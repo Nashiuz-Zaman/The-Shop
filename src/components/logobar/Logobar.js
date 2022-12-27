@@ -1,3 +1,6 @@
+//react stuff
+import { Link } from "react-router-dom";
+
 //styles
 import "./Logobar.css";
 
@@ -9,9 +12,9 @@ import puma from "../../assets/logobar/pumalogo.png";
 export default function Logobar() {
   return (
     <div className="logobar">
-      <p className="websitelogo">
+      <Link to="/" className="websitelogo">
         The Shop<span className="largeperiod">.</span>
-      </p>
+      </Link>
       <ul className="sportslogos">
         <li>
           <img src={adidas} alt="adidas logo" />

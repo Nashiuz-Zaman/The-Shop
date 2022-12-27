@@ -6,12 +6,17 @@
   margin-bottom: 1rem;
 
   .websitelogo {
-    color: $white;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: $white;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
 
     .largeperiod {
       font-size: 4rem;
