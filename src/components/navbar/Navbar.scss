@@ -1,16 +1,44 @@
+@import "../../scss/variables";
+
 .navbar {
-  padding: 2rem;
   display: flex;
   justify-content: center;
 
   .navigation-menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 
     &__item {
       font-size: 1.6rem;
-      font-weight: 500;
+      cursor: pointer;
+      display: block;
+      padding: 2rem 1rem;
+      position: relative;
+
+      .navigation-decoration-underline {
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $brandPrimary;
+        bottom: 0;
+        left: 0;
+        transform-origin: center;
+        transform: scale(0%, 100%);
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        .navigation-decoration-underline {
+          transform: scale(100%, 100%);
+        }
+      }
+
+      a:link,
+      a:visited {
+        color: $brandPrimary;
+        text-decoration: none;
+      }
     }
   }
 }

@@ -8,16 +8,20 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="navigation-menu">
         <li className="navigation-menu__item">
-          <Link>New & Featured</Link>
+          New & Featured
+          <div className="navigation-decoration-underline"></div>
         </li>
         <li className="navigation-menu__item">
           <Link to="/men">Men</Link>
+          <div className="navigation-decoration-underline"></div>
         </li>
         <li className="navigation-menu__item">
           <Link to="/women">Women</Link>
+          <div className="navigation-decoration-underline"></div>
         </li>
         <li className="navigation-menu__item">
           <Link to="/sale">Sale</Link>
+          <div className="navigation-decoration-underline"></div>
         </li>
       </ul>
     </nav>
