@@ -1,0 +1,31 @@
+@import "../../scss/variables";
+
+.logobar {
+  background-color: $brandPrimary;
+  padding: 1.5rem 2rem 2.5rem;
+  margin-bottom: 1rem;
+
+  .websitelogo {
+    color: $white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+    .largeperiod {
+      font-size: 4rem;
+    }
+  }
+
+  .sportslogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    img {
+      width: 4rem;
+    }
+  }
+}

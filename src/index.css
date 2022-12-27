@@ -18,6 +18,12 @@ body {
   display: flex;
   flex-direction: column;
   /* margin-top: auto FOR footer */
-  color: #222; }
+  color: #111;
+  font-family: "Roboto", sans-serif; }
+
+#root {
+  height: 100%; }
+  #root .App {
+    height: 100%; }
 
 /*# sourceMappingURL=index.css.map */

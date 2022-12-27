@@ -1,0 +1,22 @@
+.logobar {
+  background-color: #111;
+  padding: 1.5rem 2rem 2.5rem;
+  margin-bottom: 1rem; }
+  .logobar .websitelogo {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; }
+    .logobar .websitelogo .largeperiod {
+      font-size: 4rem; }
+  .logobar .sportslogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; }
+    .logobar .sportslogos img {
+      width: 4rem; }
+
+/*# sourceMappingURL=Logobar.css.map */

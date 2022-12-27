@@ -1,0 +1,13 @@
+.navbar {
+  padding: 2rem;
+  display: flex;
+  justify-content: center; }
+  .navbar .navigation-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem; }
+    .navbar .navigation-menu__item {
+      font-size: 1.6rem;
+      font-weight: 500; }
+
+/*# sourceMappingURL=Navbar.css.map */
