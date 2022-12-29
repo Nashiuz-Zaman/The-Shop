@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import "./Logobar.css";
 
 //images
-import nike from "../../assets/logobar/nikelogo.png";
-import adidas from "../../assets/logobar/adidaslogo.png";
-import puma from "../../assets/logobar/pumalogo.png";
+import nike from "./assets/logobar/nikelogo.png";
+import adidas from "./assets/logobar/adidaslogo.png";
+import puma from "./assets/logobar/pumalogo.png";
 
 export default function Logobar() {
   return (
