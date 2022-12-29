@@ -1,0 +1,18 @@
+.subnav__heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  color: #000; }
+.subnav__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+  .subnav__list-item--link:link, .subnav__list-item--link:visited {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-size: 1.4rem; }
+  .subnav__list-item--link:hover, .subnav__list-item--link:active {
+    color: #000; }
+
+/*# sourceMappingURL=Dropdown.css.map */

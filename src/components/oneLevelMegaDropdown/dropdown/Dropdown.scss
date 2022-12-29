@@ -1,0 +1,31 @@
+@import "../../../scss/variables";
+
+.subnav {
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    color: $black;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-item--link {
+      &:link,
+      &:visited {
+        color: $lightBlack;
+        text-decoration: none;
+        font-size: 1.4rem;
+      }
+
+      &:hover,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+}
