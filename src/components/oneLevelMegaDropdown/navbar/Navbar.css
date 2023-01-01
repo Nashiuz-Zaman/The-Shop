@@ -1,6 +1,13 @@
 .navbar {
-  position: relative;
-  height: 5rem; }
+  position: sticky;
+  height: 5rem;
+  margin-bottom: 1.2rem;
+  z-index: 1000;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  background-color: #f7f7f7; }
   .navbar .navigation-menu {
     list-style-type: none;
     display: flex;
@@ -43,13 +50,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 5rem;
         pointer-events: none;
         transition: all 0.3s;
         background-color: #f7f7f7;
-        transform: translateY(10%); }
-      .navbar .navigation-menu__item:hover a:link::before,
-      .navbar .navigation-menu__item:hover a:visited::before {
+        transform: translateY(10%);
+        z-index: 1;
+        cursor: default; }
+      .navbar .navigation-menu__item:hover .navigation-menu__item--link:link::before,
+      .navbar .navigation-menu__item:hover .navigation-menu__item--link:visited::before {
         transform: scale(1, 1); }
       .navbar .navigation-menu__item:hover .dropdown-container {
         visibility: visible;

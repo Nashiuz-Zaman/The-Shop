@@ -1,0 +1,36 @@
+.button-on-image {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  bottom: 7rem;
+  left: 7rem; }
+  .button-on-image__button:link, .button-on-image__button:visited {
+    color: #000;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s; }
+    .button-on-image__button:link::before, .button-on-image__button:visited::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid white;
+      top: 0.5rem;
+      left: 0.5rem;
+      z-index: -1;
+      transition: all 0.3s; }
+  .button-on-image:hover .button-on-image__button::before {
+    background-color: #fff; }
+  .button-on-image__button:hover {
+    background-color: #111;
+    color: #fff; }
+
+/*# sourceMappingURL=ButtonOnImage.css.map */

@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+
+.perks {
+  padding: 3rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: $commonMargin;
+  background-color: $brandSecondary;
+
+  &__perk {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+}

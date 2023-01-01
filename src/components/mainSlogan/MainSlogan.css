@@ -1,0 +1,33 @@
+.main-slogan {
+  max-width: 85rem;
+  height: 35rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  background-image: linear-gradient(to right, #fa5252, #fb8484);
+  color: #fff;
+  margin-bottom: 4rem; }
+  .main-slogan__text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 4rem 2rem 10rem;
+    padding-right: 0;
+    gap: 2.5rem; }
+  .main-slogan__carousel-part {
+    height: 35rem;
+    width: 100%;
+    position: relative; }
+  .main-slogan__heading {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 1.05rem;
+    text-transform: uppercase;
+    line-height: 1.1; }
+  .main-slogan__sub-heading {
+    font-size: 1.4rem;
+    color: #f1f3f5;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; }
+
+/*# sourceMappingURL=MainSlogan.css.map */

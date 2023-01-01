@@ -1,7 +1,6 @@
 .logobar {
   background-color: #111;
-  padding: 1.5rem 2rem 2.5rem;
-  margin-bottom: 1rem; }
+  padding: 1.5rem 2rem 2.5rem; }
   .logobar .websitelogo:link, .logobar .websitelogo:visited {
     display: block;
     text-decoration: none;
