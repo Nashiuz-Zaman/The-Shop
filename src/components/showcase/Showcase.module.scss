@@ -1,0 +1,54 @@
+@import "../../scss/variables";
+
+.showcase {
+  margin-bottom: $sectionMargin;
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 4.5rem;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    a:link,
+    a:visited {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.7rem;
+      color: $white;
+      background-color: $brandPrimary;
+      padding: 1rem 2rem;
+      border-radius: 100rem;
+      transition: $animate;
+      font-weight: 300;
+    }
+
+    a:hover,
+    a:active {
+      background-color: $lightRed;
+      color: $white;
+    }
+
+    &--heading {
+      font-family: $anton;
+      font-size: 6.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &--subheading {
+      width: 25%;
+      font-size: 1.7rem;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+  }
+}

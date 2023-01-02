@@ -1,6 +1,9 @@
 @import "../../../scss/variables";
 
 .subnav {
+  transition: $animate;
+  transform: translateY(-10%);
+
   &__heading {
     font-size: 1.6rem;
     font-weight: 500;

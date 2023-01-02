@@ -54,7 +54,6 @@
         pointer-events: none;
         transition: all 0.3s;
         background-color: #f7f7f7;
-        transform: translateY(10%);
         z-index: 1;
         cursor: default; }
       .navbar .navigation-menu__item:hover .navigation-menu__item--link:link::before,
@@ -63,7 +62,8 @@
       .navbar .navigation-menu__item:hover .dropdown-container {
         visibility: visible;
         opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0%); }
+        pointer-events: auto; }
+        .navbar .navigation-menu__item:hover .dropdown-container .subnav {
+          transform: translateY(0%); }
 
 /*# sourceMappingURL=Navbar.css.map */
