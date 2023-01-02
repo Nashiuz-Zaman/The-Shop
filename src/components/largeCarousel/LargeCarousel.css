@@ -1,8 +1,8 @@
 .large-carousel {
   width: 100%;
   position: relative !important;
-  height: 60rem;
   overflow: hidden;
+  aspect-ratio: 16/8;
   margin-bottom: 9.6rem; }
   .large-carousel__slide {
     width: 100%;

@@ -3,8 +3,8 @@
 .large-carousel {
   width: 100%;
   position: relative !important;
-  height: 60rem;
   overflow: hidden;
+  aspect-ratio: 16/8;
   margin-bottom: $sectionMargin;
 
   &__slide {
@@ -30,7 +30,6 @@
       height: 0.7rem;
       background-color: $white;
       border-radius: 1000rem;
-
       cursor: pointer;
       opacity: 0.4;
       transition: $animate;
