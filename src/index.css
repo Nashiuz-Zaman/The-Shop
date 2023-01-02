@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 *,
 *::before,
 *::after {
@@ -28,5 +29,8 @@ body {
     height: 100%; }
   #root ::selection {
     background-color: transparent; }
+
+.container {
+  padding: 0 5rem; }
 
 /*# sourceMappingURL=index.css.map */

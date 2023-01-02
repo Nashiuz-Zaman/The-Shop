@@ -1,4 +1,5 @@
 @import "scss/variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 *,
 *::before,
@@ -36,4 +37,8 @@ body {
   ::selection {
     background-color: transparent;
   }
+}
+
+.container {
+  padding: 0 5rem;
 }

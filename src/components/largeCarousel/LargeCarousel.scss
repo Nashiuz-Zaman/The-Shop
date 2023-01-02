@@ -1,9 +1,11 @@
 @import "../../scss/variables";
 
 .large-carousel {
+  width: 100%;
   position: relative !important;
   height: 60rem;
   overflow: hidden;
+  margin-bottom: $sectionMargin;
 
   &__slide {
     width: 100%;

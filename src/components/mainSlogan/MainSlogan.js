@@ -2,7 +2,7 @@
 import "./MainSlogan.css";
 
 //components
-import FadeCarouselNoBtn from "../FadeCarouselNoBtn/FadeCarouselNoBtn";
+import FadeCarouselNoBtn from "../fadeCarouselNoBtn/FadeCarouselNoBtn";
 
 export default function MainSlogan() {
   return (
