@@ -1,10 +1,7 @@
 //styles
 import "./MainSlogan.css";
 
-//components
-import FadeCarouselNoBtn from "../fadeCarouselNoBtn/FadeCarouselNoBtn";
-
-export default function MainSlogan() {
+export default function MainSlogan({ children }) {
   return (
     <div className="main-slogan">
       <div className="main-slogan__text-part">
@@ -18,9 +15,7 @@ export default function MainSlogan() {
         </p>
       </div>
 
-      <div className="main-slogan__carousel-part">
-        <FadeCarouselNoBtn />
-      </div>
+      <div className="main-slogan__carousel-part">{children}</div>
     </div>
   );
 }

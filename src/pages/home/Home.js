@@ -6,11 +6,12 @@ import Perks from "../../components/perks/Perks";
 import Showcase from "../../components/showcase/Showcase";
 import ButtonOnImage from "../../components/buttonOnImage/ButtonOnImage";
 import LowHeightShowcase from "../../components/lowHeightShowcase/LowHeightShowcase";
+import FadeCarouselNoBtn from "../../components/fadeCarouselNoBtn/FadeCarouselNoBtn";
 
 //styles
 import "./Home.css";
 
-//image sources
+// horizontal scroll gallery image source
 import basketball from "../../assets/basketball.webp";
 import fashion from "../../assets/fashion.webp";
 import backpacks from "../../assets/backpacks.webp";
@@ -23,6 +24,11 @@ import sportsbras from "../../assets/sportsbras.webp";
 import sweatshirts from "../../assets/sweatshirts.webp";
 import tennisskirts from "../../assets/tennisskirts.webp";
 import football from "../../assets/football.webp";
+
+// fade carousel top homepage image source
+import nikeNewYear from "../../assets/newyear-newgear-nike.jpg";
+import adidasNewYear from "../../assets//newyear-newgear-adidas.jpg";
+import pumaNewYear from "../../assets/newyear-newgear-puma.jpg";
 
 // horizontal scroll gallery
 const popularCategoriesHomepage = [
@@ -38,10 +44,19 @@ const popularCategoriesHomepage = [
   { id: 9, productCategoryName: "Accesories & Equipments", url: football },
 ];
 
+// fade carousel top homepage
+const fadeCarouselTopHomepage = [
+  { url: nikeNewYear, title: "nike commercial", id: 0 },
+  { url: pumaNewYear, title: "puma commercial", id: 1 },
+  { url: adidasNewYear, title: "adidas commercial", id: 2 },
+];
+
 export default function Home() {
   return (
     <div className="home">
-      <MainSlogan />
+      <MainSlogan>
+        <FadeCarouselNoBtn images={fadeCarouselTopHomepage} />
+      </MainSlogan>
       <Perks />
       <LargeCarousel>
         <ButtonOnImage

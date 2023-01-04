@@ -8,21 +8,11 @@ import { useState, useEffect } from "react";
 import "./FadeCarouselNoBtn.css";
 
 //import image sources
-import nike from "./assets/FadeCarouselNoBtn/nike.jpg";
-import adidas from "./assets/FadeCarouselNoBtn/adidas.jpg";
-import puma from "./assets/FadeCarouselNoBtn/puma.jpg";
 
-//images array
-const slides = [
-  { url: nike, title: "nike commercial", id: 0 },
-  { url: puma, title: "puma commercial", id: 1 },
-  { url: adidas, title: "adidas commercial", id: 2 },
-];
-
-export default function FadeCarouselNoBtn() {
+export default function FadeCarouselNoBtn({ images }) {
   const [curSlide, setCurSlide] = useState(0);
   const { activateCarousel, deactivateCarousel } = useAnimatedCarousel(
-    slides,
+    images,
     curSlide,
     setCurSlide,
     2500
@@ -36,7 +26,7 @@ export default function FadeCarouselNoBtn() {
     };
   }, [curSlide, activateCarousel, deactivateCarousel]);
 
-  return slides.map((slide) => {
+  return images.map((slide) => {
     return (
       <div
         key={slide.id}
