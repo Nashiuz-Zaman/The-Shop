@@ -1,13 +1,9 @@
 @import "../../scss/variables";
 
 .button-on-image {
-  position: absolute;
   cursor: pointer;
   display: flex;
-
   align-items: center;
-  bottom: 7rem;
-  left: 7rem;
 
   &__button:link,
   &__button:visited {
@@ -41,7 +37,7 @@
   }
 
   &__button:hover {
-    background-color: $brandPrimary;
+    background-color: $lightRed;
     color: $white;
   }
 }

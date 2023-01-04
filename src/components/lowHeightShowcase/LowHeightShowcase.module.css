@@ -1,0 +1,26 @@
+.low-height-showcase {
+  position: relative;
+  margin-bottom: 9.6rem; }
+  .low-height-showcase__img {
+    width: 100%;
+    aspect-ratio: 16/5.5; }
+  .low-height-showcase__textbox {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center; }
+    .low-height-showcase__textbox--heading {
+      font-family: "Anton", sans-serif;
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-bottom: 2.4rem; }
+    .low-height-showcase__textbox--subheading {
+      width: 100%;
+      font-size: 1.7rem;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 3.2rem;
+      text-transform: uppercase; }
+
+/*# sourceMappingURL=LowHeightShowcase.module.css.map */

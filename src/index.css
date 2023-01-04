@@ -43,4 +43,36 @@ body {
 .section__title--padding {
   padding: 0 5rem; }
 
+.absolute {
+  position: absolute; }
+
+.position-bottom-left {
+  bottom: 7rem;
+  left: 7rem; }
+
+.position-center-right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7rem; }
+
+.textbox-light-narrow {
+  align-items: flex-start !important;
+  width: 25% !important; }
+  .textbox-light-narrow h3 {
+    color: #fff !important;
+    text-align: left !important;
+    line-height: 0.95 !important; }
+  .textbox-light-narrow p {
+    color: #fff !important;
+    width: 100% !important;
+    text-align: left !important; }
+  .textbox-light-narrow a:link,
+  .textbox-light-narrow a:visited {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-weight: 400 !important; }
+  .textbox-light-narrow a:hover {
+    background-color: #fa5252 !important;
+    color: #fff !important; }
+
 /*# sourceMappingURL=index.css.map */

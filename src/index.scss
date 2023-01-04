@@ -54,3 +54,47 @@ body {
 .section__title--padding {
   padding: 0 5rem;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.position-bottom-left {
+  bottom: 7rem;
+  left: 7rem;
+}
+
+.position-center-right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7rem;
+}
+
+.textbox-light-narrow {
+  align-items: flex-start !important;
+  width: 25% !important;
+
+  h3 {
+    color: $white !important;
+    text-align: left !important;
+    line-height: 0.95 !important;
+  }
+
+  p {
+    color: $white !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  a:link,
+  a:visited {
+    background-color: $white !important;
+    color: $black !important;
+    font-weight: 400 !important;
+  }
+
+  a:hover {
+    background-color: $lightRed !important;
+    color: $white !important;
+  }
+}

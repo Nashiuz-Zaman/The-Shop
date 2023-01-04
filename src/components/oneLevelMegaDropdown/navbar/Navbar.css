@@ -64,6 +64,7 @@
         opacity: 1;
         pointer-events: auto; }
         .navbar .navigation-menu__item:hover .dropdown-container .subnav {
+          opacity: 1;
           transform: translateY(0%); }
 
 /*# sourceMappingURL=Navbar.css.map */

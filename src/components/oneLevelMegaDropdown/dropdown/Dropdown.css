@@ -1,6 +1,7 @@
 .subnav {
   transition: all 0.3s;
-  transform: translateY(-10%); }
+  opacity: 0;
+  transform: translateY(-30%); }
   .subnav__heading {
     font-size: 1.6rem;
     font-weight: 500;

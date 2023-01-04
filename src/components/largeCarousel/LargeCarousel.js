@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
 
 //image
@@ -9,16 +9,13 @@ import puma from "./assets/largeCarousel/puma.jpg";
 //styles
 import "./LargeCarousel.css";
 
-//components
-import ButtonOnImage from "../buttonOnImage/ButtonOnImage";
-
 const slides = [
   { url: nike, title: "nike", id: 0 },
   { url: adidas, title: "adidas", id: 1 },
   { url: puma, title: "puma", id: 2 },
 ];
 
-export default function LargeCarousel() {
+export default function LargeCarousel({ children = null }) {
   const [curSlide, setCurSlide] = useState(0);
 
   const {
@@ -53,7 +50,10 @@ export default function LargeCarousel() {
               transform: `translateX(${100 * (slide.id - curSlide)}%)`,
             }}
           >
-            <ButtonOnImage text={`Browse all ${slide.title} products`} />
+            {children &&
+              React.cloneElement(children, {
+                buttonText: `Browse all ${slide.title} products`,
+              })}
           </div>
         );
       })}

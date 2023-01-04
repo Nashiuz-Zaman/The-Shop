@@ -2,7 +2,8 @@
 
 .subnav {
   transition: $animate;
-  transform: translateY(-10%);
+  opacity: 0;
+  transform: translateY(-30%);
 
   &__heading {
     font-size: 1.6rem;

@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 //styles
 import "./ButtonOnImage.css";
 
-export default function ButtonOnImage({ text }) {
+export default function ButtonOnImage({
+  buttonText = "",
+  extraClassName = {},
+}) {
   return (
-    <div className="button-on-image">
+    <div
+      className={`button-on-image ${
+        extraClassName.position ?? "no-special-position"
+      }`}
+    >
       <Link to={`#`} className="button-on-image__button">
-        {text} &rarr;
+        {buttonText} &rarr;
       </Link>
     </div>
   );
