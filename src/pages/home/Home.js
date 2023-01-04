@@ -30,7 +30,7 @@ import nikeNewYear from "../../assets/newyear-newgear-nike.jpg";
 import adidasNewYear from "../../assets//newyear-newgear-adidas.jpg";
 import pumaNewYear from "../../assets/newyear-newgear-puma.jpg";
 
-// horizontal scroll gallery
+// horizontal scroll gallery array
 const popularCategoriesHomepage = [
   { id: 0, productCategoryName: "Backpacks", url: backpacks },
   { id: 1, productCategoryName: "Basketball Shoes", url: basketballshoes },
@@ -44,7 +44,7 @@ const popularCategoriesHomepage = [
   { id: 9, productCategoryName: "Accesories & Equipments", url: football },
 ];
 
-// fade carousel top homepage
+// fade carousel top homepage array
 const fadeCarouselTopHomepage = [
   { url: nikeNewYear, title: "nike commercial", id: 0 },
   { url: pumaNewYear, title: "puma commercial", id: 1 },
