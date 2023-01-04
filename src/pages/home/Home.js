@@ -11,54 +11,28 @@ import FadeCarouselNoBtn from "../../components/fadeCarouselNoBtn/FadeCarouselNo
 //styles
 import "./Home.css";
 
-// horizontal scroll gallery image source
+//image imports
 import basketball from "../../assets/basketball.webp";
 import fashion from "../../assets/fashion.webp";
-import backpacks from "../../assets/backpacks.webp";
-import basketballshoes from "../../assets/basketballshoes.webp";
-import footballshoes from "../../assets/footballshoes.webp";
-import hoodies from "../../assets/hoodies.webp";
-import leggings from "../../assets/leggings.webp";
-import runningshoes from "../../assets/runningshoes.webp";
-import sportsbras from "../../assets/sportsbras.webp";
-import sweatshirts from "../../assets/sweatshirts.webp";
-import tennisskirts from "../../assets/tennisskirts.webp";
-import football from "../../assets/football.webp";
 
-// fade carousel top homepage image source
-import nikeNewYear from "../../assets/newyear-newgear-nike.jpg";
-import adidasNewYear from "../../assets//newyear-newgear-adidas.jpg";
-import pumaNewYear from "../../assets/newyear-newgear-puma.jpg";
-
-// horizontal scroll gallery array
-const popularCategoriesHomepage = [
-  { id: 0, productCategoryName: "Backpacks", url: backpacks },
-  { id: 1, productCategoryName: "Basketball Shoes", url: basketballshoes },
-  { id: 2, productCategoryName: "Football Shoes", url: footballshoes },
-  { id: 3, productCategoryName: "Hoodies", url: hoodies },
-  { id: 4, productCategoryName: "Leggings", url: leggings },
-  { id: 5, productCategoryName: "Running Shoes", url: runningshoes },
-  { id: 6, productCategoryName: "Sports Bras", url: sportsbras },
-  { id: 7, productCategoryName: "Sweatshirts", url: sweatshirts },
-  { id: 8, productCategoryName: "Tennis Skirts", url: tennisskirts },
-  { id: 9, productCategoryName: "Accesories & Equipments", url: football },
-];
-
-// fade carousel top homepage array
-const fadeCarouselTopHomepage = [
-  { url: nikeNewYear, title: "nike commercial", id: 0 },
-  { url: pumaNewYear, title: "puma commercial", id: 1 },
-  { url: adidasNewYear, title: "adidas commercial", id: 2 },
-];
+//hooks
+import useImportLargeCarouselHomepageImages from "../../hooks/useImportLargeCarouselHomepageImages";
+import useImportFadeCarouselTopHomepageImages from "../../hooks/useImportFadeCarouselTopHomepageImages";
+import useImportHorizontalScrollHomepage from "../../hooks/useImportHorizontalScrollHomepage";
 
 export default function Home() {
+  const { largeCarouselHomepageImages } =
+    useImportLargeCarouselHomepageImages();
+  const { fadeCarouselTopHomepage } = useImportFadeCarouselTopHomepageImages();
+  const { popularCategoriesHomepage } = useImportHorizontalScrollHomepage();
+
   return (
     <div className="home">
       <MainSlogan>
         <FadeCarouselNoBtn images={fadeCarouselTopHomepage} />
       </MainSlogan>
       <Perks />
-      <LargeCarousel>
+      <LargeCarousel images={largeCarouselHomepageImages}>
         <ButtonOnImage
           extraClassName={{ position: "position-bottom-left absolute" }}
         />

@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from "react";
 import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
 
-//image
-import nike from "./assets/largeCarousel/nike.jpg";
-import adidas from "./assets/largeCarousel/adidas.jpg";
-import puma from "./assets/largeCarousel/puma.jpg";
-
 //styles
 import "./LargeCarousel.css";
 
-const slides = [
-  { url: nike, title: "nike", id: 0 },
-  { url: adidas, title: "adidas", id: 1 },
-  { url: puma, title: "puma", id: 2 },
-];
-
-export default function LargeCarousel({ children = null }) {
+export default function LargeCarousel({ children = {}, images }) {
   const [curSlide, setCurSlide] = useState(0);
 
   const {
@@ -24,7 +13,7 @@ export default function LargeCarousel({ children = null }) {
     activateCarousel,
     deactivateCarousel,
     goToSlide,
-  } = useAnimatedCarousel(slides, curSlide, setCurSlide, 3000);
+  } = useAnimatedCarousel(images, curSlide, setCurSlide, 3000);
 
   useEffect(() => {
     activateCarousel();
@@ -36,7 +25,7 @@ export default function LargeCarousel({ children = null }) {
 
   return (
     <section className="large-carousel">
-      {slides.map((slide) => {
+      {images.map((slide) => {
         return (
           <div
             onMouseEnter={handleMouseEnter}
@@ -58,7 +47,7 @@ export default function LargeCarousel({ children = null }) {
         );
       })}
       <div className="slider-buttons">
-        {slides.map((slide) => {
+        {images.map((slide) => {
           return (
             <div
               key={slide.id}
