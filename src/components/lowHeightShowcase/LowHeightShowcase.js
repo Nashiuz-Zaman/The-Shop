@@ -4,9 +4,6 @@ import React from "react";
 //styles
 import styles from "./LowHeightShowcase.module.css";
 
-//image source
-import classic from "./assets/classic.webp";
-
 export default function LowHeightShowcase({
   title = "",
   heading = "",
@@ -14,6 +11,7 @@ export default function LowHeightShowcase({
   buttonText = "",
   children = null,
   extraClassName = {},
+  imgSrc = "",
 }) {
   return (
     <section className={styles["low-height-showcase"]}>
@@ -21,7 +19,7 @@ export default function LowHeightShowcase({
       <div
         className={styles["low-height-showcase__img"]}
         style={{
-          background: `url(${classic})`,
+          background: `url(${imgSrc})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}

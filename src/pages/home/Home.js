@@ -14,6 +14,7 @@ import "./Home.css";
 //image imports
 import basketball from "../../assets/basketball.webp";
 import fashion from "../../assets/fashion.webp";
+import classic from "../../assets/classic.webp";
 
 //hooks
 import useImportLargeCarouselHomepageImages from "../../hooks/useImportLargeCarouselHomepageImages";
@@ -55,6 +56,7 @@ export default function Home() {
         subheading={"Shop classics Old & New"}
         buttonText={"Shop Now"}
         extraClassName={{ position: "position-center-right absolute" }}
+        imgSrc={classic}
       >
         <ButtonOnImage />
       </LowHeightShowcase>
