@@ -70,31 +70,34 @@ body {
   right: 7rem;
 }
 
-.textbox-light-narrow {
-  align-items: flex-start !important;
-  width: 25% !important;
-
-  h3 {
+.textbox-light-font {
+  h3[class*="heading"] {
     color: $white !important;
-    text-align: left !important;
-    line-height: 0.95 !important;
   }
 
-  p {
+  p[class*="subheading"] {
     color: $white !important;
-    width: 100% !important;
-    text-align: left !important;
   }
 
-  a:link,
-  a:visited {
+  a[class*="button"]:link,
+  a[class*="button"]:visited {
     background-color: $white !important;
     color: $black !important;
-    font-weight: 400 !important;
   }
 
-  a:hover {
+  a[class*="button"]:hover,
+  a[class*="button"]:active {
     background-color: $lightRed !important;
     color: $white !important;
   }
+}
+
+.grid-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1rem !important;
+}
+
+.darkwhiteBackground-opacity-low {
+  background-color: rgba($darkWhite, 0.8);
 }

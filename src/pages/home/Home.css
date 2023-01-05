@@ -1,3 +1,19 @@
+.refresh-closet {
+  align-items: center; }
+  .refresh-closet h3[class*="heading"] {
+    font-size: 6.5rem !important;
+    text-align: center !important; }
+  .refresh-closet p[class*="subheading"] {
+    width: 25% !important;
+    text-align: center !important; }
 
+.basketball-essentials {
+  width: 25% !important;
+  align-items: flex-start; }
+  .basketball-essentials h3[class*="heading"] {
+    font-size: 5.5rem !important; }
+
+.football-tennis {
+  align-items: flex-start; }
 
 /*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,26 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.heading-desc-btn-textbox {
+  margin-top: $componentGap;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    @include heading(4rem);
+  }
+
+  &__subheading {
+    @include subheading(_, none);
+  }
+
+  &__button:link,
+  &__button:visited {
+    @include normalBtnDarkNoHover();
+  }
+
+  &__button:hover,
+  &__button:active {
+    @include normalBtnDarkWithHover();
+  }
+}

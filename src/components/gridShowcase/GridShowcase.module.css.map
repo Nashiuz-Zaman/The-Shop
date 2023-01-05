@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,cAAe;EACb,aAAa,ECiBC,MAAM;EDfpB,qBAAS;IACP,QAAQ,EAAE,QAAQ;IAElB,0BAAO;MACL,KAAK,EAAE,IAAI;MACX,YAAY,EAAE,IAAI",
+"sources": ["GridShowcase.module.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "GridShowcase.module.css"
 }

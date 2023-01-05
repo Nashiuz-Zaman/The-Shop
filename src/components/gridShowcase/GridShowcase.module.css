@@ -1,3 +1,9 @@
-
+.grid-showcase {
+  margin-bottom: 9.6rem; }
+  .grid-showcase__block {
+    position: relative; }
+    .grid-showcase__block--img {
+      width: 100%;
+      aspect-ratio: 16/9; }
 
 /*# sourceMappingURL=GridShowcase.module.css.map */

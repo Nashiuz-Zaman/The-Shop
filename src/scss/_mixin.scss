@@ -1,3 +1,5 @@
+//heading-desc-btn-textbox mixins
+
 @mixin heading($fontSize) {
   font-family: $anton;
   font-size: $fontSize;
@@ -6,11 +8,28 @@
   margin-bottom: 2.4rem;
 }
 
-@mixin subheading($width, $textTr) {
+@mixin subheading($width: 100%, $textTr: none, $text-align: left) {
   width: $width;
   font-size: 1.7rem;
   line-height: 1.4;
-  text-align: center;
+  text-align: $text-align;
   margin-bottom: 3.2rem;
   text-transform: $textTr;
-} ;
+}
+
+@mixin normalBtnDarkNoHover($fontSize: 1.7rem) {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: $fontSize;
+  color: $white;
+  background-color: $brandPrimary;
+  padding: 1rem 2rem;
+  transition: $animate;
+  text-transform: capitalize;
+}
+
+@mixin normalBtnDarkWithHover {
+  background-color: $lightRed;
+  color: $white;
+}

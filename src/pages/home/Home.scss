@@ -1,2 +1,29 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
+
+.refresh-closet {
+  align-items: center;
+
+  h3[class*="heading"] {
+    font-size: 6.5rem !important;
+    text-align: center !important;
+  }
+
+  p[class*="subheading"] {
+    width: 25% !important;
+    text-align: center !important;
+  }
+}
+
+.basketball-essentials {
+  width: 25% !important;
+  align-items: flex-start;
+
+  h3[class*="heading"] {
+    font-size: 5.5rem !important;
+  }
+}
+
+.football-tennis {
+  align-items: flex-start;
+}
