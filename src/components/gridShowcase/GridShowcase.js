@@ -1,42 +1,41 @@
+//subcomponents
+import Showcase from "../../components/showcase/Showcase";
+import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
+
 //styles
 import React from "react";
 import styles from "./GridShowcase.module.css";
 
 export default function GridShowcase({
-  extraClassName = {},
-  images = [],
-
-  children = undefined,
+  extraClass = [],
+  extraClassShowcase = [],
+  extraClassHeadingDescBtn = [],
+  imagesArray = [],
+  button = undefined,
 }) {
   return (
-    <section
+    <div
       className={`${styles["grid-showcase"]} ${
-        extraClassName.container ?? "no-container"
-      } ${extraClassName.grid ?? "no-manual-grid"}`}
+        extraClass.length > 0 ? extraClass.join(" ") : ""
+      }`}
     >
-      {images.map((image) => {
+      {imagesArray.map((image) => {
         return (
           <div
             key={image.id}
             className={`${styles["grid-showcase__block"]} grid-showcase__block`}
           >
-            <div
-              className={`${styles["grid-showcase__block--img"]} grid-showcase__block--img`}
-              style={{
-                background: `url(${image.url})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            ></div>
-            {children &&
-              React.cloneElement(children, {
-                heading: image.title,
-                subheading: image.subheading,
-                buttonText: `Shop for ${image.title}`,
-              })}
+            <Showcase imageSource={image.url} extraClass={extraClassShowcase} />
+            <HeadingDescBtn
+              heading={image.heading}
+              subheading={image.subheading}
+              buttonText={`Shop For ${image.heading}`}
+              extraClass={extraClassHeadingDescBtn}
+              button={button}
+            />
           </div>
         );
       })}
-    </section>
+    </div>
   );
 }

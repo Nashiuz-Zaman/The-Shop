@@ -1,8 +1,17 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
 
+.slogan {
+  div[class*="fade-carousel-nobtn__slide"] {
+    top: 2rem !important;
+    left: -2rem !important;
+  }
+}
+
 .refresh-closet {
-  align-items: center;
+  div[class*="textbox"] {
+    align-items: center !important;
+  }
 
   h3[class*="heading"] {
     font-size: 6.5rem !important;
@@ -15,15 +24,49 @@
   }
 }
 
-.basketball-essentials {
-  width: 25% !important;
-  align-items: flex-start;
-
+.classics {
   h3[class*="heading"] {
-    font-size: 5.5rem !important;
+    font-size: 5.5rem;
+  }
+
+  p[class*="subheading"] {
+    font-weight: 300 !important;
   }
 }
 
-.football-tennis {
-  align-items: flex-start;
+.basketball-essentials {
+  div[class*="textbox"] {
+    width: 25%;
+  }
+
+  h3[class*="heading"] {
+    font-size: 6.5rem !important;
+  }
+
+  p[class*="subheading"] {
+    font-weight: 300 !important;
+  }
+}
+
+.signup {
+  background-color: $brandPrimary;
+  padding: 3rem 4rem;
+
+  h3[class*="heading"] {
+    font-size: 6.5rem !important;
+    width: 50% !important;
+  }
+
+  p[class*="subheading"] {
+    font-weight: 300 !important;
+  }
+
+  div[class*="textbox"] {
+    margin-top: 0 !important;
+  }
+
+  div[class*="fade-carousel-nobtn__slide"] {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
 }

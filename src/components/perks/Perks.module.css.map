@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAEA,MAAO;EACL,OAAO,EAAE,SAAS;EAClB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,YAAY;EAC7B,aAAa,ECWA,MAAM;EDVnB,gBAAgB,ECND,OAAO;EDQtB,YAAQ;IACN,SAAS,EAAE,MAAM;IACjB,WAAW,EAAE,GAAG",
-"sources": ["Perks.scss","../../scss/_variables.scss"],
+"sources": ["Perks.module.scss","../../scss/_variables.scss"],
 "names": [],
-"file": "Perks.css"
+"file": "Perks.module.css"
 }

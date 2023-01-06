@@ -4,10 +4,8 @@
 .showcase {
   width: 100%;
   position: relative;
-  margin-bottom: $sectionMargin;
 
-  &__img {
-    width: 100%;
-    aspect-ratio: 16/9;
+  &__imgbox {
+    @include widescreenImageContainer();
   }
 }

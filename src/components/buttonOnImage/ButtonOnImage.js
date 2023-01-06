@@ -5,16 +5,19 @@ import "./ButtonOnImage.css";
 
 export default function ButtonOnImage({
   buttonText = "",
-  extraClassName = {},
+  extraClass = [],
+  toUrl = "#",
+  rightArrow = true,
 }) {
   return (
     <div
       className={`button-on-image ${
-        extraClassName.position ?? "no-special-position"
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
     >
-      <Link to={`#`} className="button-on-image__button">
-        {buttonText} &rarr;
+      <Link to={toUrl} className="button-on-image__button">
+        {buttonText === "" ? "Please provide text for button" : buttonText}{" "}
+        {rightArrow && <>&rarr;</>}
       </Link>
     </div>
   );

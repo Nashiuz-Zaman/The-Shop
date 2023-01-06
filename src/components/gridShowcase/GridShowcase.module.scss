@@ -1,14 +1,7 @@
 @import "../../scss/variables";
 
 .grid-showcase {
-  margin-bottom: $sectionMargin;
-
   &__block {
     position: relative;
-
-    &--img {
-      width: 100%;
-      aspect-ratio: 16/9;
-    }
   }
 }

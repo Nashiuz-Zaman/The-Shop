@@ -14,10 +14,6 @@
     padding: 1rem 4rem 2rem 10rem;
     padding-right: 0;
     gap: 2.5rem; }
-  .main-slogan__carousel-part {
-    height: 35rem;
-    width: 100%;
-    position: relative; }
   .main-slogan__heading {
     font-size: 4rem;
     font-weight: 500;
@@ -30,4 +26,4 @@
     letter-spacing: 0.1rem;
     text-transform: capitalize; }
 
-/*# sourceMappingURL=MainSlogan.css.map */
+/*# sourceMappingURL=MainSlogan.module.css.map */

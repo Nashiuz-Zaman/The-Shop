@@ -5,13 +5,13 @@ export default function useImportGridShowcaseHome() {
   const gridShowcaseHome = [
     {
       url: footballEssentials,
-      title: "football",
+      heading: "football",
       id: 0,
       subheading: "Supercharge your game with engineered equipments.",
     },
     {
       url: tennisEssentials,
-      title: "tennis",
+      heading: "tennis",
       id: 1,
       subheading: "Rule the court with equipments designed to perform.",
     },

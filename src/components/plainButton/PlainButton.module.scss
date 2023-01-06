@@ -1,0 +1,14 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.plain-button {
+  &:link,
+  &:visited {
+    @include normalBtnDarkNoHover();
+  }
+
+  &:hover,
+  &:active {
+    @include normalBtnDarkWithHover();
+  }
+}

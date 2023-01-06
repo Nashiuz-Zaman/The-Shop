@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIE,yCACU;ECeV,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,MAAM;EAClB,eAAe,EAAE,IAAI;EACrB,SAAS,EAJ4B,MAAM;EAK3C,KAAK,ECrBC,IAAI;EDsBV,gBAAgB,ECxBH,IAAI;EDyBjB,OAAO,EAAE,SAAS;EAClB,UAAU,ECbF,QAAQ;EDchB,cAAc,EAAE,UAAU;ADnB1B,yCACS;ECsBT,gBAAgB,ECzBP,OAAO;ED0BhB,KAAK,EC9BC,IAAI",
+"sources": ["PlainButton.module.scss","../../scss/_mixin.scss","../../scss/_variables.scss"],
+"names": [],
+"file": "PlainButton.module.css"
+}

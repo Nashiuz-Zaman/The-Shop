@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,0BAA2B;EACzB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,KAAK;EACX,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,MAAM;EAElB,iCAAS;IACP,OAAO,EAAE,CAAC",
-"sources": ["FadeCarouselNoBtn.scss"],
-"names": [],
-"file": "FadeCarouselNoBtn.css"
-}

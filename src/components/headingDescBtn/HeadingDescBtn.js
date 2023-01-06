@@ -1,17 +1,18 @@
+import React from "react";
 import styles from "./HeadingDescBtn.module.css";
-import { Link } from "react-router-dom";
 
 export default function HeadingDescBtn({
   heading = "",
   subheading = "",
+  extraClass = [],
+  button = undefined,
   buttonText = "",
-  extraClassName = [],
 }) {
   return (
     <div
-      className={`${styles["heading-desc-btn-textbox"]} ${extraClassName.join(
-        " "
-      )}`}
+      className={`${styles["heading-desc-btn-textbox"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : "Default class"
+      }`}
     >
       {heading && (
         <h3 className={styles["heading-desc-btn-textbox__heading"]}>
@@ -23,11 +24,12 @@ export default function HeadingDescBtn({
           {subheading}
         </p>
       )}
-      {buttonText && (
-        <Link className={styles["heading-desc-btn-textbox__button"]}>
-          {buttonText} &rarr;
-        </Link>
-      )}
+      {button &&
+        React.cloneElement(button, {
+          buttonText: `${
+            buttonText === "" ? "Please provide text for button" : buttonText
+          }`,
+        })}
     </div>
   );
 }

@@ -1,19 +1,13 @@
 //styles
-import "./Perks.css";
+import styles from "./Perks.module.css";
 
-const perks = [
-  "Upto 50% Discounts",
-  "International Shipping",
-  "24/7 Online Support",
-];
-
-export default function Perks() {
+export default function Perks({ textArray = [] }) {
   return (
-    <section className="perks">
-      {perks.map((perk) => {
+    <section className={styles["perks"]}>
+      {textArray.map((text) => {
         return (
-          <h2 key={perk} className="perks__perk">
-            {perk}
+          <h2 key={text} className={styles["perks__perk"]}>
+            {text}
           </h2>
         );
       })}

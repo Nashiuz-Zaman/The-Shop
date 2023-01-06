@@ -1,18 +1,30 @@
-//custom hooks import
-import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
-
 //react
+//////////////////////////////////
+//////////////////////////////////
+//////////////////////////////////
 import { useState, useEffect } from "react";
 
+//custom hooks import
+//////////////////////////////////
+//////////////////////////////////
+//////////////////////////////////
+import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
+
 //styles
-import "./FadeCarouselNoBtn.css";
+import styles from "./FadeCarouselNoBtn.module.css";
 
-//import image sources
+//component starts from here
+//////////////////////////////////
+//////////////////////////////////
+//////////////////////////////////
 
-export default function FadeCarouselNoBtn({ images }) {
+export default function FadeCarouselNoBtn({
+  imagesArray = [],
+  extraClass = [],
+}) {
   const [curSlide, setCurSlide] = useState(0);
   const { activateCarousel, deactivateCarousel } = useAnimatedCarousel(
-    images,
+    imagesArray,
     curSlide,
     setCurSlide,
     2500
@@ -26,19 +38,27 @@ export default function FadeCarouselNoBtn({ images }) {
     };
   }, [curSlide, activateCarousel, deactivateCarousel]);
 
-  return images.map((slide) => {
-    return (
-      <div
-        key={slide.id}
-        className={`fade-carousel-nobtn-slide ${
-          slide.id === curSlide ? "active" : ""
-        }`}
-        style={{
-          background: `url(${slide.url})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      ></div>
-    );
-  });
+  return (
+    <div
+      className={`${styles["fade-carousel-nobtn"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
+      }`}
+    >
+      {imagesArray.map((slide) => {
+        return (
+          <div
+            key={slide.id}
+            className={`${styles["fade-carousel-nobtn__slide"]} ${
+              slide.id === curSlide ? "active-fade-carousel" : ""
+            }`}
+            style={{
+              background: `url(${slide.url})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          ></div>
+        );
+      })}
+    </div>
+  );
 }

@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
 
 //styles
-import "./LargeCarousel.css";
+import styles from "./LargeCarousel.module.css";
 
-export default function LargeCarousel({ children = {}, images }) {
+export default function LargeCarousel({
+  button = undefined,
+  imagesArray = [],
+  extraClass = [],
+}) {
   const [curSlide, setCurSlide] = useState(0);
 
   const {
@@ -13,7 +17,7 @@ export default function LargeCarousel({ children = {}, images }) {
     activateCarousel,
     deactivateCarousel,
     goToSlide,
-  } = useAnimatedCarousel(images, curSlide, setCurSlide, 3000);
+  } = useAnimatedCarousel(imagesArray, curSlide, setCurSlide, 3000);
 
   useEffect(() => {
     activateCarousel();
@@ -24,13 +28,17 @@ export default function LargeCarousel({ children = {}, images }) {
   }, [curSlide, activateCarousel, deactivateCarousel]);
 
   return (
-    <section className="large-carousel">
-      {images.map((slide) => {
+    <div
+      className={`${styles["large-carousel"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
+      }`}
+    >
+      {imagesArray.map((slide) => {
         return (
           <div
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="large-carousel__slide"
+            className={styles["large-carousel__slide"]}
             key={slide.id}
             style={{
               background: `url(${slide.url})`,
@@ -39,26 +47,26 @@ export default function LargeCarousel({ children = {}, images }) {
               transform: `translateX(${100 * (slide.id - curSlide)}%)`,
             }}
           >
-            {children &&
-              React.cloneElement(children, {
-                buttonText: `Browse all ${slide.title} products`,
+            {button &&
+              React.cloneElement(button, {
+                buttonText: `Show all ${slide.title} products`,
               })}
           </div>
         );
       })}
-      <div className="slider-buttons">
-        {images.map((slide) => {
+      <div className={styles["slider-buttons"]}>
+        {imagesArray.map((slide) => {
           return (
             <div
               key={slide.id}
               onClick={() => goToSlide(slide.id)}
-              className={`slider-buttons__button ${
+              className={`${styles["slider-buttons__button"]} ${
                 slide.id === curSlide ? "active" : ""
               }`}
             ></div>
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }

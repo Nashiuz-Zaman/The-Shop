@@ -3,23 +3,28 @@ import styles from "./Showcase.module.css";
 
 export default function Showcase({
   title = "",
-  children = undefined,
-  source = undefined,
+  imageSource = undefined,
+  extraClass = [],
 }) {
   return (
-    <div className="container">
-      <section className={styles["showcase"]}>
-        {title && <h2 className="section__title">{title}</h2>}
+    <div
+      className={`${styles["showcase"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
+      }`}
+    >
+      {title && <h2 className="section__title">{title}</h2>}
+      {imageSource === undefined ? (
+        <p>Please provide image</p>
+      ) : (
         <div
-          className={styles["showcase__img"]}
+          className={styles["showcase__imgbox"]}
           style={{
-            background: `url(${source ?? "Please provide image"})`,
+            background: `url(${imageSource})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         ></div>
-        {children && children}
-      </section>
+      )}
     </div>
   );
 }

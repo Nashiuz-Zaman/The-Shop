@@ -101,3 +101,20 @@ body {
 .darkwhiteBackground-opacity-low {
   background-color: rgba($darkWhite, 0.8);
 }
+
+.section-margin {
+  margin-bottom: $sectionMargin !important;
+}
+
+.showcase-headingdescbtn-container {
+  position: relative !important;
+}
+
+.button-grouping {
+  display: flex;
+  gap: 1rem;
+}
+
+.active-fade-carousel {
+  opacity: 1 !important;
+}

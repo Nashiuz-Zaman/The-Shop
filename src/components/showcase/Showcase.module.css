@@ -1,8 +1,7 @@
 .showcase {
   width: 100%;
-  position: relative;
-  margin-bottom: 9.6rem; }
-  .showcase__img {
+  position: relative; }
+  .showcase__imgbox {
     width: 100%;
     aspect-ratio: 16/9; }
 

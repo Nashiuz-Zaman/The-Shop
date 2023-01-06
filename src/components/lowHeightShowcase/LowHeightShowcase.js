@@ -6,42 +6,24 @@ import styles from "./LowHeightShowcase.module.css";
 
 export default function LowHeightShowcase({
   title = "",
-  heading = "",
-  subheading = "",
-  buttonText = "",
-  children = null,
-  extraClassName = {},
-  imgSrc = "",
+  extraClassName = [],
+  imageSource = "",
 }) {
   return (
-    <section className={styles["low-height-showcase"]}>
+    <div
+      className={`${styles["low-height-showcase"]} ${
+        extraClassName.length > 0 ? extraClassName.join(" ") : "default class"
+      }`}
+    >
       {title && <h2 className="section-title">{title}</h2>}
       <div
         className={styles["low-height-showcase__img"]}
         style={{
-          background: `url(${imgSrc})`,
+          background: `url(${imageSource})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       ></div>
-
-      <div
-        className={`${styles["low-height-showcase__textbox"]} ${
-          extraClassName.position ?? "no-special-position"
-        }`}
-      >
-        {heading && (
-          <h3 className={styles["low-height-showcase__textbox--heading"]}>
-            {heading}
-          </h3>
-        )}
-        {subheading && (
-          <p className={styles["low-height-showcase__textbox--subheading"]}>
-            {subheading}
-          </p>
-        )}
-        {buttonText && React.cloneElement(children, { buttonText: buttonText })}
-      </div>
-    </section>
+    </div>
   );
 }

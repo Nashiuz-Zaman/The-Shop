@@ -1,0 +1,15 @@
+.plain-button:link, .plain-button:visited {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #111;
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+  text-transform: capitalize; }
+.plain-button:hover, .plain-button:active {
+  background-color: #fa5252;
+  color: #fff; }
+
+/*# sourceMappingURL=PlainButton.module.css.map */

@@ -33,3 +33,9 @@
   background-color: $lightRed;
   color: $white;
 }
+
+// image container size mixin
+@mixin widescreenImageContainer {
+  width: 100%;
+  aspect-ratio: 16/9;
+}

@@ -76,4 +76,17 @@ body {
 .darkwhiteBackground-opacity-low {
   background-color: rgba(247, 247, 247, 0.8); }
 
+.section-margin {
+  margin-bottom: 9.6rem !important; }
+
+.showcase-headingdescbtn-container {
+  position: relative !important; }
+
+.button-grouping {
+  display: flex;
+  gap: 1rem; }
+
+.active-fade-carousel {
+  opacity: 1 !important; }
+
 /*# sourceMappingURL=index.css.map */

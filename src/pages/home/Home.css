@@ -1,19 +1,40 @@
-.refresh-closet {
-  align-items: center; }
-  .refresh-closet h3[class*="heading"] {
-    font-size: 6.5rem !important;
-    text-align: center !important; }
-  .refresh-closet p[class*="subheading"] {
-    width: 25% !important;
-    text-align: center !important; }
+.slogan div[class*="fade-carousel-nobtn__slide"] {
+  top: 2rem !important;
+  left: -2rem !important; }
 
-.basketball-essentials {
+.refresh-closet div[class*="textbox"] {
+  align-items: center !important; }
+.refresh-closet h3[class*="heading"] {
+  font-size: 6.5rem !important;
+  text-align: center !important; }
+.refresh-closet p[class*="subheading"] {
   width: 25% !important;
-  align-items: flex-start; }
-  .basketball-essentials h3[class*="heading"] {
-    font-size: 5.5rem !important; }
+  text-align: center !important; }
 
-.football-tennis {
-  align-items: flex-start; }
+.classics h3[class*="heading"] {
+  font-size: 5.5rem; }
+.classics p[class*="subheading"] {
+  font-weight: 300 !important; }
+
+.basketball-essentials div[class*="textbox"] {
+  width: 25%; }
+.basketball-essentials h3[class*="heading"] {
+  font-size: 6.5rem !important; }
+.basketball-essentials p[class*="subheading"] {
+  font-weight: 300 !important; }
+
+.signup {
+  background-color: #111;
+  padding: 3rem 4rem; }
+  .signup h3[class*="heading"] {
+    font-size: 6.5rem !important;
+    width: 50% !important; }
+  .signup p[class*="subheading"] {
+    font-weight: 300 !important; }
+  .signup div[class*="textbox"] {
+    margin-top: 0 !important; }
+  .signup div[class*="fade-carousel-nobtn__slide"] {
+    background-size: contain !important;
+    background-repeat: no-repeat !important; }
 
 /*# sourceMappingURL=Home.css.map */

@@ -1,7 +1,8 @@
 .heading-desc-btn-textbox {
   margin-top: 2rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: flex-start; }
   .heading-desc-btn-textbox__heading {
     font-family: "Anton", sans-serif;
     font-size: 4rem;
@@ -15,18 +16,5 @@
     text-align: left;
     margin-bottom: 3.2rem;
     text-transform: none; }
-  .heading-desc-btn-textbox__button:link, .heading-desc-btn-textbox__button:visited {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.7rem;
-    color: #fff;
-    background-color: #111;
-    padding: 1rem 2rem;
-    transition: all 0.3s;
-    text-transform: capitalize; }
-  .heading-desc-btn-textbox__button:hover, .heading-desc-btn-textbox__button:active {
-    background-color: #fa5252;
-    color: #fff; }
 
 /*# sourceMappingURL=HeadingDescBtn.module.css.map */
