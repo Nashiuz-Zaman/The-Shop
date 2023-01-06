@@ -1,0 +1,14 @@
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+  .link-group__heading {
+    font-weight: 500;
+    text-transform: uppercase; }
+  .link-group__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none; }
+
+/*# sourceMappingURL=LinkGroup.module.css.map */

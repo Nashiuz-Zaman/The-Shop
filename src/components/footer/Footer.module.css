@@ -1,0 +1,10 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  margin-top: auto; }
+  .footer__links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; }
+
+/*# sourceMappingURL=Footer.module.css.map */

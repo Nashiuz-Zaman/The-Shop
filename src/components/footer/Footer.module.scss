@@ -1,0 +1,13 @@
+@import "../../scss/variables";
+
+.footer {
+  background-color: $brandPrimary;
+  color: $white;
+  margin-top: auto;
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

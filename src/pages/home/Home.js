@@ -97,7 +97,7 @@ export default function Home() {
             heading={"FOREVER. CLASSIC."}
             subheading={"Shop classics Old & New"}
             buttonText={"Shop Now"}
-            button={<ButtonOnImage />}
+            button={<ButtonOnImage rightArrow={false} />}
           />
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function Home() {
               "position-bottom-left",
               "textbox-light-font",
             ]}
-            button={<PlainButton toUrl={"#"} />}
+            button={<PlainButton toUrl={"#"} rightArrow={false} />}
           />
         </div>
       </section>
