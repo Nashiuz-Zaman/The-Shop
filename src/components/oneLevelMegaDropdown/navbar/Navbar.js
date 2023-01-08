@@ -25,7 +25,7 @@ export default function Navbar() {
                 {capitalizeStr(option)}
               </Link>
               <div className="dropdown-container">
-                <Dropdown mainNavOption={option} />
+                <Dropdown navbarMainOption={option} />
               </div>
             </li>
           );

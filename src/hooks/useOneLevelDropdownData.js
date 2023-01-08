@@ -2,6 +2,146 @@ export default function useOneLevelDropdownData() {
   const mainNavOptions = ["men", "women", "kids", "sale"];
 
   //data structure for the dropdown menu
+  const dropdownMenuOptions = {
+    men: [
+      {
+        heading: { text: "Shoes", link: undefined },
+        options: [
+          { text: "All Shoes", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Clothing", link: undefined },
+        options: [
+          { text: "All Clothing", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Collection", link: undefined },
+        options: [
+          { text: "All Collection", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Accesories & Equipments", link: undefined },
+        options: [
+          { text: "All Accesories & Equipments", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+    ],
+
+    women: [
+      {
+        heading: { text: "Shoes", link: undefined },
+        options: [
+          { text: "All Shoes", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Clothing", link: undefined },
+        options: [
+          { text: "All Clothing", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Collection", link: undefined },
+        options: [
+          { text: "All Collection", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Accesories & Equipments", link: undefined },
+        options: [
+          { text: "All Accesories & Equipments", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+    ],
+
+    kids: [
+      {
+        heading: { text: "Shoes", link: undefined },
+        options: [
+          { text: "All Shoes", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Clothing", link: undefined },
+        options: [
+          { text: "All Clothing", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Accesories & Equipments", link: undefined },
+        options: [
+          { text: "All Accesories & Equipments", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+    ],
+
+    sale: [
+      {
+        heading: { text: "Shoes", link: undefined },
+        options: [
+          { text: "All Shoes", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Clothing", link: undefined },
+        options: [
+          { text: "All Clothing", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+      {
+        heading: { text: "Accesories & Equipments", link: undefined },
+        options: [
+          { text: "All Accesories & Equipments", link: "#" },
+          { text: "Nike", link: "#" },
+          { text: "Adidas", link: "#" },
+          { text: "Puma", link: "#" },
+        ],
+      },
+    ],
+  };
+
   const allOptions = {
     men: {
       shoes: ["All Shoes", "Nike", "Adidas", "Puma"],
@@ -43,5 +183,5 @@ export default function useOneLevelDropdownData() {
     },
   };
 
-  return { mainNavOptions, allOptions };
+  return { mainNavOptions, allOptions, dropdownMenuOptions };
 }

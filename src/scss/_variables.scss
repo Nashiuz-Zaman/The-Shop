@@ -2,6 +2,7 @@
 $brandPrimary: #111;
 $brandSecondary: #f1f3f5;
 $white: #fff;
+$gray: darken($white, 50%);
 $darkWhite: darken($white, 3%);
 $black: #000;
 $lightBlack: lighten($black, 30%);
@@ -13,6 +14,7 @@ $anton: "Anton", sans-serif;
 
 //effects
 $animate: all 0.3s;
+$animateFast: all 0.2s;
 
 //spacing
 $smallMargin: 1.2rem;

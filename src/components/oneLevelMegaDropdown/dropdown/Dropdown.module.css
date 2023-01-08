@@ -1,0 +1,24 @@
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; }
+  .dropdown div[class*="link-group"] h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #000;
+    letter-spacing: 0.1rem; }
+  .dropdown div[class*="link-group"] a:link,
+  .dropdown div[class*="link-group"] a:visited {
+    display: block;
+    font-weight: 400;
+    color: gray;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.2s; }
+  .dropdown div[class*="link-group"] a:hover,
+  .dropdown div[class*="link-group"] a:active {
+    color: #000; }
+
+/*# sourceMappingURL=Dropdown.module.css.map */

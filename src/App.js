@@ -15,7 +15,8 @@ import Footer from "./components/footer/Footer";
 import useLinkGroups from "./hooks/useLinkGroups";
 
 function App() {
-  const { footerOptions } = useLinkGroups();
+  const { footerOptions, logoButtonData, footerBottomOptions } =
+    useLinkGroups();
 
   return (
     <div className="App">
@@ -29,7 +30,12 @@ function App() {
           <Route path="/kids" element={<Kids />} />
           <Route path="/sale" element={<Sale />} />
         </Routes>
-        <Footer optionsArray={footerOptions} />
+        <Footer
+          organizationName="The Shop"
+          optionsArray={footerOptions}
+          logoButtonsArray={logoButtonData}
+          bottomOptionsArray={footerBottomOptions}
+        />
       </BrowserRouter>
     </div>
   );

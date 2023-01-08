@@ -47,10 +47,6 @@
         top: 5rem;
         left: 0;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
         pointer-events: none;
         transition: all 0.3s;
         background-color: #f7f7f7;
@@ -63,7 +59,7 @@
         visibility: visible;
         opacity: 1;
         pointer-events: auto; }
-        .navbar .navigation-menu__item:hover .dropdown-container .subnav {
+        .navbar .navigation-menu__item:hover .dropdown-container .dropdown {
           opacity: 1;
           transform: translateY(0%); }
 
