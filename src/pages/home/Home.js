@@ -1,3 +1,6 @@
+//react
+import { useContext } from "react";
+
 //components
 //////////////////////////////////
 //////////////////////////////////
@@ -13,6 +16,12 @@ import FadeCarouselNoBtn from "../../components/fadeCarouselNoBtn/FadeCarouselNo
 import GridShowcase from "../../components/gridShowcase/GridShowcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import PlainButton from "../../components/plainButton/PlainButton";
+
+//context
+//////////////////////////////////
+//////////////////////////////////
+//////////////////////////////////
+import { MediaQueryContext } from "../../contexts/MediaQueryContext";
 
 //styles
 //////////////////////////////////
@@ -39,6 +48,7 @@ import useImportGridShowcaseHome from "../../hooks/useImportGridShowcaseHome";
 import usePerks from "../../hooks/usePerks";
 
 export default function Home() {
+  const { mediaQueryState } = useContext(MediaQueryContext);
   const { largeCarouselHomepageImages } =
     useImportLargeCarouselHomepageImages();
   const { fadeCarouselTopHomepage, fadeCarouselBrandLogos } =
@@ -60,8 +70,16 @@ export default function Home() {
       <section className="all-products-brands">
         <LargeCarousel
           imagesArray={largeCarouselHomepageImages}
+          // Check screen size and pass extraclass prop into the ButtonOnImage component based on the screen size
           button={
-            <ButtonOnImage extraClass={["position-bottom-left", "absolute"]} />
+            <ButtonOnImage
+              rightArrow={
+                mediaQueryState.mobileMatches ||
+                mediaQueryState.smallTabletMatches
+                  ? true
+                  : false
+              }
+            />
           }
         />
       </section>

@@ -2,9 +2,44 @@
 @import "../../scss/mixin";
 
 .slogan {
-  div[class*="fade-carousel-nobtn__slide"] {
-    top: 2rem !important;
-    left: -2rem !important;
+  margin-bottom: $mediumMargin;
+}
+
+.all-products-brands {
+  div[class*="button-on-image"] {
+    position: absolute;
+    bottom: 7rem;
+    left: 7rem;
+
+    @media (max-width: 768px) {
+      position: static;
+      bottom: initial;
+      left: initial;
+    }
+
+    a[class*="button"]:link,
+    a[class*="button"]:visited {
+      @media (max-width: 768px) {
+        width: 100%;
+        background-color: $brandSecondary;
+        color: $black;
+        padding: 2rem 2rem;
+        text-align: center;
+        font-size: 2.4rem;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    a[class*="button"]:hover,
+    a[class*="button"]:active {
+      @media (max-width: 768px) {
+        background-color: $lightRed;
+        color: $white;
+      }
+    }
   }
 }
 

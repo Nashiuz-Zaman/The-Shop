@@ -1,25 +1,45 @@
-.large-carousel {
+.large-carousel__container-main {
   width: 100%;
-  position: relative !important;
+  position: relative;
   overflow: hidden;
-  aspect-ratio: 16/8;
   margin-bottom: 9.6rem; }
-  .large-carousel__slide {
+  .large-carousel__container-main__inner-container {
     width: 100%;
-    height: 100%;
+    position: relative;
+    aspect-ratio: 16 / 8; }
+    @media (max-width: 768px) {
+      .large-carousel__container-main__inner-container {
+        aspect-ratio: 16/12; } }
+    .large-carousel__container-main__inner-container .large-carousel__container-imagebox-button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 1s; }
+    .large-carousel__container-main__inner-container .imagebox {
+      width: 100%;
+      height: 100%; }
+  .large-carousel__container-main .slider-buttons {
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 1s; }
-  .large-carousel .slider-buttons {
-    position: absolute;
-    bottom: 5rem;
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    bottom: 3rem;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 2; }
-    .large-carousel .slider-buttons__button {
+    transform: translateX(-50%); }
+    @media (max-width: 768px) {
+      .large-carousel__container-main .slider-buttons {
+        position: static !important;
+        bottom: initial;
+        left: initial;
+        transform: initial;
+        gap: 3.5rem; } }
+    .large-carousel__container-main .slider-buttons__button {
       width: 3rem;
       height: 0.7rem;
       background-color: #fff;
@@ -27,9 +47,12 @@
       cursor: pointer;
       opacity: 0.4;
       transition: all 0.3s; }
-      .large-carousel .slider-buttons__button:hover {
+      @media (max-width: 768px) {
+        .large-carousel__container-main .slider-buttons__button {
+          background-color: #000;
+          width: 5rem;
+          height: 0.6rem; } }
+      .large-carousel__container-main .slider-buttons__button:hover {
         opacity: 1; }
-    .large-carousel .slider-buttons .active {
-      opacity: 1; }
 
 /*# sourceMappingURL=LargeCarousel.module.css.map */

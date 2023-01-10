@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { MediaQueryContext } from "../../contexts/MediaQueryContext";
 import useAnimatedCarousel from "../../hooks/useAnimatedCarousel";
 
 //styles
@@ -10,6 +11,7 @@ export default function LargeCarousel({
   extraClass = [],
 }) {
   const [curSlide, setCurSlide] = useState(0);
+  const { mediaQueryState } = useContext(MediaQueryContext);
 
   const {
     handleMouseEnter,
@@ -29,31 +31,42 @@ export default function LargeCarousel({
 
   return (
     <div
-      className={`${styles["large-carousel"]} ${
-        extraClass.length > 0 ? extraClass.join(" ") : "default class"
-      }`}
+      className={`${styles["large-carousel__container-main"]} 
+      ${extraClass.length > 0 ? extraClass.join(" ") : "default class"}
+      `}
     >
-      {imagesArray.map((slide) => {
-        return (
-          <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className={styles["large-carousel__slide"]}
-            key={slide.id}
-            style={{
-              background: `url(${slide.url})`,
-              backgroundPosition: "top",
-              backgroundSize: "cover",
-              transform: `translateX(${100 * (slide.id - curSlide)}%)`,
-            }}
-          >
-            {button &&
-              React.cloneElement(button, {
-                buttonText: `Show all ${slide.title} products`,
-              })}
-          </div>
-        );
-      })}
+      <div
+        className={styles["large-carousel__container-main__inner-container"]}
+      >
+        {imagesArray.map((slide) => {
+          return (
+            <div
+              className={styles["large-carousel__container-imagebox-button"]}
+              key={slide.id}
+              style={{
+                transform: `translateX(${100 * (slide.id - curSlide)}%)`,
+              }}
+            >
+              <div
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                className={styles["imagebox"]}
+                style={{
+                  background: `url(${slide.url})`,
+                  backgroundPosition: "top",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+              {button &&
+                React.cloneElement(button, {
+                  key: slide.title,
+                  buttonText: `Show all ${slide.title} products`,
+                })}
+            </div>
+          );
+        })}
+      </div>
+
       <div className={styles["slider-buttons"]}>
         {imagesArray.map((slide) => {
           return (
@@ -61,7 +74,7 @@ export default function LargeCarousel({
               key={slide.id}
               onClick={() => goToSlide(slide.id)}
               className={`${styles["slider-buttons__button"]} ${
-                slide.id === curSlide ? "active" : ""
+                slide.id === curSlide ? "active-slider-button" : ""
               }`}
             ></div>
           );

@@ -86,6 +86,9 @@ body {
   display: flex;
   gap: 1rem; }
 
+.active-slider-button {
+  opacity: 1 !important; }
+
 .active-fade-carousel {
   opacity: 1 !important; }
 
