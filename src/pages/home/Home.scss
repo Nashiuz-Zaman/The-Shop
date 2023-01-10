@@ -3,6 +3,34 @@
 
 .slogan {
   margin-bottom: $mediumMargin;
+
+  div[class*="fade-carousel-nobtn__slide"] {
+    top: 1.5rem;
+    left: -2rem;
+  }
+}
+
+.slogan-small-screen {
+  div[class*="main-slogan"] {
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: -$smallMargin;
+    grid-template-columns: 1fr;
+  }
+
+  div[class*="fade-carousel-nobtn"] {
+    width: 90%;
+    aspect-ratio: 16/16;
+    margin: 2rem auto;
+
+    div[class*="fade-carousel-nobtn__slide"] {
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .all-products-brands {
@@ -10,36 +38,6 @@
     position: absolute;
     bottom: 7rem;
     left: 7rem;
-
-    @media (max-width: 768px) {
-      position: static;
-      bottom: initial;
-      left: initial;
-    }
-
-    a[class*="button"]:link,
-    a[class*="button"]:visited {
-      @media (max-width: 768px) {
-        width: 100%;
-        background-color: $brandSecondary;
-        color: $black;
-        padding: 2rem 2rem;
-        text-align: center;
-        font-size: 2.4rem;
-
-        &:before {
-          display: none;
-        }
-      }
-    }
-
-    a[class*="button"]:hover,
-    a[class*="button"]:active {
-      @media (max-width: 768px) {
-        background-color: $lightRed;
-        color: $white;
-      }
-    }
   }
 }
 
@@ -104,4 +102,55 @@
     background-size: contain !important;
     background-repeat: no-repeat !important;
   }
+}
+
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+// Media Queries
+
+@media (max-width: 480px) {
+  .perks {
+    margin-bottom: 2rem !important;
+  }
+
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
+
+  .all-products-brands {
+    div[class*="button-on-image"] {
+      position: static;
+      bottom: initial;
+      left: initial;
+      padding: 3rem 3rem 0;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+
+      a[class*="button"]:link,
+      a[class*="button"]:visited {
+        width: max-content;
+        color: $brandPrimary;
+        background-color: $white;
+        border: 0.1rem solid $brandPrimary;
+        padding: 2rem !important;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      a[class*="button"]:hover,
+      a[class*="button"]:active {
+        background-color: $lightRed;
+        color: $white;
+        border: 0.1rem solid $lightRed;
+      }
+    }
+  }
+
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
+  ////////////////////////////////////////////
 }

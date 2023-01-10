@@ -28,11 +28,11 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    bottom: 1rem;
     padding: 4rem;
-    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%); }
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       .large-carousel__container-main .slider-buttons {
         position: static !important;
         bottom: initial;
@@ -47,9 +47,9 @@
       cursor: pointer;
       opacity: 0.4;
       transition: all 0.3s; }
-      @media (max-width: 768px) {
+      @media (max-width: 850px) {
         .large-carousel__container-main .slider-buttons__button {
-          background-color: #000;
+          background-color: #111;
           width: 5rem;
           height: 0.6rem; } }
       .large-carousel__container-main .slider-buttons__button:hover {

@@ -41,4 +41,8 @@
       font-weight: 300;
       color: #000; }
 
+@media (max-width: 480px) {
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 85%; } }
+
 /*# sourceMappingURL=HorizontalScrollGallery.module.css.map */

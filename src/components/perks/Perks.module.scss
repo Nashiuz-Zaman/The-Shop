@@ -8,19 +8,25 @@
   margin-bottom: $mediumMargin;
   background-color: $brandSecondary;
 
-  @media (max-width: 768px) {
+  &__perk {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 480px) {
+  .perks {
+    padding: 6rem;
+    gap: 6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .perks {
     padding: 3rem 2rem;
     flex-direction: column;
     justify-content: initial;
     gap: 3rem;
-  }
-
-  &__perk {
-    font-size: 2.4rem;
-    font-weight: 400;
-
-    @media (max-width: 768px) {
-      // font-size: 1.6rem;
-    }
   }
 }

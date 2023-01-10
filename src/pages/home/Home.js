@@ -59,13 +59,49 @@ export default function Home() {
 
   return (
     <div className="home">
-      <section className="slogan">
-        <MainSlogan>
+      {/* render MainSlogan combined with FadeCarouselNoBtn if screen size matches
+      large tablets and computer screens */}
+      {(mediaQueryState.computerScreenMatches ||
+        mediaQueryState.largeTabletMatches) && (
+        <section className="slogan">
+          <MainSlogan
+            heading={
+              <>
+                New Year.
+                <br /> New Gear.
+              </>
+            }
+            subheading={
+              <>Give yourself a treat in {new Date().getFullYear() + 1}</>
+            }
+          >
+            <FadeCarouselNoBtn imagesArray={fadeCarouselTopHomepage} />
+          </MainSlogan>
+        </section>
+      )}
+      {/* render MainSlogan combined with FadeCarouselNoBtn if screen size matches
+      large tablets and computer screens */}
+      {(mediaQueryState.smallTabletMatches ||
+        mediaQueryState.mobileMatches) && (
+        <section className="slogan-small-screen">
+          <MainSlogan
+            heading={
+              <>
+                New Year.
+                <br /> New Gear.
+              </>
+            }
+            subheading={
+              <>Give yourself a treat in {new Date().getFullYear() + 1}</>
+            }
+          />
           <FadeCarouselNoBtn imagesArray={fadeCarouselTopHomepage} />
-        </MainSlogan>
-      </section>
+        </section>
+      )}
 
-      <Perks textArray={perksHomeTop} />
+      <section className="perks">
+        <Perks textArray={perksHomeTop} />
+      </section>
 
       <section className="all-products-brands">
         <LargeCarousel
@@ -76,18 +112,20 @@ export default function Home() {
               rightArrow={
                 mediaQueryState.mobileMatches ||
                 mediaQueryState.smallTabletMatches
-                  ? true
-                  : false
+                  ? false
+                  : true
               }
             />
           }
         />
       </section>
 
-      <HorizontalScrollGallery
-        title={"Popular Categories"}
-        images={popularCategoriesHomepage}
-      />
+      <section className="popular-categories">
+        <HorizontalScrollGallery
+          title={"Popular Categories"}
+          images={popularCategoriesHomepage}
+        />
+      </section>
 
       <section className="refresh-closet container section-margin">
         <div className="showcase-headingdescbtn-container">
@@ -102,7 +140,6 @@ export default function Home() {
           />
         </div>
       </section>
-
       <section className="classics section-margin">
         <div className="showcase-headingdescbtn-container">
           <LowHeightShowcase imageSource={classic} />
@@ -119,7 +156,6 @@ export default function Home() {
           />
         </div>
       </section>
-
       <section className="basketball-essentials section-margin container">
         <div className="showcase-headingdescbtn-container">
           <Showcase title={"Game Time"} imageSource={basketball} />
@@ -136,7 +172,6 @@ export default function Home() {
           />
         </div>
       </section>
-
       <section className="football-tennis section-margin container">
         <GridShowcase
           extraClass={["grid-2"]}
@@ -144,7 +179,6 @@ export default function Home() {
           button={<PlainButton toUrl={"#"} />}
         />
       </section>
-
       <div className="container section-margin">
         <section className="signup textbox-light-font grid-2">
           <div>

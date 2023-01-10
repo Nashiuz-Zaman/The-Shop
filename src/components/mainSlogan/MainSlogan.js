@@ -1,18 +1,16 @@
 //styles
 import styles from "./MainSlogan.module.css";
 
-export default function MainSlogan({ children = undefined }) {
+export default function MainSlogan({
+  children = undefined,
+  heading = "",
+  subheading = "",
+}) {
   return (
     <div className={styles["main-slogan"]}>
       <div className={styles["main-slogan__text-part"]}>
-        <h1 className={styles["main-slogan__heading"]}>
-          New Year
-          <br /> New Gear.
-        </h1>
-        <p className={styles["main-slogan__sub-heading"]}>
-          Give yourself a treat in
-          {` ${new Date().getFullYear() + 1}`}
-        </p>
+        <h1 className={styles["main-slogan__heading"]}>{heading}</h1>
+        <p className={styles["main-slogan__sub-heading"]}>{subheading}</p>
       </div>
 
       {children && children}

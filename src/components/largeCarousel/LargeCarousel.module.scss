@@ -39,12 +39,12 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    bottom: 1rem;
     padding: 4rem;
-    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
 
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       position: static !important;
       bottom: initial;
       left: initial;
@@ -61,8 +61,8 @@
       opacity: 0.4;
       transition: $animate;
 
-      @media (max-width: 768px) {
-        background-color: $black;
+      @media (max-width: 850px) {
+        background-color: $brandPrimary;
         width: 5rem;
         height: 0.6rem;
       }
