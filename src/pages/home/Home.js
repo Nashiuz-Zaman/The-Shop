@@ -16,6 +16,7 @@ import FadeCarouselNoBtn from "../../components/fadeCarouselNoBtn/FadeCarouselNo
 import GridShowcase from "../../components/gridShowcase/GridShowcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import PlainButton from "../../components/plainButton/PlainButton";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 //context
 //////////////////////////////////
@@ -75,7 +76,7 @@ export default function Home() {
               <>Give yourself a treat in {new Date().getFullYear() + 1}</>
             }
           >
-            <FadeCarouselNoBtn imagesArray={fadeCarouselTopHomepage} />
+            <FadeCarouselNoBtn imagesInfoArray={fadeCarouselTopHomepage} />
           </MainSlogan>
         </section>
       )}
@@ -95,7 +96,7 @@ export default function Home() {
               <>Give yourself a treat in {new Date().getFullYear() + 1}</>
             }
           />
-          <FadeCarouselNoBtn imagesArray={fadeCarouselTopHomepage} />
+          <FadeCarouselNoBtn imagesInfoArray={fadeCarouselTopHomepage} />
         </section>
       )}
 
@@ -121,15 +122,17 @@ export default function Home() {
       </section>
 
       <section className="popular-categories">
-        <HorizontalScrollGallery
+        <SectionTitle
           title={"Popular Categories"}
-          images={popularCategoriesHomepage}
+          extraClass={["section-title__padding"]}
         />
+        <HorizontalScrollGallery images={popularCategoriesHomepage} />
       </section>
 
-      <section className="refresh-closet container section-margin">
-        <div className="showcase-headingdescbtn-container">
-          <Showcase title={"Fashion"} imageSource={fashion} />
+      <section className="refresh-closet container">
+        <SectionTitle title={"Fashion"} />
+        <div className="positioning-container">
+          <Showcase imageSource={fashion} />
           <HeadingDescBtn
             heading={"Refresh your closet"}
             subheading={
@@ -140,48 +143,71 @@ export default function Home() {
           />
         </div>
       </section>
+
       <section className="classics section-margin">
-        <div className="showcase-headingdescbtn-container">
+        <div className="positioning-container">
           <LowHeightShowcase imageSource={classic} />
           <HeadingDescBtn
-            extraClass={[
-              "absolute",
-              "position-center-right",
-              "textbox-light-font",
-            ]}
+            extraClass={
+              (mediaQueryState.computerScreenMatches ||
+                mediaQueryState.largeTabletMatches) && [
+                "absolute",
+                "position-center-right",
+                "textbox-light-font",
+              ]
+            }
             heading={"FOREVER. CLASSIC."}
             subheading={"Shop classics Old & New"}
             buttonText={"Shop Now"}
-            button={<ButtonOnImage rightArrow={false} />}
+            button={
+              (mediaQueryState.computerScreenMatches ||
+                mediaQueryState.largeTabletMatches) === true ? (
+                <ButtonOnImage rightArrow={false} />
+              ) : (
+                <PlainButton rightArrow={false} />
+              )
+            }
           />
         </div>
       </section>
-      <section className="basketball-essentials section-margin container">
-        <div className="showcase-headingdescbtn-container">
-          <Showcase title={"Game Time"} imageSource={basketball} />
+
+      <section className="basketball-essentials container">
+        <SectionTitle title={"Game time"} />
+        <div className="positioning-container">
+          <Showcase imageSource={basketball} />
           <HeadingDescBtn
             heading={"Basketball Essentials"}
             subheading={"Everything you need for the court"}
             buttonText={"Shop"}
-            extraClass={[
-              "absolute",
-              "position-bottom-left",
-              "textbox-light-font",
-            ]}
+            extraClass={
+              (mediaQueryState.computerScreenMatches ||
+                mediaQueryState.largeTabletMatches) && [
+                "absolute",
+                "position-bottom-left",
+                "textbox-light-font",
+              ]
+            }
             button={<PlainButton toUrl={"#"} rightArrow={false} />}
           />
         </div>
       </section>
-      <section className="football-tennis section-margin container">
+
+      <section className="football-tennis">
+        <SectionTitle
+          title={"Built For Perfomance"}
+          extraClass={["section-title__padding"]}
+        />
         <GridShowcase
-          extraClass={["grid-2"]}
-          imagesArray={gridShowcaseHome}
-          button={<PlainButton toUrl={"#"} />}
+          extraClass={["grid-2", "container"]}
+          imagesInfoArray={gridShowcaseHome}
+          button={<PlainButton rightArrow={false} />}
         />
       </section>
-      <div className="container section-margin">
-        <section className="signup textbox-light-font grid-2">
-          <div>
+
+      <section className="signup container">
+        <SectionTitle title={"Free Membership"} />
+        <div className="signup-container textbox-light-font">
+          <div className="signup-container__text">
             <HeadingDescBtn
               heading="Become A Member"
               subheading="Sign up for free. Join the community."
@@ -193,11 +219,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <FadeCarouselNoBtn imagesArray={fadeCarouselBrandLogos} />
+          <div className="signup-container__carousel">
+            <FadeCarouselNoBtn imagesInfoArray={fadeCarouselBrandLogos} />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

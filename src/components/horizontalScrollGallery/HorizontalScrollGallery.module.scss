@@ -65,7 +65,19 @@
 }
 
 @media (max-width: 480px) {
-  .horizontal-scroll-gallery__scroller {
-    grid-auto-columns: 85%;
+  .horizontal-scroll-gallery {
+    ::-webkit-scrollbar-thumb {
+      background-color: darken($white, 60%) !important;
+      border-radius: 100rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: darken($white, 10%);
+      margin-inline: 5rem;
+    }
+
+    &__scroller {
+      grid-auto-columns: 85%;
+    }
   }
 }

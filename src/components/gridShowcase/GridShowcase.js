@@ -7,30 +7,27 @@ import React from "react";
 import styles from "./GridShowcase.module.css";
 
 export default function GridShowcase({
-  extraClass = [],
-  extraClassShowcase = [],
-  extraClassHeadingDescBtn = [],
-  imagesArray = [],
+  extraClass = undefined,
+  imagesInfoArray = undefined,
   button = undefined,
 }) {
   return (
     <div
       className={`${styles["grid-showcase"]} ${
-        extraClass.length > 0 ? extraClass.join(" ") : ""
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
     >
-      {imagesArray.map((image) => {
+      {imagesInfoArray.map((imageInfo) => {
         return (
           <div
-            key={image.id}
-            className={`${styles["grid-showcase__block"]} grid-showcase__block`}
+            key={imageInfo.id}
+            className={styles["grid-showcase__single-showcase-container"]}
           >
-            <Showcase imageSource={image.url} extraClass={extraClassShowcase} />
+            <Showcase imageSource={imageInfo.url} />
             <HeadingDescBtn
-              heading={image.heading}
-              subheading={image.subheading}
-              buttonText={`Shop For ${image.heading}`}
-              extraClass={extraClassHeadingDescBtn}
+              heading={imageInfo.heading}
+              subheading={imageInfo.subheading}
+              buttonText={`Shop For ${imageInfo.heading}`}
               button={button}
             />
           </div>

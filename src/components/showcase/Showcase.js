@@ -12,7 +12,6 @@ export default function Showcase({
         extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
     >
-      {title && <h2 className="section__title">{title}</h2>}
       {imageSource === undefined ? (
         <p>Please provide image</p>
       ) : (

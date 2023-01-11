@@ -1,8 +1,10 @@
 .showcase {
-  width: 100%;
-  position: relative; }
-  .showcase__imgbox {
-    width: 100%;
-    aspect-ratio: 16/9; }
+  display: block;
+  width: 100% !important;
+  aspect-ratio: 16/9; }
+  .showcase .showcase__imgbox {
+    display: block;
+    width: 100% !important;
+    height: 100%; }
 
 /*# sourceMappingURL=Showcase.module.css.map */

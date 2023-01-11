@@ -1,4 +1,6 @@
-.grid-showcase__block {
-  position: relative; }
+.grid-showcase {
+  width: 100%; }
+  .grid-showcase__single-showcase-container {
+    width: 100% !important; }
 
 /*# sourceMappingURL=GridShowcase.module.css.map */

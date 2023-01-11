@@ -19,12 +19,12 @@ import styles from "./FadeCarouselNoBtn.module.css";
 //////////////////////////////////
 
 export default function FadeCarouselNoBtn({
-  imagesArray = [],
+  imagesInfoArray = [],
   extraClass = [],
 }) {
   const [curSlide, setCurSlide] = useState(0);
   const { activateCarousel, deactivateCarousel } = useAnimatedCarousel(
-    imagesArray,
+    imagesInfoArray,
     curSlide,
     setCurSlide,
     2500
@@ -44,15 +44,15 @@ export default function FadeCarouselNoBtn({
         extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
     >
-      {imagesArray.map((slide) => {
+      {imagesInfoArray.map((imageInfo) => {
         return (
           <div
-            key={slide.id}
+            key={imageInfo.id}
             className={`${styles["fade-carousel-nobtn__slide"]} ${
-              slide.id === curSlide ? "active-fade-carousel" : ""
+              imageInfo.id === curSlide ? "active-fade-carousel" : ""
             }`}
             style={{
-              background: `url(${slide.url})`,
+              background: `url(${imageInfo.url})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}

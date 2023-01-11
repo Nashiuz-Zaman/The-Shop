@@ -8,7 +8,7 @@ import useShuffleArr from "../../hooks/useShuffleArr.js";
 //styles
 import styles from "./HorizontalScrollGallery.module.css";
 
-export default function HorizontalScrollGallery({ title = "", images = [] }) {
+export default function HorizontalScrollGallery({ images = [] }) {
   const [galleryItems, setGalleryItems] = useState([]);
   const { shuffleArr } = useShuffleArr();
 
@@ -18,8 +18,6 @@ export default function HorizontalScrollGallery({ title = "", images = [] }) {
 
   return (
     <section className={styles["horizontal-scroll-gallery"]}>
-      <h2 className="section__title section__title--padding">{title}</h2>
-
       <div className={styles["horizontal-scroll-gallery__scroller"]}>
         {galleryItems.map((item) => {
           return (

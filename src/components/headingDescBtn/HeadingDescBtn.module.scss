@@ -15,3 +15,18 @@
     @include subheading(_, none);
   }
 }
+
+@media (max-width: 480px) {
+  .heading-desc-btn-textbox {
+    align-items: flex-start !important;
+
+    &__heading {
+      @include heading(3rem !important);
+    }
+
+    &__subheading {
+      @include subheading(_, none);
+      font-size: 1.4rem !important;
+    }
+  }
+}
