@@ -1,4 +1,4 @@
-export default function useOneLevelDropdownData() {
+export default function useNavigationOptionsData() {
   const mainNavOptions = ["men", "women", "kids", "sale"];
 
   //data structure for the dropdown menu
@@ -142,46 +142,26 @@ export default function useOneLevelDropdownData() {
     ],
   };
 
-  const allOptions = {
-    men: {
-      shoes: ["All Shoes", "Nike", "Adidas", "Puma"],
-      clothing: ["All Clothing", "Nike", "Adidas", "Puma"],
-      shop_collection: ["All Collection", "Nike", "Adidas", "Puma"],
-      accesories_and_equipment: [
-        "All Accesories & Equipments",
-        "Nike",
-        "Adidas",
-        "Puma",
+  const mobileNavOptions = [
+    {
+      id: "main",
+      options: [
+        { text: "Men", id: 0, nextMenu: "men" },
+        { text: "Women", id: 1, nextMenu: "women" },
+        { text: "Kids", id: 2, nextMenu: "kids" },
+        { text: "Sale", id: 3, nextMenu: "sale" },
       ],
     },
-    women: {
-      shoes: ["All Shoes", "Nike", "Adidas", "Puma"],
-      clothing: ["All Clothing", "Nike", "Adidas", "Puma"],
-      shop_collection: ["All Collection", "Nike", "Adidas", "Puma"],
-      accesories_and_equipment: [
-        "All Accesories & Equipments",
-        "Nike",
-        "Adidas",
-        "Puma",
+    {
+      id: "men",
+      options: [
+        { text: "Shoes", id: 0, nextMenu: "men-shoes" },
+        { text: "Clothing", id: 1, nextMenu: "men-clothing" },
+        { text: "Collection", id: 2, nextMenu: "men-collection" },
+        { text: "Accesories & Equipments", id: 3, nextMenu: "men-accesories" },
       ],
     },
-    kids: {
-      shoes: ["All Shoes", "Nike", "Adidas", "Puma"],
-      clothing: ["All Clothing", "Nike", "Adidas", "Puma"],
-      shop_collection: ["All Collection", "Nike", "Adidas", "Puma"],
-      accesories_and_equipment: [
-        "All Accesories & Equipments",
-        "Nike",
-        "Adidas",
-        "Puma",
-      ],
-    },
-    sale: {
-      shoes: ["All Shoes", "Nike", "Adidas", "Puma"],
-      clothing: ["All Clothing", "Nike", "Adidas", "Puma"],
-      shop_collection: ["All Collection", "Nike", "Adidas", "Puma"],
-    },
-  };
+  ];
 
-  return { mainNavOptions, allOptions, dropdownMenuOptions };
+  return { mainNavOptions, dropdownMenuOptions, mobileNavOptions };
 }

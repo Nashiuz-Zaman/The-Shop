@@ -1,5 +1,6 @@
 //react
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
 
 //components
 import Logobar from "./components/logobar/Logobar";
@@ -10,11 +11,19 @@ import Women from "./pages/women/Women";
 import Kids from "./pages/kids/Kids";
 import Sale from "./pages/sale/Sale";
 import Footer from "./components/footer/Footer";
+import MobileNavigation from "./components/mobileNavigation/MobileNavigation";
+
+//context
+import { MediaQueryContext } from "./contexts/MediaQueryContext";
 
 //custom hooks
 import useLinkGroups from "./hooks/useLinkGroups";
+import useNavigationOptionsData from "./hooks/useNavigationOptionsData";
 
 function App() {
+  const { mediaQueryState } = useContext(MediaQueryContext);
+  const { mainNavOptions, dropdownMenuOptions, mobileNavOptions } =
+    useNavigationOptionsData();
   const { footerOptions, logoButtonData, footerBottomOptions } =
     useLinkGroups();
 
@@ -22,7 +31,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Logobar />
-        <Navbar />
+        {mediaQueryState.computerScreenMatches && (
+          <Navbar
+            mainNavOptions={mainNavOptions}
+            dropdownMenuOptions={dropdownMenuOptions}
+          />
+        )}
+        {!mediaQueryState.computerScreenMatches && (
+          <MobileNavigation mainNavOptions={mobileNavOptions} />
+        )}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<Men />} />

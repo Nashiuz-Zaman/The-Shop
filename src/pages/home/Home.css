@@ -7,7 +7,6 @@
 .slogan-small-screen div[class*="main-slogan"] {
   margin: 0 auto;
   padding: 2rem;
-  margin-top: -1.2rem;
   grid-template-columns: 1fr; }
 .slogan-small-screen div[class*="fade-carousel-nobtn"] {
   width: 90%;

@@ -1,14 +1,13 @@
 //components
 import LinkGroup from "../../linkGroup/LinkGroup";
 
-//custom hooks
-import useOneLevelDropdownData from "../../../hooks/useOneLevelDropdownData";
-
 //styles
 import styles from "./Dropdown.module.css";
 
-export default function Dropdown({ navbarMainOption }) {
-  const { dropdownMenuOptions } = useOneLevelDropdownData();
+export default function Dropdown({
+  navbarMainOption = undefined,
+  dropdownMenuOptions = undefined,
+}) {
   const dropdownOptionsForMainOption =
     dropdownMenuOptions[`${navbarMainOption}`];
 
