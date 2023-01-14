@@ -1,10 +1,12 @@
 .mobile-navigation-list {
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   transform: translateX(100%);
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.25s;
+  background-color: #fff; }
   .mobile-navigation-list__closelisticon-container .closelisticon {
     background: none;
     border: none;
@@ -26,28 +28,22 @@
     justify-content: center;
     align-items: center;
     margin-right: auto;
-    width: 6.5rem;
-    height: 6.5rem; }
+    gap: 1.5rem;
+    padding: 5rem 3.5rem 4rem; }
+  .mobile-navigation-list__leftcareticon-container span {
+    display: block;
+    font-size: 1.6rem; }
   .mobile-navigation-list__leftcareticon-container img {
     display: block;
-    width: 2.5rem;
-    height: 2.5rem;
+    height: 2.2rem;
     color: #111; }
   .mobile-navigation-list__list-of-options {
-    padding: 0 3rem;
+    padding: 0 3.5rem;
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 2.5rem; }
-    .mobile-navigation-list__list-of-options__single-option span {
-      font-size: 2.4rem;
-      text-transform: capitalize;
-      color: #111;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
-    .mobile-navigation-list__list-of-options__single-option a:link,
-    .mobile-navigation-list__list-of-options__single-option a:visited {
+    .mobile-navigation-list__list-of-options__heading span {
       font-size: 2.4rem;
       text-decoration: none;
       text-transform: capitalize;
@@ -55,8 +51,33 @@
       display: flex;
       align-items: center;
       justify-content: space-between; }
-    .mobile-navigation-list__list-of-options__single-option img {
-      height: 2.2rem; }
+    .mobile-navigation-list__list-of-options__heading a:link,
+    .mobile-navigation-list__list-of-options__heading a:visited {
+      font-size: 2.4rem;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .mobile-navigation-list__list-of-options__single-option span {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .mobile-navigation-list__list-of-options__single-option a:link,
+    .mobile-navigation-list__list-of-options__single-option a:visited {
+      font-size: 1.6rem;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .mobile-navigation-list__list-of-options img {
+      height: 2rem; }
 
 .open {
   transform: translateX(0%) !important; }

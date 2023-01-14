@@ -4,7 +4,7 @@
   position: -webkit-sticky;
   top: 0;
   left: 0;
-  z-index: 1000; }
+  z-index: 100; }
   .mobile-nav__container {
     position: fixed;
     top: 0;
@@ -15,8 +15,7 @@
     overflow-y: scroll;
     z-index: 1000;
     transform: translateX(100%);
-    transition: all 0.3s ease-in-out;
-    background-color: #fff; }
+    transition: all 0.25s; }
     .mobile-nav__container--open {
       transform: translateX(0%); }
 

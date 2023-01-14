@@ -12,6 +12,7 @@ import Kids from "./pages/kids/Kids";
 import Sale from "./pages/sale/Sale";
 import Footer from "./components/footer/Footer";
 import MobileNavigation from "./components/mobileNavigation/MobileNavigation";
+import BackdropBlur from "./components/backdropBlur/BackdropBlur";
 
 //context
 import { MediaQueryContext } from "./contexts/MediaQueryContext";
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <BackdropBlur />
       <BrowserRouter>
         <Logobar />
         {mediaQueryState.computerScreenMatches && (

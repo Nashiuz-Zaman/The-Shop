@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import closelisticon from "../../assets/closelisticon.svg";
 import rightcaret from "../../assets/caret-right.svg";
 import leftcaret from "../../assets/caret-left.svg";
+import rightcaretGray from "../../assets/caret-right-gray.svg";
 
 //styles
 import styles from "./MobileNavigationList.module.css";
@@ -13,16 +14,19 @@ export default function MobileNavigationList({
   navigationOptions = undefined,
   handleCloseClick,
   currentMenu,
-  previousMenu,
+
   handleMenuChangeForward,
   handleMenuChangeBackward,
+  previousMenuArray,
 }) {
   return (
     <div
       className={`${styles["mobile-navigation-list"]} ${
         currentMenu === navigationOptions.id ? styles["open"] : ""
       } ${
-        previousMenu === navigationOptions.id ? styles["previously-opened"] : ""
+        previousMenuArray.includes(navigationOptions.id)
+          ? styles["previously-opened"]
+          : ""
       }`}
     >
       {navigationOptions.id === "main" && (
@@ -53,22 +57,61 @@ export default function MobileNavigationList({
       )}
 
       <ul className={styles["mobile-navigation-list__list-of-options"]}>
+        {navigationOptions.heading !== undefined && (
+          <li
+            onClick={() => {
+              if (navigationOptions.heading.link) {
+                handleCloseClick();
+              }
+            }}
+            className={
+              styles["mobile-navigation-list__list-of-options__heading"]
+            }
+          >
+            <Link to={navigationOptions.heading.link}>
+              {navigationOptions.heading.text}
+            </Link>
+          </li>
+        )}
+
         {navigationOptions.options.map((option) => {
-          return (
+          return navigationOptions.id === "main" ? (
             <li
               onClick={() => {
-                previousMenu = currentMenu;
-                handleMenuChangeForward(option);
+                option.link !== undefined
+                  ? handleCloseClick()
+                  : handleMenuChangeForward(option);
+              }}
+              key={option.id}
+              className={
+                styles["mobile-navigation-list__list-of-options__heading"]
+              }
+            >
+              <span>
+                {option.text}
+                <img src={rightcaret} alt={"right caret"} />
+              </span>
+            </li>
+          ) : (
+            <li
+              onClick={() => {
+                option.link !== undefined
+                  ? handleCloseClick()
+                  : handleMenuChangeForward(option);
               }}
               className={
                 styles["mobile-navigation-list__list-of-options__single-option"]
               }
               key={option.id}
             >
-              <Link to={"#"}>
-                {option.text}
-                <img src={rightcaret} alt={"right caret"} />
-              </Link>
+              {option.link === undefined ? (
+                <span>
+                  {option.text}
+                  <img src={rightcaretGray} alt={"right caret"} />
+                </span>
+              ) : (
+                <Link to={option.link}>{option.text}</Link>
+              )}
             </li>
           );
         })}
