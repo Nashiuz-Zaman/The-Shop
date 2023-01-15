@@ -87,9 +87,15 @@ body {
 .active-fade-carousel {
   opacity: 1 !important; }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   .grid-2 {
     grid-template-columns: 1fr;
-    gap: 3rem; } }
+    gap: 3rem; }
+
+  .container {
+    padding: 0 3.5rem; }
+
+  .section-title__padding {
+    padding: 0 3.5rem; } }
 
 /*# sourceMappingURL=index.css.map */

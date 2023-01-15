@@ -64,7 +64,8 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
+  //480px
   .horizontal-scroll-gallery {
     ::-webkit-scrollbar-thumb {
       background-color: darken($white, 60%) !important;
@@ -73,11 +74,12 @@
 
     ::-webkit-scrollbar-track {
       background-color: darken($white, 10%);
-      margin-inline: 5rem;
+      margin-inline: 3.5rem !important;
     }
 
     &__scroller {
       grid-auto-columns: 85%;
+      scroll-padding-inline: 3.5rem !important;
     }
   }
 }

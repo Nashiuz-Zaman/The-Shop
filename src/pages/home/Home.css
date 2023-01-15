@@ -47,7 +47,7 @@
   .basketball-essentials h3[class*="heading"] {
     font-size: 6.5rem; }
   .basketball-essentials p[class*="subheading"] {
-    font-weight: 300; }
+    font-weight: 400; }
 
 .football-tennis {
   margin-bottom: 9.6rem; }
@@ -75,6 +75,15 @@
       background-repeat: no-repeat !important; }
 
 @media (max-width: 30em) {
+  .slogan-small-screen div[class*="main-slogan"] {
+    margin: 0 auto;
+    padding: 1rem;
+    grid-template-columns: 1fr; }
+  .slogan-small-screen h1[class*="heading"] {
+    font-size: 3.6rem; }
+  .slogan-small-screen p[class*="sub-heading"] {
+    font-size: 1.3rem; }
+
   .perks {
     margin-bottom: 2rem !important; }
 
@@ -162,7 +171,8 @@
       text-align: center;
       font-weight: 400;
       font-size: 6rem !important;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      line-height: 1.1 !important; }
     .signup-container p[class*="subheading"] {
       margin-bottom: 3rem;
       font-size: 1.6rem !important; }
@@ -181,5 +191,22 @@
       font-size: 1.4rem !important; }
     .signup-container a[class*="plain-button"]:link, .signup-container a[class*="plain-button"]:visited {
       font-size: 1.5rem !important; } }
+@media (max-width: 23em) {
+  .slogan-small-screen h1[class*="heading"] {
+    font-size: 3.3rem; }
+  .slogan-small-screen p[class*="sub-heading"] {
+    font-size: 1.3rem; }
+
+  .signup-container {
+    padding: 2rem;
+    gap: 5rem; }
+    .signup-container__carousel {
+      height: 20rem; }
+    .signup-container h3[class*="heading"] {
+      font-size: 4.5rem !important; }
+    .signup-container p[class*="subheading"] {
+      font-size: 1.25rem !important; }
+    .signup-container a[class*="plain-button"]:link, .signup-container a[class*="plain-button"]:visited {
+      font-size: 1.3rem !important; } }
 
 /*# sourceMappingURL=Home.css.map */

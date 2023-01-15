@@ -16,7 +16,8 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
+  //480px
   .heading-desc-btn-textbox {
     align-items: flex-start !important;
 
@@ -27,6 +28,20 @@
     &__subheading {
       @include subheading(_, none);
       font-size: 1.4rem !important;
+    }
+  }
+}
+
+@media (max-width: 25em) {
+  //400px
+  .heading-desc-btn-textbox {
+    &__heading {
+      @include heading(2.5rem !important);
+    }
+
+    &__subheading {
+      @include subheading(_, none);
+      font-size: 1.3rem !important;
     }
   }
 }
