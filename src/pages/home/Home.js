@@ -50,7 +50,7 @@ import usePerks from "../../hooks/usePerks";
 
 export default function Home() {
   const { mediaQueryState } = useContext(MediaQueryContext);
-  const { largeCarouselHomepageImages } =
+  const { largeCarouselHomepageImages, largeCarouselHomepageImagesMobile } =
     useImportLargeCarouselHomepageImages();
   const { fadeCarouselTopHomepage, fadeCarouselBrandLogos } =
     useImportFadeCarouselImages();
@@ -106,7 +106,11 @@ export default function Home() {
 
       <section className="all-products-brands">
         <LargeCarousel
-          imagesArray={largeCarouselHomepageImages}
+          imagesArray={
+            mediaQueryState.mobileMatches
+              ? largeCarouselHomepageImagesMobile
+              : largeCarouselHomepageImages
+          }
           // Check screen size and pass extraclass prop into the ButtonOnImage component based on the screen size
           button={
             <ButtonOnImage

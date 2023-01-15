@@ -1,11 +1,15 @@
 //react
 import { Link } from "react-router-dom";
 
+//components
+import PlainButton from "../../plainButton/PlainButton";
+import TextButtonWithImage from "../../textButtonWithImage/TextButtonWithImage";
+
 //image source
-import closelisticon from "../../assets/closelisticon.svg";
-import rightcaret from "../../assets/caret-right.svg";
-import leftcaret from "../../assets/caret-left.svg";
-import rightcaretGray from "../../assets/caret-right-gray.svg";
+import closelisticon from "../../../assets/closelisticon.svg";
+import rightcaret from "../../../assets/caret-right.svg";
+import leftcaret from "../../../assets/caret-left.svg";
+import rightcaretGray from "../../../assets/caret-right-gray.svg";
 
 //styles
 import styles from "./MobileNavigationList.module.css";
@@ -14,10 +18,14 @@ export default function MobileNavigationList({
   navigationOptions = undefined,
   handleCloseClick,
   currentMenu,
-
   handleMenuChangeForward,
   handleMenuChangeBackward,
   previousMenuArray,
+  brandName = "",
+  learnMoreLink = "",
+  joinUsLink = "",
+  signInLink = "",
+  textButtonsWithImagesInfo = undefined,
 }) {
   return (
     <div
@@ -51,7 +59,7 @@ export default function MobileNavigationList({
             className={styles["leftcareticon"]}
           >
             <img src={leftcaret} alt={"mobile nav left caret icon"} />{" "}
-            <span>All</span>
+            <span>Go Back</span>
           </button>
         </div>
       )}
@@ -87,10 +95,14 @@ export default function MobileNavigationList({
                 styles["mobile-navigation-list__list-of-options__heading"]
               }
             >
-              <span>
-                {option.text}
-                <img src={rightcaret} alt={"right caret"} />
-              </span>
+              {option.link !== undefined ? (
+                <Link to={option.link}>{option.text}</Link>
+              ) : (
+                <span>
+                  {option.text}
+                  <img src={rightcaret} alt={"right caret"} />
+                </span>
+              )}
             </li>
           ) : (
             <li
@@ -116,6 +128,36 @@ export default function MobileNavigationList({
           );
         })}
       </ul>
+
+      {navigationOptions.id === "main" && (
+        <div className={styles["mobile-navigation-list__signup"]}>
+          <p className={styles["mobile-navigation-list__signup__description"]}>
+            Become a {brandName} Member for the best products, inspiration and
+            stories in sport. <Link to={learnMoreLink}>Learn more</Link>
+          </p>
+
+          <div
+            className={styles["mobile-navigation-list__signup__button-group"]}
+          >
+            <PlainButton
+              buttonText="Join Us"
+              toUrl={joinUsLink}
+              rightArrow={false}
+            />
+            <PlainButton
+              buttonText="Sign In"
+              toUrl={signInLink}
+              rightArrow={false}
+            />
+          </div>
+        </div>
+      )}
+
+      {navigationOptions.id === "main" && textButtonsWithImagesInfo && (
+        <TextButtonWithImage
+          textButtonsWithImagesInfo={textButtonsWithImagesInfo}
+        />
+      )}
     </div>
   );
 }

@@ -32,13 +32,6 @@
     padding: 4rem;
     left: 50%;
     transform: translateX(-50%); }
-    @media (max-width: 850px) {
-      .large-carousel__container-main .slider-buttons {
-        position: static !important;
-        bottom: initial;
-        left: initial;
-        transform: initial;
-        gap: 3.5rem; } }
     .large-carousel__container-main .slider-buttons__button {
       width: 3rem;
       height: 0.7rem;
@@ -47,12 +40,24 @@
       cursor: pointer;
       opacity: 0.4;
       transition: all 0.3s; }
-      @media (max-width: 850px) {
-        .large-carousel__container-main .slider-buttons__button {
-          background-color: #111;
-          width: 5rem;
-          height: 0.6rem; } }
       .large-carousel__container-main .slider-buttons__button:hover {
         opacity: 1; }
+      .large-carousel__container-main .slider-buttons__button:active {
+        opacity: 0.4; }
+
+@media (max-width: 54em) {
+  .slider-buttons {
+    position: static !important;
+    transform: initial !important;
+    gap: 3.5rem !important; }
+    .slider-buttons__button {
+      background-color: #111 !important;
+      width: 5rem !important;
+      height: 0.6rem !important; } }
+@media (max-width: 28em) {
+  .slider-buttons {
+    gap: 2.5rem !important; }
+    .slider-buttons__button {
+      width: 4rem !important; } }
 
 /*# sourceMappingURL=LargeCarousel.module.css.map */

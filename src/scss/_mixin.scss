@@ -39,3 +39,18 @@
   width: 100%;
   aspect-ratio: 16/9;
 }
+
+//flexbox mixins
+
+@mixin flex-all-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//general button mixins
+
+@mixin btn-reset() {
+  background: none;
+  border: none;
+}

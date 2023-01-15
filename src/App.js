@@ -11,22 +11,26 @@ import Women from "./pages/women/Women";
 import Kids from "./pages/kids/Kids";
 import Sale from "./pages/sale/Sale";
 import Footer from "./components/footer/Footer";
-import MobileNavigation from "./components/mobileNavigation/MobileNavigation";
+import MobileNavigation from "./components/mobileNavBar/mobileNavigation/MobileNavigation";
 import BackdropBlur from "./components/backdropBlur/BackdropBlur";
+import MobileFooter from "./components/mobileFooter/MobileFooter";
 
 //context
 import { MediaQueryContext } from "./contexts/MediaQueryContext";
 
 //custom hooks
-import useLinkGroups from "./hooks/useLinkGroups";
+import useLinkGroupsData from "./hooks/useLinkGroupsData";
+import useImportMobileFooterData from "./hooks/useImportMobileFooterData";
 import useNavigationOptionsData from "./hooks/useNavigationOptionsData";
 
-function App() {
+export default function App() {
   const { mediaQueryState } = useContext(MediaQueryContext);
   const { mainNavOptions, dropdownMenuOptions, mobileNavOptions } =
     useNavigationOptionsData();
   const { footerOptions, logoButtonData, footerBottomOptions } =
-    useLinkGroups();
+    useLinkGroupsData();
+  const { mobileFooterFirstList, mobileFooterRestList } =
+    useImportMobileFooterData();
 
   return (
     <div className="App">
@@ -49,15 +53,26 @@ function App() {
           <Route path="/kids" element={<Kids />} />
           <Route path="/sale" element={<Sale />} />
         </Routes>
-        <Footer
-          organizationName="The Shop"
-          optionsArray={footerOptions}
-          logoButtonsArray={logoButtonData}
-          bottomOptionsArray={footerBottomOptions}
-        />
+
+        {mediaQueryState.computerScreenMatches && (
+          <Footer
+            organizationName="The Shop"
+            optionsArray={footerOptions}
+            logoButtonsArray={logoButtonData}
+            bottomOptionsArray={footerBottomOptions}
+          />
+        )}
+
+        {!mediaQueryState.computerScreenMatches && (
+          <MobileFooter
+            organizationName="The Shop"
+            firstOptionsList={mobileFooterFirstList}
+            restOptionsList={mobileFooterRestList}
+            logoButtonsArray={logoButtonData}
+            bottomOptionsArray={footerBottomOptions}
+          />
+        )}
       </BrowserRouter>
     </div>
   );
 }
-
-export default App;

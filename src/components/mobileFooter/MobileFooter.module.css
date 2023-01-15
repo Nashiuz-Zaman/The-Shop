@@ -1,0 +1,47 @@
+.mobile-footer {
+  background-color: #111;
+  padding: 4rem 2rem 3rem; }
+  .mobile-footer__top {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem;
+    margin-bottom: 4rem; }
+    .mobile-footer__top__links {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2rem; }
+      .mobile-footer__top__links__normal-part {
+        font-family: "Anton", sans-serif;
+        letter-spacing: 0.1rem;
+        border-bottom: 1px solid #4d4d4d; }
+        .mobile-footer__top__links__normal-part div[class*="link-group"] {
+          margin-bottom: 2rem; }
+      .mobile-footer__top__links__collapsible-part {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; }
+        .mobile-footer__top__links__collapsible-part p[class*="collapsible__text-heading"] {
+          font-family: "Anton", sans-serif;
+          letter-spacing: 0.1rem; }
+        .mobile-footer__top__links__collapsible-part a[class*="collapsible__link-heading"]:link, .mobile-footer__top__links__collapsible-part a[class*="collapsible__link-heading"]:visited {
+          font-family: "Anton", sans-serif;
+          letter-spacing: 0.1rem; }
+    .mobile-footer__top__image-buttons {
+      display: flex;
+      gap: 1.5rem; }
+  .mobile-footer__bottom__copyright-info--details {
+    color: gray;
+    font-size: 1.15rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 4rem; }
+  .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] {
+    gap: 3rem !important; }
+    .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:link,
+    .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:visited {
+      color: gray;
+      letter-spacing: 0.05rem; }
+    .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:hover,
+    .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:active {
+      color: #fff; }
+
+/*# sourceMappingURL=MobileFooter.module.css.map */

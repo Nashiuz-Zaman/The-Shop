@@ -1,0 +1,17 @@
+.text-button-with-image__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3.5rem; }
+.text-button-with-image__button {
+  display: flex;
+  gap: 2rem;
+  align-items: center; }
+  .text-button-with-image__button:link, .text-button-with-image__button:visited {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6rem; }
+  .text-button-with-image__button img {
+    height: 2rem; }
+
+/*# sourceMappingURL=TextButtonWithImage.module.css.map */

@@ -128,7 +128,8 @@
 ////////////////////////////////////////////
 // Media Queries
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
+  //480px
   .perks {
     margin-bottom: 2rem !important;
   }
@@ -273,6 +274,36 @@
       div[class*="textbox"] {
         margin-top: 0 !important;
         align-items: center !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 28em) {
+  //434px
+
+  .signup {
+    &-container {
+      padding: 2.5rem 2rem 2rem;
+      gap: 8rem;
+
+      &__text {
+        height: auto;
+      }
+
+      h3[class*="heading"] {
+        font-size: 5rem !important;
+      }
+
+      p[class*="subheading"] {
+        font-size: 1.4rem !important;
+      }
+
+      a[class*="plain-button"] {
+        &:link,
+        &:visited {
+          font-size: 1.5rem !important;
+        }
       }
     }
   }

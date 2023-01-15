@@ -1,20 +1,21 @@
 //components
 import MobileNavigationList from "../mobileNavigationList/MobileNavigationList";
-import BackdropBlur from "../backdropBlur/BackdropBlur";
+import BackdropBlur from "../../backdropBlur/BackdropBlur";
 
 //image source
-import listicon from "../../assets/listicon.svg";
+import listicon from "../../../assets/listicon.svg";
 
 //styles
 import styles from "./MobileNavigation.module.css";
 
 //custom hooks
-import useMobileNavigation from "../../hooks/useMobileNavigation";
+import useMobileNavigation from "../../../hooks/useMobileNavigation";
+import useTextButtonWithImageData from "../../../hooks/useTextButtonWithImageData";
 
 export default function MobileNavigation({ mainNavOptions = undefined }) {
   const { state, handleClose, handleOpen, goToNext, goToPrevious } =
     useMobileNavigation();
-  console.log(state.backdropOpen);
+  const { mobileNavigationButtons } = useTextButtonWithImageData();
 
   return (
     <nav className={styles["mobile-nav"]}>
@@ -36,13 +37,11 @@ export default function MobileNavigation({ mainNavOptions = undefined }) {
               handleCloseClick={handleClose}
               currentMenu={state.currentMenu}
               previousMenuArray={state.previousMenu}
-              // previousMenu={
-              //   state.previousMenu.length > 0
-              //     ? state.previousMenu[state.previousMenu.length - 1]
-              //     : ""
-              // }
               handleMenuChangeForward={goToNext}
               handleMenuChangeBackward={goToPrevious}
+              brandName={"The Shop"}
+              learnMoreLink={""}
+              textButtonsWithImagesInfo={mobileNavigationButtons}
             />
           );
         })}

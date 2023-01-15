@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,cAAe;EACb,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,MAAM;EACrB,KAAK,ECDC,IAAI;EDEV,cAAc,EAAE,MAAM;EACtB,cAAc,EAAE,UAAU",
+"mappings": "AAGA,cAAe;EACb,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,MAAM;EACrB,KAAK,ECAC,IAAI;EDCV,cAAc,EAAE,MAAM;EACtB,cAAc,EAAE,UAAU",
 "sources": ["SectionTitle.module.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "SectionTitle.module.css"

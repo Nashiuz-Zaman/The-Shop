@@ -1,0 +1,107 @@
+.mobile-navigation-list {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all 0.25s;
+  background-color: #fff; }
+  .mobile-navigation-list__closelisticon-container .closelisticon {
+    background: none;
+    border: none;
+    margin-left: auto;
+    padding-right: 3.5rem;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .mobile-navigation-list__closelisticon-container img {
+    display: block;
+    height: 2.3rem; }
+  .mobile-navigation-list__leftcareticon-container .leftcareticon {
+    background: none;
+    border: none;
+    margin-right: auto;
+    gap: 1.5rem;
+    padding: 5rem 3.5rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .mobile-navigation-list__leftcareticon-container span,
+  .mobile-navigation-list__leftcareticon-container img {
+    display: block; }
+  .mobile-navigation-list__leftcareticon-container span {
+    font-size: 1.6rem; }
+  .mobile-navigation-list__leftcareticon-container img {
+    height: 2rem; }
+  .mobile-navigation-list__list-of-options {
+    padding: 0 3.5rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem; }
+    .mobile-navigation-list__list-of-options__heading span, .mobile-navigation-list__list-of-options__single-option span {
+      text-transform: capitalize; }
+    .mobile-navigation-list__list-of-options__heading a:link,
+    .mobile-navigation-list__list-of-options__heading a:visited, .mobile-navigation-list__list-of-options__single-option a:link,
+    .mobile-navigation-list__list-of-options__single-option a:visited {
+      text-decoration: none;
+      text-transform: capitalize; }
+    .mobile-navigation-list__list-of-options__heading span,
+    .mobile-navigation-list__list-of-options__heading a:link,
+    .mobile-navigation-list__list-of-options__heading a:visited, .mobile-navigation-list__list-of-options__single-option span,
+    .mobile-navigation-list__list-of-options__single-option a:link,
+    .mobile-navigation-list__list-of-options__single-option a:visited {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .mobile-navigation-list__list-of-options__heading span {
+      font-size: 2.4rem;
+      color: #111; }
+    .mobile-navigation-list__list-of-options__heading a:link,
+    .mobile-navigation-list__list-of-options__heading a:visited {
+      font-size: 2.4rem;
+      color: #111; }
+    .mobile-navigation-list__list-of-options__single-option span {
+      font-size: 1.6rem;
+      color: gray; }
+    .mobile-navigation-list__list-of-options__single-option a:link,
+    .mobile-navigation-list__list-of-options__single-option a:visited {
+      font-size: 1.6rem;
+      color: gray; }
+    .mobile-navigation-list__list-of-options img {
+      height: 2rem; }
+  .mobile-navigation-list__signup {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding: 3.5rem; }
+    .mobile-navigation-list__signup__description {
+      color: gray;
+      font-size: 1.9rem;
+      line-height: 1.4; }
+      .mobile-navigation-list__signup__description a:link,
+      .mobile-navigation-list__signup__description a:visited {
+        color: #111;
+        text-decoration: none;
+        font-weight: 700; }
+    .mobile-navigation-list__signup__button-group {
+      display: flex;
+      gap: 1rem; }
+      .mobile-navigation-list__signup__button-group * {
+        border-radius: 100rem; }
+      .mobile-navigation-list__signup__button-group a:nth-child(2):link,
+      .mobile-navigation-list__signup__button-group a:nth-child(2):visited {
+        background-color: #fff;
+        border: 1px solid #111;
+        color: #111; }
+
+.open {
+  transform: translateX(0%) !important; }
+
+.previously-opened {
+  transform: translateX(-100%) !important; }
+
+/*# sourceMappingURL=MobileNavigationList.module.css.map */

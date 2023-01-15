@@ -74,7 +74,7 @@
       background-size: contain !important;
       background-repeat: no-repeat !important; }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   .perks {
     margin-bottom: 2rem !important; }
 
@@ -169,5 +169,17 @@
     .signup-container div[class*="textbox"] {
       margin-top: 0 !important;
       align-items: center !important; } }
+@media (max-width: 28em) {
+  .signup-container {
+    padding: 2.5rem 2rem 2rem;
+    gap: 8rem; }
+    .signup-container__text {
+      height: auto; }
+    .signup-container h3[class*="heading"] {
+      font-size: 5rem !important; }
+    .signup-container p[class*="subheading"] {
+      font-size: 1.4rem !important; }
+    .signup-container a[class*="plain-button"]:link, .signup-container a[class*="plain-button"]:visited {
+      font-size: 1.5rem !important; } }
 
 /*# sourceMappingURL=Home.css.map */

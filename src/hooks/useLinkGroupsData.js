@@ -3,7 +3,7 @@ import facebookLogo from "../assets/facebook-logo.png";
 import instagramLogo from "../assets/instagram-logo.png";
 import youtubeLogo from "../assets/youtube-logo.png";
 
-export default function useLinkGroups() {
+export default function useLinkGroupsData() {
   const footerOptions = [
     {
       id: 0,

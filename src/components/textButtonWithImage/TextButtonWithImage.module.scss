@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.text-button-with-image {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3.5rem;
+  }
+
+  &__button {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $brandPrimary;
+      font-size: 1.6rem;
+    }
+
+    img {
+      height: 2rem;
+    }
+  }
+}
