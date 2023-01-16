@@ -1,0 +1,77 @@
+.form-container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin-right: 5rem;
+  min-width: 20rem;
+  justify-content: center;
+  background-color: transparent;
+  backface-visibility: hidden;
+  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s;
+  z-index: 1000; }
+
+.expand {
+  position: fixed;
+  top: 0;
+  transform: translateY(0%);
+  min-width: 100%;
+  height: 30rem;
+  background-color: #fff;
+  padding-top: 2rem;
+  margin-right: 0;
+  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s; }
+  .expand .form-searchbar {
+    width: 50%; }
+    .expand .form-searchbar__label {
+      justify-content: flex-start !important; }
+
+.form-searchbar {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  gap: 1rem; }
+  .form-searchbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; }
+    .form-searchbar button img {
+      display: block;
+      height: 2.5rem; }
+  .form-searchbar__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #111;
+    padding: 1.3rem;
+    border-radius: 1000rem; }
+    .form-searchbar__label:hover {
+      background-color: #1e1e1e; }
+    .form-searchbar__label__input {
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-family: inherit;
+      background-color: inherit;
+      color: #fff;
+      flex-grow: 1; }
+      .form-searchbar__label__input::placeholder {
+        font-size: 1.4rem;
+        font-family: inherit;
+        color: gray; }
+      .form-searchbar__label__input:hover::placeholder {
+        color: #fff; }
+      .form-searchbar__label__input:focus {
+        outline: none; }
+    .form-searchbar__label img {
+      display: block;
+      height: 2.2rem;
+      padding-left: 1rem; }
+
+/*# sourceMappingURL=Searchbar.module.css.map */
