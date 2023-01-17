@@ -3,37 +3,68 @@
 
 .form-container {
   display: flex;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  margin-right: 5rem;
   min-width: 20rem;
   justify-content: center;
+  align-items: flex-start;
   background-color: transparent;
   backface-visibility: hidden;
-  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s;
+  transition: min-width 0.2s ease;
   z-index: 1000;
+  position: relative;
 }
 
 .expand {
   position: fixed;
   top: 0;
-  transform: translateY(0%);
+  right: 0;
   min-width: 100%;
-  height: 30rem;
+  min-height: 30rem;
+  max-height: 70vh;
   background-color: $white;
   padding-top: 2rem;
-  margin-right: 0;
-  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s;
+  padding-inline: 3.5rem;
+  transition: min-width 0.15s ease-out;
+  justify-content: space-between !important;
 
   .form-searchbar {
-    width: 50%;
+    min-width: 50%;
+    margin-right: 0;
 
     &__label {
       justify-content: flex-start !important;
     }
   }
+
+  .close-button {
+    transform: scale(1, 1);
+    transition: transform 0.2s 0.2s;
+  }
+}
+
+.brand-name {
+  padding: 1.15rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: inherit;
+  transform-origin: center;
+  transform: scale(0, 0);
+  transition: transform 0s;
 }
 
 .form-searchbar {
@@ -41,18 +72,8 @@
   height: fit-content;
   align-items: center;
   gap: 1rem;
-
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: block;
-
-    img {
-      display: block;
-      height: 2.5rem;
-    }
-  }
+  min-width: 100%;
+  margin-right: -6rem;
 
   &__label {
     width: 100%;
@@ -60,35 +81,26 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: $brandPrimary;
-    padding: 1.3rem;
+    background-color: $veryLightGray;
+    padding: 1.15rem;
     border-radius: 1000rem;
-
-    &:hover {
-      background-color: lighten($brandPrimary, 5%);
-    }
 
     &__input {
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-family: inherit;
       background-color: inherit;
-      color: $white;
+      color: $brandPrimary;
       flex-grow: 1;
 
       &::placeholder {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-family: inherit;
         color: $gray;
-      }
-
-      &:hover {
-        &::placeholder {
-          color: $white;
-        }
+        font-weight: 300;
       }
 
       &:focus {
@@ -99,7 +111,6 @@
     img {
       display: block;
       height: 2.2rem;
-      padding-left: 1rem;
     }
   }
 }

@@ -1,77 +1,94 @@
 .form-container {
   display: flex;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  margin-right: 5rem;
   min-width: 20rem;
   justify-content: center;
+  align-items: flex-start;
   background-color: transparent;
   backface-visibility: hidden;
-  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s;
-  z-index: 1000; }
+  transition: min-width 0.2s ease;
+  z-index: 1000;
+  position: relative; }
 
 .expand {
   position: fixed;
   top: 0;
-  transform: translateY(0%);
+  right: 0;
   min-width: 100%;
-  height: 30rem;
+  min-height: 30rem;
+  max-height: 70vh;
   background-color: #fff;
   padding-top: 2rem;
-  margin-right: 0;
-  transition: top 0s, transform 0s, min-width 0.25s, background-color 0.7s; }
+  padding-inline: 3.5rem;
+  transition: min-width 0.15s ease-out;
+  justify-content: space-between !important; }
   .expand .form-searchbar {
-    width: 50%; }
+    min-width: 50%;
+    margin-right: 0; }
     .expand .form-searchbar__label {
       justify-content: flex-start !important; }
+  .expand .close-button {
+    transform: scale(1, 1);
+    transition: transform 0.2s 0.2s; }
+
+.brand-name {
+  padding: 1.15rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  font-family: inherit; }
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: inherit;
+  transform-origin: center;
+  transform: scale(0, 0);
+  transition: transform 0s; }
 
 .form-searchbar {
   display: flex;
   height: fit-content;
   align-items: center;
-  gap: 1rem; }
-  .form-searchbar button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: block; }
-    .form-searchbar button img {
-      display: block;
-      height: 2.5rem; }
+  gap: 1rem;
+  min-width: 100%;
+  margin-right: -6rem; }
   .form-searchbar__label {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #111;
-    padding: 1.3rem;
+    background-color: #ddd;
+    padding: 1.15rem;
     border-radius: 1000rem; }
-    .form-searchbar__label:hover {
-      background-color: #1e1e1e; }
     .form-searchbar__label__input {
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-family: inherit;
       background-color: inherit;
-      color: #fff;
+      color: #111;
       flex-grow: 1; }
       .form-searchbar__label__input::placeholder {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-family: inherit;
-        color: gray; }
-      .form-searchbar__label__input:hover::placeholder {
-        color: #fff; }
+        color: gray;
+        font-weight: 300; }
       .form-searchbar__label__input:focus {
         outline: none; }
     .form-searchbar__label img {
       display: block;
-      height: 2.2rem;
-      padding-left: 1rem; }
+      height: 2.2rem; }
 
 /*# sourceMappingURL=Searchbar.module.css.map */

@@ -4,11 +4,12 @@ $brandSecondary: #f1f3f5;
 $white: #fff;
 $gray: darken($white, 50%);
 $lightGray: darken($white, 10%);
-$darkWhite: darken($white, 3%);
+$darkWhite: darken($white, 5%);
 $black: #000;
 $lightBlack: lighten($black, 30%);
 $lightRed: #fa5252;
 $backdropColor: rgba(17, 17, 17, 0.36);
+$veryLightGray: #ddd;
 
 //font
 $roboto: "Roboto", sans-serif;

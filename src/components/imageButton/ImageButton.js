@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./ImageButton.module.css";
 
 export default function ImageButton({
+  title = "",
   extraClass = [],
   imageSource = undefined,
   externalLink = false,
@@ -13,6 +14,7 @@ export default function ImageButton({
     <p>Please provide button image</p>
   ) : (
     <div
+      title={imageSource.title}
       className={`${styles["image-button"]}  ${
         extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
@@ -26,7 +28,9 @@ export default function ImageButton({
             backgroundPosition: "center",
             backgroundSize: "contain",
           }}
-        />
+        >
+          &nbsp;
+        </a>
       )}
 
       {externalLink === false && (

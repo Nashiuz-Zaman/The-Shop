@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 67.25%;
+    width: 80%;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -33,5 +33,9 @@
     width: 2.5rem;
     height: 2.5rem;
     color: #111; }
+
+@media (max-width: 30em) {
+  .mobile-nav__container {
+    width: 90%; } }
 
 /*# sourceMappingURL=MobileNavigation.module.css.map */

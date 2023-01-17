@@ -39,6 +39,7 @@ export default function App() {
         <Logobar />
         {mediaQueryState.computerScreenMatches && (
           <Navbar
+            brandName={"The Shop."}
             mainNavOptions={mainNavOptions}
             dropdownMenuOptions={dropdownMenuOptions}
           />
