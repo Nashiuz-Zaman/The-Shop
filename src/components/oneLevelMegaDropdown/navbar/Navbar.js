@@ -10,10 +10,10 @@ import ImageButton from "../../imageButton/ImageButton";
 //custom hooks
 import useImportNavigationUserInfoButtonData from "../../../hooks/useImportNavigationUserInfoButtonData";
 import useBackdrop from "../../../hooks/useBackdrop";
+import useSearchbar from "../../../hooks/useSearchbar";
 
 //styles
 import "./Navbar.css";
-import useSearchbar from "../../../hooks/useSearchbar";
 
 export default function Navbar({
   mainNavOptions = undefined,
