@@ -1,6 +1,5 @@
 //react
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 //components
 import Dropdown from "../dropdown/Dropdown";
@@ -10,40 +9,43 @@ import ImageButton from "../../imageButton/ImageButton";
 
 //custom hooks
 import useImportNavigationUserInfoButtonData from "../../../hooks/useImportNavigationUserInfoButtonData";
+import useBackdrop from "../../../hooks/useBackdrop";
 
 //styles
 import "./Navbar.css";
+import useSearchbar from "../../../hooks/useSearchbar";
 
 export default function Navbar({
   mainNavOptions = undefined,
   dropdownMenuOptions = undefined,
 }) {
-  const [searchBoxOpen, setSearchBoxOpen] = useState(false);
-  const [backdropOpen, setBackdropOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const { backdropOpen, openBackdrop, closeBackdrop } = useBackdrop();
+  const {
+    searchTerm,
+    searchbarOpen,
+    setSearchTerm,
+    handleOpenSearchbar,
+    handleCloseSearchbar,
+  } = useSearchbar({ openBackdrop, closeBackdrop });
   const { userInfoButtonData } = useImportNavigationUserInfoButtonData();
 
-  const handleOpenClick = () => {
-    setSearchBoxOpen(true);
-    setBackdropOpen(true);
+  const handleMouseEnterNavigationItem = () => {
+    openBackdrop(true);
+  };
+  const handleMouseLeaveNavigationItem = () => {
+    closeBackdrop(false);
   };
 
-  const handleCloseClick = () => {
-    setSearchBoxOpen(false);
-    setBackdropOpen(false);
-    setSearchTerm("");
-  };
-
-  const handleMouseEnter = () => {
-    setBackdropOpen(true);
-  };
-  const handleMouseLeave = () => {
-    setBackdropOpen(false);
+  const closeBackdropAndEverything = () => {
+    handleCloseSearchbar();
   };
 
   return (
     <>
-      <BackdropBlur open={backdropOpen} handleCloseClick={handleCloseClick} />
+      <BackdropBlur
+        open={backdropOpen}
+        handleCloseClick={closeBackdropAndEverything}
+      />
       <nav className="navbar">
         <div className="navbar__brandName"></div>
 
@@ -51,10 +53,13 @@ export default function Navbar({
           {mainNavOptions &&
             mainNavOptions.map((option) => {
               return (
-                <li key={option} className="navigation-menu__item">
+                <li
+                  onMouseEnter={handleMouseEnterNavigationItem}
+                  onMouseLeave={handleMouseLeaveNavigationItem}
+                  key={option}
+                  className="navigation-menu__item"
+                >
                   <Link
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
                     className="navigation-menu__item--link"
                     to={`/${option}`}
                   >
@@ -76,10 +81,9 @@ export default function Navbar({
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
             brandName={"The Shop"}
-            expand={searchBoxOpen}
-            backdropOpen={backdropOpen}
-            handleOpenClick={handleOpenClick}
-            handleCloseClick={handleCloseClick}
+            expand={searchbarOpen}
+            handleOpenClick={handleOpenSearchbar}
+            handleCloseClick={handleCloseSearchbar}
           />
 
           <div className="navbar__searchbar-and-user-info__user-info">

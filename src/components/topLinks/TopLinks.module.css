@@ -1,0 +1,16 @@
+.top-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #f1f3f5; }
+  .top-links__link:link, .top-links__link:visited {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.2rem; }
+  .top-links__link:hover, .top-links__link:active {
+    text-decoration: underline;
+    text-decoration-color: inherit; }
+
+/*# sourceMappingURL=TopLinks.module.css.map */

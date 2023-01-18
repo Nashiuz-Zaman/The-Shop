@@ -2,12 +2,62 @@
 @import "../../../scss/mixin";
 
 .mobile-nav {
-  background-color: $brandSecondary;
+  background-color: $white;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
+
+  &__brand-and-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 2rem 2rem;
+
+    a[class*="brand-name"] {
+      &:link,
+      &:visited {
+        margin-right: auto !important;
+      }
+    }
+
+    div[class*="image-button"] {
+      background-color: $white;
+      width: 4rem;
+
+      &:hover,
+      &:active {
+        background-color: $veryLightGray;
+      }
+    }
+
+    div[class*="hamburger-menu"] {
+      width: 4rem;
+
+      &:hover,
+      &:active {
+        background-color: $veryLightGray;
+      }
+    }
+  }
+
+  &__searchbar-and-user-info__user-info {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center !important;
+
+    div[class*="image-button"] {
+      background-color: $white !important;
+      width: 4rem;
+
+      &:hover {
+        background-color: $veryLightGray !important;
+      }
+    }
+  }
 
   &__container {
     position: fixed;
@@ -24,24 +74,6 @@
     &--open {
       transform: translateX(0%);
     }
-  }
-}
-
-.listicon {
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  width: 6.5rem;
-  height: 6.5rem;
-
-  img {
-    display: block;
-    width: 2.5rem;
-    height: 2.5rem;
-    color: $brandPrimary;
   }
 }
 

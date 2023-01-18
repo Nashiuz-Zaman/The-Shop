@@ -3,23 +3,12 @@
 .logobar {
   background-color: $brandPrimary;
   padding: 1.5rem 2rem 2.5rem;
-  // margin-bottom: $smallMargin;
 
-  .websitelogo {
+  a[class*="brand-name"] {
     &:link,
     &:visited {
-      display: block;
-      text-decoration: none;
-      color: $white;
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 900;
-      text-transform: uppercase;
+      color: $white !important;
       margin-bottom: 1.5rem;
-    }
-
-    .largeperiod {
-      font-size: 4rem;
     }
   }
 

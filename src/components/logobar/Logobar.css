@@ -1,17 +1,9 @@
 .logobar {
   background-color: #111;
   padding: 1.5rem 2rem 2.5rem; }
-  .logobar .websitelogo:link, .logobar .websitelogo:visited {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
+  .logobar a[class*="brand-name"]:link, .logobar a[class*="brand-name"]:visited {
+    color: #fff !important;
     margin-bottom: 1.5rem; }
-  .logobar .websitelogo .largeperiod {
-    font-size: 4rem; }
   .logobar .sportslogos {
     display: flex;
     align-items: center;

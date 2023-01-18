@@ -12,8 +12,8 @@ import Kids from "./pages/kids/Kids";
 import Sale from "./pages/sale/Sale";
 import Footer from "./components/footer/Footer";
 import MobileNavigation from "./components/mobileNavBar/mobileNavigation/MobileNavigation";
-import BackdropBlur from "./components/backdropBlur/BackdropBlur";
 import MobileFooter from "./components/mobileFooter/MobileFooter";
+import TopLinks from "./components/topLinks/TopLinks";
 
 //context
 import { MediaQueryContext } from "./contexts/MediaQueryContext";
@@ -22,6 +22,7 @@ import { MediaQueryContext } from "./contexts/MediaQueryContext";
 import useLinkGroupsData from "./hooks/useLinkGroupsData";
 import useImportMobileFooterData from "./hooks/useImportMobileFooterData";
 import useNavigationOptionsData from "./hooks/useNavigationOptionsData";
+import useImportTopLinkData from "./hooks/useImportTopLinkData";
 
 export default function App() {
   const { mediaQueryState } = useContext(MediaQueryContext);
@@ -31,12 +32,19 @@ export default function App() {
     useLinkGroupsData();
   const { mobileFooterFirstList, mobileFooterRestList } =
     useImportMobileFooterData();
+  const { topLinkData } = useImportTopLinkData();
 
   return (
     <div className="App">
-      <BackdropBlur />
       <BrowserRouter>
-        <Logobar />
+        {mediaQueryState.computerScreenMatches && (
+          <TopLinks linksInfoArray={topLinkData} />
+        )}
+
+        {mediaQueryState.computerScreenMatches && (
+          <Logobar title={"The Shop."} />
+        )}
+
         {mediaQueryState.computerScreenMatches && (
           <Navbar
             brandName={"The Shop."}
@@ -45,7 +53,10 @@ export default function App() {
           />
         )}
         {!mediaQueryState.computerScreenMatches && (
-          <MobileNavigation mainNavOptions={mobileNavOptions} />
+          <MobileNavigation
+            mainNavOptions={mobileNavOptions}
+            brandName={"The Shop."}
+          />
         )}
         <Routes>
           <Route path="/" element={<Home />} />

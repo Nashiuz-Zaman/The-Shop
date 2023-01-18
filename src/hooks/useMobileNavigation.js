@@ -5,7 +5,6 @@ const mobileNavigation = {
   currentMenu: "",
   previousMenu: [],
   containerOpen: false,
-  backdropOpen: false,
 };
 
 const mobileNavigationReducer = (state, action) => {
@@ -34,34 +33,34 @@ const mobileNavigationReducer = (state, action) => {
   }
 };
 
-export default function useMobileNavigation() {
+export default function useMobileNavigation({ closeBackdrop, openBackdrop }) {
   const [mobileNavigationState, dispatch] = useReducer(
     mobileNavigationReducer,
     mobileNavigation
   );
 
-  const handleOpen = () => {
+  const handleOpenMobileNavigation = () => {
     dispatch({
       type: "open-click",
       payload: {
         currentMenu: "main",
         previousMenu: [],
         containerOpen: true,
-        backdropOpen: true,
       },
     });
+    openBackdrop();
   };
 
-  const handleClose = () => {
+  const handleCloseMobileNavigation = () => {
     dispatch({
       type: "close-click",
       payload: {
         currentMenu: "",
         previousMenu: [],
         containerOpen: false,
-        backdropOpen: false,
       },
     });
+    closeBackdrop();
   };
 
   const goToNext = (option) => {
@@ -81,8 +80,8 @@ export default function useMobileNavigation() {
 
   return {
     state: mobileNavigationState,
-    handleClose,
-    handleOpen,
+    handleCloseMobileNavigation,
+    handleOpenMobileNavigation,
     goToNext,
     goToPrevious,
   };
