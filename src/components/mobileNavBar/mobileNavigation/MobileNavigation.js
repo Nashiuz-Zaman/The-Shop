@@ -57,6 +57,7 @@ export default function MobileNavigation({
         <div className={styles["mobile-nav__brand-and-options"]}>
           <BrandName title={brandName} />
           <MobileSearchbar
+            brandName="The Shop."
             searchTerm={searchTerm}
             expand={searchbarOpen}
             setSearchTerm={setSearchTerm}

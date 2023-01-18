@@ -64,8 +64,8 @@
   }
 }
 
-@media (max-width: 30em) {
-  //480px
+@media (max-width: 48em) {
+  //768px
   .horizontal-scroll-gallery {
     ::-webkit-scrollbar-thumb {
       background-color: darken($white, 60%) !important;
@@ -77,6 +77,16 @@
       margin-inline: 3.5rem !important;
     }
 
+    &__scroller {
+      grid-auto-columns: 40%;
+      scroll-padding-inline: 3.5rem !important;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  //480px
+  .horizontal-scroll-gallery {
     &__scroller {
       grid-auto-columns: 85%;
       scroll-padding-inline: 3.5rem !important;

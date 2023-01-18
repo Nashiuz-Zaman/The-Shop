@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0rem 1rem 2rem rgba($brandPrimary, 0.1);
 
   &__brand-and-options {
     display: flex;
@@ -20,6 +21,7 @@
       &:link,
       &:visited {
         margin-right: auto !important;
+        padding: 0.75rem 0;
       }
     }
 

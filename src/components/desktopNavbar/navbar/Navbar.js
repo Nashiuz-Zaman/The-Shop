@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 //components
 import Dropdown from "../dropdown/Dropdown";
-import Searchbar from "../../searchbar/Searchbar";
+import Searchbar from "../../desktopSearchbar/Searchbar";
 import BackdropBlur from "../../backdropBlur/BackdropBlur";
 import ImageButton from "../../imageButton/ImageButton";
 

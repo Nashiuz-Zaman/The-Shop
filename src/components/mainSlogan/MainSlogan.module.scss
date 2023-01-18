@@ -30,10 +30,102 @@
     line-height: 1.1;
   }
 
-  &__sub-heading {
+  &__subheading {
     font-size: 1.4rem;
     color: $brandSecondary;
     letter-spacing: 0.1rem;
     text-transform: capitalize;
+  }
+}
+
+@media (max-width: 53em) {
+  // 834px
+
+  .main-slogan {
+    grid-template-columns: 1.3fr 1fr;
+    margin: 0 3rem;
+    height: 31rem;
+
+    &__text-part {
+      padding: 0 !important;
+      padding: 1rem 6rem !important;
+    }
+
+    &__heading {
+      font-size: 3rem;
+    }
+
+    &__subheading {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 45em) {
+  .main-slogan {
+    grid-template-columns: 1fr 1fr;
+
+    &__text-part {
+      padding: 1rem 2.5rem !important;
+    }
+
+    &__heading {
+      font-size: 3rem;
+    }
+
+    &__subheading {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 38em) {
+  // 834px
+  .main-slogan {
+    width: 100%;
+    margin: 0 !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 70rem;
+    background-image: none;
+
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   $lightRed,
+    //   lighten($lightRed, 5%)
+    // );
+    background-color: $lightRed;
+
+    &__text-part {
+      padding: 2rem 6rem !important;
+    }
+
+    &__carousel {
+      width: 55%;
+      justify-self: center;
+      box-shadow: 0rem 1rem 3rem rgba($brandPrimary, 0.3);
+      transform: translateY(-15%);
+    }
+
+    &__heading {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+    }
+
+    &__subheading {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  .main-slogan {
+    &__carousel {
+      width: 70%;
+      // border-radius: 50%;
+      overflow: hidden;
+    }
   }
 }

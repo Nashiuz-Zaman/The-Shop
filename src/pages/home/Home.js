@@ -60,45 +60,21 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* render MainSlogan combined with FadeCarouselNoBtn if screen size matches
-      large tablets and computer screens */}
-      {(mediaQueryState.computerScreenMatches ||
-        mediaQueryState.largeTabletMatches) && (
-        <section className="slogan">
-          <MainSlogan
-            heading={
-              <>
-                New Year.
-                <br /> New Gear.
-              </>
-            }
-            subheading={
-              <>Give yourself a treat in {new Date().getFullYear() + 1}</>
-            }
-          >
-            <FadeCarouselNoBtn imagesInfoArray={fadeCarouselTopHomepage} />
-          </MainSlogan>
-        </section>
-      )}
-      {/* render MainSlogan combined with FadeCarouselNoBtn if screen size matches
-      large tablets and computer screens */}
-      {(mediaQueryState.smallTabletMatches ||
-        mediaQueryState.mobileMatches) && (
-        <section className="slogan-small-screen">
-          <MainSlogan
-            heading={
-              <>
-                New Year.
-                <br /> New Gear.
-              </>
-            }
-            subheading={
-              <>Give yourself a treat in {new Date().getFullYear() + 1}</>
-            }
-          />
-          <FadeCarouselNoBtn imagesInfoArray={fadeCarouselTopHomepage} />
-        </section>
-      )}
+      <section className="slogan">
+        <MainSlogan
+          imagesInfoArray={fadeCarouselTopHomepage}
+          heading={
+            <>
+              New Year.
+              <br /> New Gear.
+            </>
+          }
+          subheading={
+            <>Give yourself a treat in {new Date().getFullYear() + 1}</>
+          }
+          carousel={true}
+        />
+      </section>
 
       <section className="perks">
         <Perks textArray={perksHomeTop} />

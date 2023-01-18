@@ -4,14 +4,14 @@ import { useContext } from "react";
 
 //components
 import Logobar from "./components/logobar/Logobar";
-import Navbar from "./components/oneLevelMegaDropdown/navbar/Navbar";
+import Navbar from "./components/desktopNavbar/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
 import Kids from "./pages/kids/Kids";
 import Sale from "./pages/sale/Sale";
 import Footer from "./components/footer/Footer";
-import MobileNavigation from "./components/mobileNavBar/mobileNavigation/MobileNavigation";
+import MobileNavigation from "./components/mobileNavbar/mobileNavigation/MobileNavigation";
 import MobileFooter from "./components/mobileFooter/MobileFooter";
 import TopLinks from "./components/topLinks/TopLinks";
 

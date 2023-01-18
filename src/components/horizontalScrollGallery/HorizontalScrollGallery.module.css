@@ -41,13 +41,17 @@
       font-weight: 300;
       color: #000; }
 
-@media (max-width: 30em) {
+@media (max-width: 48em) {
   .horizontal-scroll-gallery ::-webkit-scrollbar-thumb {
     background-color: #666666 !important;
     border-radius: 100rem; }
   .horizontal-scroll-gallery ::-webkit-scrollbar-track {
     background-color: #e6e6e6;
     margin-inline: 3.5rem !important; }
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 40%;
+    scroll-padding-inline: 3.5rem !important; } }
+@media (max-width: 30em) {
   .horizontal-scroll-gallery__scroller {
     grid-auto-columns: 85%;
     scroll-padding-inline: 3.5rem !important; } }

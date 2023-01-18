@@ -11,10 +11,6 @@
     position: relative;
     aspect-ratio: 16 / 8;
 
-    @media (max-width: 768px) {
-      aspect-ratio: 16/12;
-    }
-
     .large-carousel__container-imagebox-button {
       width: 100%;
       height: 100%;
@@ -75,6 +71,16 @@
       background-color: $brandPrimary !important;
       width: 5rem !important;
       height: 0.6rem !important;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  .large-carousel__container-main {
+    &__inner-container {
+      width: 100%;
+      position: relative;
+      aspect-ratio: 16 / 12;
     }
   }
 }
