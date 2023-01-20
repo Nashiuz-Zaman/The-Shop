@@ -63,10 +63,10 @@
     .signup-container div[class*="textbox"] a:visited {
       text-transform: uppercase; }
     .signup-container__text {
-      flex-basis: 50%; }
+      flex-basis: 65%; }
     .signup-container__carousel {
-      flex-basis: 50%;
-      height: 25rem; }
+      flex-basis: 35%;
+      height: 22rem; }
     .signup-container h3[class*="heading"] {
       width: 50% !important; }
     .signup-container p[class*="subheading"] {
