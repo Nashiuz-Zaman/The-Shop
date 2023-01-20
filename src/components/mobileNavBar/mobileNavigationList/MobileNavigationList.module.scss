@@ -130,16 +130,42 @@
 
     &__button-group {
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
       * {
         border-radius: 100rem;
+
+        a:link,
+        a:visited {
+          text-transform: uppercase;
+          font-weight: 700;
+          border: 1px solid $brandPrimary !important;
+        }
+        a:hover,
+        a:active {
+          border: 1px solid $lightRed !important;
+          background-color: $lightRed !important;
+        }
+      }
+    }
+
+    div:nth-child(1) {
+      a:link,
+      a:visited {
+        background-color: $brandPrimary !important;
+        color: $white !important;
+      }
+    }
+
+    div:nth-child(2) {
+      a:link,
+      a:visited {
+        background-color: $white;
+        color: $brandPrimary;
       }
 
-      a:nth-child(2):link,
-      a:nth-child(2):visited {
-        background-color: $white;
-        border: 1px solid $brandPrimary;
-        color: $brandPrimary;
+      a:hover,
+      a:active {
+        color: $white !important;
       }
     }
   }

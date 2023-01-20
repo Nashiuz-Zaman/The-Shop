@@ -1,7 +1,7 @@
 @import "../../scss/variables";
 
 .perks {
-  padding: 3rem 3rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -14,22 +14,14 @@
   }
 }
 
-@media (max-width: 48em) {
-  //768px
+@media (max-width: 30em) {
+  //480px
   .perks {
     padding: 3rem 2rem;
     flex-direction: column;
     justify-content: initial;
     gap: 4rem;
-  }
-}
-
-@media (max-width: 30em) {
-  //480px
-  .perks {
-    padding: 4rem;
-    gap: 4rem;
-    margin-bottom: 2rem;
+    background-color: $white;
 
     &__perk {
       font-size: 2rem;

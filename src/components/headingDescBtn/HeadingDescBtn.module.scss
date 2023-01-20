@@ -2,32 +2,63 @@
 @import "../../scss/mixin";
 
 .heading-desc-btn-textbox {
-  margin-top: $componentGap;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: inherit;
 
   &__heading {
-    @include heading(4rem);
+    font-family: $anton;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.3rem;
+    font-weight: 400;
   }
 
   &__subheading {
-    @include subheading(_, none);
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
   }
 }
 
-@media (max-width: 30em) {
-  //480px
+@media (max-width: 64em) {
   .heading-desc-btn-textbox {
-    align-items: flex-start !important;
-
     &__heading {
-      @include heading(3rem !important);
+      font-size: 4.5rem;
+      margin-bottom: 1.2rem;
     }
 
     &__subheading {
-      @include subheading(_, none);
-      font-size: 1.4rem !important;
+      font-size: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 54em) {
+  .heading-desc-btn-textbox {
+    &__heading {
+      font-size: 3.7rem;
+    }
+  }
+}
+
+@media (max-width: 45em) {
+  .heading-desc-btn-textbox {
+    &__heading {
+      font-size: 3.5rem;
+    }
+
+    &__subheading {
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -36,12 +67,11 @@
   //400px
   .heading-desc-btn-textbox {
     &__heading {
-      @include heading(2.5rem !important);
+      font-size: 3rem;
     }
 
     &__subheading {
-      @include subheading(_, none);
-      font-size: 1.3rem !important;
+      margin-bottom: 1.2rem;
     }
   }
 }

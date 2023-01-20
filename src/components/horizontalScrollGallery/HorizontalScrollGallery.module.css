@@ -38,7 +38,6 @@
       margin-bottom: 1.8rem; }
     .horizontal-scroll-gallery__item--name {
       font-size: 1.8rem;
-      font-weight: 300;
       color: #000; }
 
 @media (max-width: 48em) {
@@ -47,13 +46,18 @@
     border-radius: 100rem; }
   .horizontal-scroll-gallery ::-webkit-scrollbar-track {
     background-color: #e6e6e6;
-    margin-inline: 3.5rem !important; }
+    margin-inline: 3.5rem; }
   .horizontal-scroll-gallery__scroller {
     grid-auto-columns: 40%;
-    scroll-padding-inline: 3.5rem !important; } }
-@media (max-width: 30em) {
+    scroll-padding-inline: 3.5rem; } }
+@media (max-width: 34em) {
   .horizontal-scroll-gallery__scroller {
     grid-auto-columns: 85%;
-    scroll-padding-inline: 3.5rem !important; } }
+    scroll-padding-inline: 3.5rem; } }
+@media (max-width: 30em) {
+  .horizontal-scroll-gallery ::-webkit-scrollbar-track {
+    margin-inline: 2rem; }
+  .horizontal-scroll-gallery__scroller {
+    scroll-padding-inline: 2rem; } }
 
 /*# sourceMappingURL=HorizontalScrollGallery.module.css.map */

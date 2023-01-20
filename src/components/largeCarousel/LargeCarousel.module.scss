@@ -75,7 +75,14 @@
   }
 }
 
-@media (max-width: 30em) {
+@media (max-width: 45em) {
+  //768px
+  .slider-buttons {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 34em) {
   .large-carousel__container-main {
     &__inner-container {
       width: 100%;
@@ -85,7 +92,15 @@
   }
 }
 
-@media (max-width: 28em) {
+@media (max-width: 30em) {
+  .large-carousel__container-main {
+    &__inner-container {
+      width: 100%;
+      position: relative;
+      aspect-ratio: 16 / 12;
+    }
+  }
+
   .slider-buttons {
     gap: 2.5rem !important;
 

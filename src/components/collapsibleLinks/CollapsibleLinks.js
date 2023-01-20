@@ -1,12 +1,13 @@
 //react
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 //styles
 import styles from "./CollapsibleLinks.module.css";
 
 //image source
 import plusicon from "../../assets/plus.svg";
+import minusicon from "../../assets/minus.svg";
 
 export default function CollapsibleLinks({
   singleListObject = undefined,
@@ -14,26 +15,23 @@ export default function CollapsibleLinks({
   externalLinkList = false,
 }) {
   const [open, setOpen] = useState(false);
+  const collapsibleRef = useRef();
 
   const handleClick = (e) => {
     setOpen((prevOpen) => {
       return !prevOpen;
     });
 
-    const collapsiblePart = e.currentTarget
-      .closest(".collapsible")
-      .querySelector(".collapse-part");
-
     if (open === false) {
-      collapsiblePart.style.transition =
+      collapsibleRef.current.style.transition =
         "max-height 0.25s, opacity 0.25s 0.25s";
-      collapsiblePart.style.maxHeight = `${collapsiblePart.scrollHeight}px`;
-      collapsiblePart.style.opacity = "1";
+      collapsibleRef.current.style.maxHeight = `${collapsibleRef.current.scrollHeight}px`;
+      collapsibleRef.current.style.opacity = "1";
     } else {
-      collapsiblePart.style.transition =
+      collapsibleRef.current.style.transition =
         "opacity 0.25s, max-height 0.25s 0.25s";
-      collapsiblePart.style.maxHeight = "0";
-      collapsiblePart.style.opacity = "0";
+      collapsibleRef.current.style.opacity = "0";
+      collapsibleRef.current.style.maxHeight = "0";
     }
   };
 
@@ -46,7 +44,7 @@ export default function CollapsibleLinks({
             className={styles["collapsible__text-heading"]}
           >
             {singleListObject.heading.text}
-            <img src={plusicon} alt={"plus sign"} />
+            <img src={open ? minusicon : plusicon} alt={"plus sign"} />
           </p>
         ) : externalLinkHeading ? (
           <a
@@ -55,7 +53,7 @@ export default function CollapsibleLinks({
             href={singleListObject.heading.link}
           >
             {singleListObject.heading.text}{" "}
-            <img src={plusicon} alt={"plus sign"} />
+            <img src={open ? minusicon : plusicon} alt={"plus sign"} />
           </a>
         ) : (
           <Link
@@ -64,11 +62,14 @@ export default function CollapsibleLinks({
             to={singleListObject.heading.link}
           >
             {singleListObject.heading.text}{" "}
-            <img src={plusicon} alt={"plus sign"} />
+            <img src={open ? minusicon : plusicon} alt={"plus sign"} />
           </Link>
         ))}
 
-      <div className={`${styles["collapsible__collapse-part"]} collapse-part`}>
+      <div
+        ref={collapsibleRef}
+        className={`${styles["collapsible__collapse-part"]} collapse-part`}
+      >
         <ul className={styles["collapsible__collapse-part__list"]}>
           {singleListObject.options &&
             singleListObject.options.map((option) => {

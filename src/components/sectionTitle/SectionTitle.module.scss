@@ -10,6 +10,14 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 48em) {
+  //768px
+  .section-title {
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+}
+
 @media (max-width: 30em) {
   //480px
   .section-title {

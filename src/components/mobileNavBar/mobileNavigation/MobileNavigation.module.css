@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 0.5rem;
-    padding: 2rem 2rem; }
+    padding: 1.75rem 2rem; }
     .mobile-nav__brand-and-options a[class*="brand-name"]:link, .mobile-nav__brand-and-options a[class*="brand-name"]:visited {
       margin-right: auto !important;
       padding: 0.75rem 0; }
@@ -48,8 +48,11 @@
     .mobile-nav__container--open {
       transform: translateX(0%); }
 
-@media (max-width: 30em) {
+@media (max-width: 34em) {
   .mobile-nav__container {
-    width: 90%; } }
+    width: 67%; } }
+@media (max-width: 25em) {
+  .mobile-nav__brand-and-options {
+    padding: 1.5rem; } }
 
 /*# sourceMappingURL=MobileNavigation.module.css.map */

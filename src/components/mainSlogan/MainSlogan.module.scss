@@ -7,10 +7,11 @@
   display: grid;
   grid-template-columns: 2fr 1.3fr;
   background-image: linear-gradient(
-    to right,
+    to bottom right,
     $lightRed,
     lighten($lightRed, 10%)
   );
+
   color: $white;
 
   &__text-part {
@@ -39,8 +40,7 @@
 }
 
 @media (max-width: 53em) {
-  // 834px
-
+  //834px
   .main-slogan {
     grid-template-columns: 1.3fr 1fr;
     margin: 0 3rem;
@@ -89,12 +89,12 @@
     height: 70rem;
     background-image: none;
 
-    // background-image: linear-gradient(
-    //   to bottom right,
-    //   $lightRed,
-    //   lighten($lightRed, 5%)
-    // );
-    background-color: $lightRed;
+    background-image: linear-gradient(
+      to bottom right,
+      darken($lightRed, 50%),
+      $lightRed
+    );
+    // background-color: $lightRed;
 
     &__text-part {
       padding: 2rem 6rem !important;
@@ -105,6 +105,9 @@
       justify-self: center;
       box-shadow: 0rem 1rem 3rem rgba($brandPrimary, 0.3);
       transform: translateY(-15%);
+      // border-radius: 50%;
+      // border: 0.2rem solid $white;
+      overflow: hidden;
     }
 
     &__heading {

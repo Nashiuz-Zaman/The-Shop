@@ -7,7 +7,7 @@ import { useContext } from "react";
 //////////////////////////////////
 import HorizontalScrollGallery from "../../components/horizontalScrollGallery/HorizontalScrollGallery";
 import LargeCarousel from "../../components/largeCarousel/LargeCarousel";
-import MainSlogan from "../../components/mainSlogan/MainSlogan";
+
 import Perks from "../../components/perks/Perks";
 import Showcase from "../../components/showcase/Showcase";
 import ButtonOnImage from "../../components/buttonOnImage/ButtonOnImage";
@@ -17,6 +17,7 @@ import GridShowcase from "../../components/gridShowcase/GridShowcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import PlainButton from "../../components/plainButton/PlainButton";
 import SectionTitle from "../../components/sectionTitle/SectionTitle";
+import Hero from "../../components/hero/Hero";
 
 //context
 //////////////////////////////////
@@ -37,6 +38,7 @@ import "./Home.css";
 import basketball from "../../assets/basketball.webp";
 import fashion from "../../assets/fashion.webp";
 import classic from "../../assets/classic.webp";
+import hero from "../../assets/hero.webp";
 
 //hooks
 //////////////////////////////////
@@ -47,22 +49,23 @@ import useImportFadeCarouselImages from "../../hooks/useImportFadeCarouselImages
 import useImportHorizontalScrollHomepage from "../../hooks/useImportHorizontalScrollHomepage";
 import useImportGridShowcaseHome from "../../hooks/useImportGridShowcaseHome";
 import usePerks from "../../hooks/usePerks";
+import useImportHeroBtnsData from "../../hooks/useImportHeroBtnsData";
 
 export default function Home() {
   const { mediaQueryState } = useContext(MediaQueryContext);
   const { largeCarouselHomepageImages, largeCarouselHomepageImagesMobile } =
     useImportLargeCarouselHomepageImages();
-  const { fadeCarouselTopHomepage, fadeCarouselBrandLogos } =
-    useImportFadeCarouselImages();
+  const { fadeCarouselBrandLogos } = useImportFadeCarouselImages();
   const { popularCategoriesHomepage } = useImportHorizontalScrollHomepage();
   const { gridShowcaseHome } = useImportGridShowcaseHome();
   const { perksHomeTop } = usePerks();
+  const { homeHeroButtonsInfo } = useImportHeroBtnsData();
 
   return (
     <div className="home">
-      <section className="slogan">
-        <MainSlogan
-          imagesInfoArray={fadeCarouselTopHomepage}
+      <section className="hero">
+        <Hero
+          imageSource={hero}
           heading={
             <>
               New Year.
@@ -72,7 +75,9 @@ export default function Home() {
           subheading={
             <>Give yourself a treat in {new Date().getFullYear() + 1}</>
           }
-          carousel={true}
+          group={true}
+          button={<ButtonOnImage />}
+          buttonInfoArray={homeHeroButtonsInfo}
         />
       </section>
 
@@ -82,22 +87,13 @@ export default function Home() {
 
       <section className="all-products-brands">
         <LargeCarousel
-          imagesArray={
+          imagesInfoArray={
             mediaQueryState.mobileMatches
               ? largeCarouselHomepageImagesMobile
               : largeCarouselHomepageImages
           }
           // Check screen size and pass extraclass prop into the ButtonOnImage component based on the screen size
-          button={
-            <ButtonOnImage
-              rightArrow={
-                mediaQueryState.mobileMatches ||
-                mediaQueryState.smallTabletMatches
-                  ? false
-                  : true
-              }
-            />
-          }
+          button={<ButtonOnImage rightArrow={false} />}
         />
       </section>
 
@@ -118,8 +114,8 @@ export default function Home() {
             subheading={
               "Make the new year your year with apparel and footwear to bring out your very best."
             }
-            buttonText={"Shop"}
-            button={<PlainButton />}
+            buttonText={"Shop Latest Trends"}
+            button={<PlainButton rightArrow={false} />}
           />
         </div>
       </section>
@@ -138,7 +134,7 @@ export default function Home() {
             }
             heading={"FOREVER. CLASSIC."}
             subheading={"Shop classics Old & New"}
-            buttonText={"Shop Now"}
+            buttonText={"Shop All Classics"}
             button={
               (mediaQueryState.computerScreenMatches ||
                 mediaQueryState.largeTabletMatches) === true ? (
@@ -158,7 +154,7 @@ export default function Home() {
           <HeadingDescBtn
             heading={"Basketball Essentials"}
             subheading={"Everything you need for the court"}
-            buttonText={"Shop"}
+            buttonText={"Shop for Basketball"}
             extraClass={
               (mediaQueryState.computerScreenMatches ||
                 mediaQueryState.largeTabletMatches) && [
@@ -167,7 +163,7 @@ export default function Home() {
                 "textbox-light-font",
               ]
             }
-            button={<PlainButton toUrl={"#"} rightArrow={false} />}
+            button={<ButtonOnImage toUrl={"#"} rightArrow={false} />}
           />
         </div>
       </section>
@@ -191,12 +187,13 @@ export default function Home() {
             <HeadingDescBtn
               heading="Become A Member"
               subheading="Sign up for free. Join the community."
+              group={true}
+              buttonInfoArray={[
+                { buttonText: "Join Us", id: 0 },
+                { buttonText: "Sign In", id: 1 },
+              ]}
+              button={<PlainButton rightArrow={false} />}
             />
-
-            <div className="button-grouping">
-              <PlainButton buttonText="Join Us" rightArrow={false} />
-              <PlainButton buttonText="Sign In" rightArrow={false} />
-            </div>
           </div>
 
           <div className="signup-container__carousel">

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,cAAe;EACb,KAAK,EAAE,IAAI;EACX,yCAA6B;IAC3B,KAAK,EAAE,eAAe",
+"mappings": "AAEA,cAAe;EACb,KAAK,EAAE,IAAI;EAEX,yCAA6B;IAC3B,KAAK,EAAE,eAAe",
 "sources": ["GridShowcase.module.scss"],
 "names": [],
 "file": "GridShowcase.module.css"

@@ -66,7 +66,7 @@ body {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1rem; }
+  gap: 3rem; }
 
 .darkwhiteBackground-opacity-low {
   background-color: rgba(242, 242, 242, 0.8); }
@@ -87,15 +87,21 @@ body {
 .active-fade-carousel {
   opacity: 1 !important; }
 
-@media (max-width: 30em) {
+@media (max-width: 38em) {
   .grid-2 {
     grid-template-columns: 1fr;
-    gap: 3rem; }
+    gap: 5rem; }
 
   .container {
     padding: 0 3.5rem; }
 
   .section-title__padding {
     padding: 0 3.5rem; } }
+@media (max-width: 30em) {
+  .container {
+    padding: 0 2rem; }
+
+  .section-title__padding {
+    padding: 0 2rem; } }
 
 /*# sourceMappingURL=index.css.map */

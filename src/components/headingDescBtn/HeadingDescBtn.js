@@ -7,6 +7,9 @@ export default function HeadingDescBtn({
   extraClass = [],
   button = undefined,
   buttonText = "",
+  toUrl = "#",
+  buttonInfoArray = [],
+  group = false,
 }) {
   return (
     <div
@@ -24,12 +27,31 @@ export default function HeadingDescBtn({
           {subheading}
         </p>
       )}
+
       {button &&
+        !group &&
         React.cloneElement(button, {
+          toUrl: { toUrl },
           buttonText: `${
             buttonText === "" ? "Please provide text for button" : buttonText
           }`,
         })}
+
+      {button && group && (
+        <div className={styles["button-group"]}>
+          {buttonInfoArray.map((single) => {
+            return React.cloneElement(button, {
+              key: single.id,
+              toUrl: single.link,
+              buttonText: `${
+                single.buttonText === ""
+                  ? "Please provide text for button"
+                  : single.buttonText
+              }`,
+            });
+          })}
+        </div>
+      )}
     </div>
   );
 }

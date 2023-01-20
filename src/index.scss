@@ -90,7 +90,7 @@ body {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .darkwhiteBackground-opacity-low {
@@ -118,11 +118,11 @@ body {
   opacity: 1 !important;
 }
 
-@media (max-width: 30em) {
-  //480px
+@media (max-width: 38em) {
+  //608px
   .grid-2 {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 5rem;
   }
 
   .container {
@@ -131,5 +131,17 @@ body {
 
   .section-title__padding {
     padding: 0 3.5rem;
+  }
+}
+
+@media (max-width: 30em) {
+  //448px
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .section-title__padding {
+    padding: 0 2rem;
   }
 }

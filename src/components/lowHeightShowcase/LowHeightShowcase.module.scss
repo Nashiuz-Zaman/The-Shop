@@ -16,11 +16,9 @@
     align-items: center;
 
     &--heading {
-      @include heading(5rem);
     }
 
     &--subheading {
-      @include subheading(100%, uppercase);
     }
   }
 }

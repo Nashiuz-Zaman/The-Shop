@@ -4,7 +4,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1.3fr;
-  background-image: linear-gradient(to right, #fa5252, #fb8484);
+  background-image: linear-gradient(to bottom right, #fa5252, #fb8484);
   color: #fff; }
   .main-slogan__text-part {
     display: flex;
@@ -54,14 +54,15 @@
     grid-template-rows: 1fr 1fr;
     height: 70rem;
     background-image: none;
-    background-color: #fa5252; }
+    background-image: linear-gradient(to bottom right, #4b0202, #fa5252); }
     .main-slogan__text-part {
       padding: 2rem 6rem !important; }
     .main-slogan__carousel {
       width: 55%;
       justify-self: center;
       box-shadow: 0rem 1rem 3rem rgba(17, 17, 17, 0.3);
-      transform: translateY(-15%); }
+      transform: translateY(-15%);
+      overflow: hidden; }
     .main-slogan__heading {
       font-size: 4rem;
       letter-spacing: 0.2rem;

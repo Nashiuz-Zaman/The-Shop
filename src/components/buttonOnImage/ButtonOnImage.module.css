@@ -1,0 +1,49 @@
+.button-on-image {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1; }
+  .button-on-image__button:link, .button-on-image__button:visited {
+    color: #111;
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s; }
+    .button-on-image__button:link::before, .button-on-image__button:visited::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border: 1px solid white;
+      top: 0.3rem;
+      left: 0.3rem;
+      transition: all 0.3s; }
+  .button-on-image:hover .button-on-image__button::before {
+    background-color: #fff; }
+  .button-on-image__button:hover {
+    background-color: #fa5252;
+    color: #fff; }
+
+@media (max-width: 64em) {
+  .button-on-image__button:link, .button-on-image__button:visited {
+    font-size: 1.2rem;
+    padding: 1.5rem; } }
+@media (max-width: 54em) {
+  .button-on-image__button:link, .button-on-image__button:visited {
+    font-size: 1.2rem;
+    padding: 1.3rem; } }
+@media (max-width: 45em) {
+  .button-on-image__button:link, .button-on-image__button:visited {
+    font-size: 1.2rem !important;
+    padding: 1.25rem !important; } }
+
+/*# sourceMappingURL=ButtonOnImage.module.css.map */

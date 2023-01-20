@@ -1,126 +1,103 @@
-.slogan {
+.hero {
   margin-bottom: 3.6rem; }
-  .slogan div[class*="fade-carousel-nobtn__slide"] {
-    top: 1.5rem;
-    left: -2rem; }
 
 .all-products-brands div[class*="button-on-image"] {
   position: absolute;
   bottom: 10rem;
   left: 7rem; }
+  .all-products-brands div[class*="button-on-image"] a:link,
+  .all-products-brands div[class*="button-on-image"] a:visited {
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    font-weight: 700; }
 
 .refresh-closet {
   margin-bottom: 9.6rem; }
   .refresh-closet div[class*="textbox"] {
+    margin-top: 2rem;
     align-items: center; }
+    .refresh-closet div[class*="textbox"] a:link,
+    .refresh-closet div[class*="textbox"] a:visited {
+      border: 1px solid #111;
+      text-transform: uppercase; }
+    .refresh-closet div[class*="textbox"] a:hover,
+    .refresh-closet div[class*="textbox"] a:active {
+      border: 1px solid transparent;
+      color: #fff; }
   .refresh-closet h3[class*="heading"] {
-    font-size: 6.5rem;
     text-align: center; }
   .refresh-closet p[class*="subheading"] {
     width: 25%;
     text-align: center; }
 
-.classics h3[class*="heading"] {
-  font-size: 5.5rem; }
-.classics p[class*="subheading"] {
-  font-weight: 300 !important; }
-
 .basketball-essentials {
   margin-bottom: 9.6rem; }
   .basketball-essentials div[class*="textbox"] {
     width: 25%; }
-  .basketball-essentials h3[class*="heading"] {
-    font-size: 6.5rem; }
-  .basketball-essentials p[class*="subheading"] {
-    font-weight: 400; }
+    .basketball-essentials div[class*="textbox"] a:link,
+    .basketball-essentials div[class*="textbox"] a:visited {
+      text-transform: uppercase; }
 
 .football-tennis {
   margin-bottom: 9.6rem; }
+  .football-tennis div[class*="textbox"] {
+    margin-top: 2rem; }
+    .football-tennis div[class*="textbox"] a:link,
+    .football-tennis div[class*="textbox"] a:visited {
+      border: 1px solid #111;
+      text-transform: uppercase; }
+    .football-tennis div[class*="textbox"] a:hover,
+    .football-tennis div[class*="textbox"] a:active {
+      border: 1px solid transparent;
+      color: #fff; }
 
 .signup {
   margin-bottom: 9.6rem; }
   .signup-container {
     background-color: #111;
     padding: 3rem 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 10rem; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .signup-container div[class*="textbox"] a:link,
+    .signup-container div[class*="textbox"] a:visited {
+      text-transform: uppercase; }
+    .signup-container__text {
+      flex-basis: 50%; }
     .signup-container__carousel {
-      width: 100%;
+      flex-basis: 50%;
       height: 25rem; }
     .signup-container h3[class*="heading"] {
-      font-size: 6.5rem !important;
       width: 50% !important; }
     .signup-container p[class*="subheading"] {
       font-weight: 300 !important; }
-    .signup-container div[class*="textbox"] {
-      margin-top: 0 !important; }
     .signup-container div[class*="fade-carousel-nobtn__slide"] {
       background-size: contain !important;
       background-repeat: no-repeat !important; }
 
 @media (max-width: 64em) {
-  .slogan {
-    margin-top: 2rem; }
-
   .all-products-brands div[class*="button-on-image"] {
     position: absolute;
     bottom: 8rem;
     left: 5rem; }
 
-  .refresh-closet h3[class*="heading"] {
-    font-size: 5.5rem; }
   .refresh-closet p[class*="subheading"] {
-    font-size: 1.5rem;
     width: 38%; }
 
   .classics div[class*="textbox"] {
-    margin-top: 0;
     right: 4rem; }
-  .classics h3[class*="heading"] {
-    font-size: 4.5rem;
-    margin-bottom: 1.8rem; }
-  .classics p[class*="subheading"] {
-    font-size: 1.5rem;
-    margin-bottom: 2rem; }
-  .classics a[class*="button-on-image__button"]:link, .classics a[class*="button-on-image__button"]:visited {
-    font-size: 1.5rem; }
 
   .basketball-essentials {
     margin-bottom: 9.6rem; }
     .basketball-essentials div[class*="textbox"] {
-      margin-top: 0;
       left: 4rem;
       bottom: 4rem; }
-    .basketball-essentials h3[class*="heading"] {
-      font-size: 5rem;
-      margin-bottom: 1.8rem; }
-    .basketball-essentials p[class*="subheading"] {
-      font-size: 1.5rem;
-      text-align: initial;
-      margin-bottom: 2rem; }
-    .basketball-essentials a[class*="button-on-image__button"]:link, .basketball-essentials a[class*="button-on-image__button"]:visited {
-      font-size: 1.5rem; }
 
   .signup-container {
-    padding: 2.5rem 4rem;
-    justify-items: center !important; }
-    .signup-container__text {
-      height: 25rem; }
+    gap: 5rem; }
     .signup-container__carousel {
-      width: 90%; }
-    .signup-container h3[class*="heading"] {
-      width: 100% !important;
-      font-weight: 400;
-      font-size: 5rem !important;
-      margin-bottom: 1.5rem;
-      line-height: 1.1 !important; }
-    .signup-container p[class*="subheading"] {
-      margin-bottom: 3rem;
-      font-size: 1.6rem !important; }
-    .signup-container div[class*="textbox"] {
-      margin-top: 0 !important; } }
-@media (max-width: 53em) {
+      height: 20rem; } }
+@media (max-width: 54em) {
   .perks [class*="perk"] {
     font-size: 1.6rem; }
 
@@ -132,121 +109,88 @@
     padding: 2rem 2.5rem;
     font-size: 1.3rem !important; }
 
-  .refresh-closet h3[class*="heading"] {
-    font-size: 4rem; }
   .refresh-closet p[class*="subheading"] {
-    font-size: 1.4rem;
     width: 38%; }
 
   .classics div[class*="textbox"] {
     right: 2.5rem; }
-  .classics h3[class*="heading"] {
-    font-weight: 400;
-    font-size: 3.5rem; }
-  .classics p[class*="subheading"] {
-    font-size: 1.3rem; }
-  .classics a[class*="button-on-image__button"]:link, .classics a[class*="button-on-image__button"]:visited {
-    padding: 1.4rem 2.3rem;
-    font-size: 1.3rem; }
 
   .basketball-essentials div[class*="textbox"] {
-    margin-top: 0;
     left: 3rem;
     bottom: 3rem;
     width: 40%; }
-  .basketball-essentials h3[class*="heading"] {
-    font-weight: 400;
-    font-size: 3.5rem;
-    margin-bottom: 1.3rem; }
-  .basketball-essentials p[class*="subheading"] {
-    font-size: 1.3rem;
-    margin-bottom: 1.45rem; }
-  .basketball-essentials a[class*="button"]:link, .basketball-essentials a[class*="button"]:visited {
-    padding: 1rem 2rem;
-    font-size: 1.4rem; }
-
-  .football-tennis h3[class*="heading"] {
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin-bottom: 1.8rem; }
-  .football-tennis p[class*="subheading"] {
-    font-size: 1.4rem;
-    margin-bottom: 2rem; }
-  .football-tennis a[class*="button"]:link, .football-tennis a[class*="button"]:visited {
-    font-size: 1.3rem; }
 
   .signup-container {
-    padding: 2.5rem 3rem;
-    display: flex !important;
-    gap: 4rem !important;
+    padding: 2.5rem;
+    gap: 2rem;
     align-items: center; }
-    .signup-container__text {
-      height: fit-content;
-      flex-basis: 50%; }
     .signup-container__carousel {
-      height: 20rem;
-      flex-basis: 50%; }
-    .signup-container h3[class*="heading"] {
-      font-size: 4.5rem !important; }
-    .signup-container p[class*="subheading"] {
-      font-size: 1.3rem !important; }
-    .signup-container a[class*="button"]:link, .signup-container a[class*="button"]:visited {
-      padding: 1rem 2rem;
-      font-size: 1.4rem; } }
+      padding: 1rem;
+      height: 18rem; } }
 @media (max-width: 48em) {
+  .popular-categories h2[class*="section-title"] {
+    text-align: initial; }
+
   .refresh-closet p[class*="subheading"] {
     width: 50%; }
 
-  .classics div[class*="textbox"] {
-    margin-top: 2rem !important;
-    align-items: center !important; }
-  .classics p[class*="subheading"] {
-    font-size: 1.3rem;
-    font-weight: 400 !important; }
-  .classics a[class*="button"]:link, .classics a[class*="button"]:visited {
-    padding: 1.4rem 2.3rem;
-    font-size: 1.3rem; }
-
+  .classics div[class*="textbox"],
   .basketball-essentials div[class*="textbox"] {
     margin-top: 2rem;
-    align-items: center !important;
+    align-items: center;
     width: 100%; }
-  .basketball-essentials p[class*="subheading"] {
-    font-weight: 400 !important; }
-  .basketball-essentials a[class*="button"]:link, .basketball-essentials a[class*="button"]:visited {
-    padding: 1.4rem 2.3rem;
-    font-size: 1.3rem; }
-
-  .football-tennis p[class*="subheading"] {
-    font-size: 1.3rem; }
-  .football-tennis a[class*="button"]:link, .football-tennis a[class*="button"]:visited {
-    font-size: 1.3rem; } }
+  .classics a:link,
+  .classics a:visited,
+  .basketball-essentials a:link,
+  .basketball-essentials a:visited {
+    border: 1px solid #111;
+    text-transform: uppercase; }
+  .classics a:hover,
+  .classics a:active,
+  .basketball-essentials a:hover,
+  .basketball-essentials a:active {
+    border: 1px solid transparent;
+    color: #fff; } }
 @media (max-width: 45em) {
-  .slogan {
-    margin-bottom: 2rem; }
-    .slogan div[class*="fade-carousel-nobtn__slide"] {
-      top: 0rem;
-      left: 0rem; }
+  .all-products-brands a:link,
+  .all-products-brands a:visited {
+    font-size: 1.2rem !important;
+    padding: 1.25rem !important; }
 
-  .football-tennis p[class*="subheading"] {
-    font-size: 1.2rem; }
-  .football-tennis a[class*="button"]:link, .football-tennis a[class*="button"]:visited {
-    font-size: 1.2rem; } }
-@media (max-width: 30em) {
-  .slogan-small-screen div[class*="main-slogan"] {
-    margin: 0 auto;
-    padding: 1rem;
-    grid-template-columns: 1fr; }
-  .slogan-small-screen h1[class*="heading"] {
-    font-size: 3.6rem; }
-  .slogan-small-screen p[class*="subheading"] {
-    font-size: 1.3rem; }
+  .signup-container {
+    gap: 0; }
+    .signup-container__text {
+      flex-basis: 55%; }
+    .signup-container__carousel {
+      flex-basis: 45%;
+      height: 15rem; } }
+@media (max-width: 38em) {
+  .perks [class*="perk"] {
+    font-size: 1.4rem; }
 
-  .perks {
-    margin-bottom: 2rem !important; }
+  .refresh-closet p[class*="subheading"] {
+    width: 60%;
+    text-align: center; }
 
+  .signup-container {
+    padding-bottom: 5rem;
+    flex-direction: column-reverse !important;
+    gap: 4rem;
+    align-items: center; }
+    .signup-container__carousel {
+      width: 50%;
+      flex-basis: 20rem; }
+    .signup-container h3[class*="heading"] {
+      width: 100% !important;
+      text-align: center;
+      font-size: 5rem !important; }
+    .signup-container p[class*="subheading"] {
+      text-transform: capitalize; }
+    .signup-container div[class*="textbox"] {
+      align-items: center !important; } }
+@media (max-width: 34em) {
   .all-products-brands div[class*="button-on-image"] {
-    position: static;
+    position: relative;
     bottom: initial;
     left: initial;
     padding: 3rem 3rem 0;
@@ -256,9 +200,8 @@
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:link,
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:visited {
       width: max-content;
-      color: #111;
-      background-color: #fff;
-      border: 0.1rem solid #111;
+      color: #fff;
+      background-color: #111;
       padding: 2rem !important; }
       .all-products-brands div[class*="button-on-image"] a[class*="button"]:link::before,
       .all-products-brands div[class*="button-on-image"] a[class*="button"]:visited::before {
@@ -266,106 +209,39 @@
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:hover,
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:active {
       background-color: #fa5252;
-      color: #fff;
-      border: 0.1rem solid #fa5252; }
+      color: #fff; }
 
-  .refresh-closet {
-    margin-bottom: 9.6rem; }
-    .refresh-closet h2[class*="section-title"] {
-      text-align: center; }
-    .refresh-closet div[class*="textbox"] {
-      align-items: center; }
-    .refresh-closet h3[class*="heading"] {
-      text-align: initial;
-      margin-bottom: 1.8rem; }
-    .refresh-closet p[class*="subheading"] {
-      width: 100%;
-      text-align: initial;
-      margin-bottom: 2rem; }
-
-  .classics div[class*="low-height-showcase"] {
-    margin-bottom: 0; }
-  .classics div[class*="textbox"] {
-    margin-top: 2rem;
-    align-items: center !important; }
-  .classics h3[class*="heading"] {
-    margin-bottom: 1.8rem; }
-  .classics p[class*="subheading"] {
-    margin-bottom: 2rem; }
-
-  .basketball-essentials {
-    margin-bottom: 9.6rem; }
-    .basketball-essentials h2[class*="section-title"] {
-      text-align: center; }
-    .basketball-essentials div[class*="textbox"] {
-      margin-top: 2rem;
-      width: 100%; }
-    .basketball-essentials h3[class*="heading"] {
-      margin-bottom: 1.8rem; }
-    .basketball-essentials p[class*="subheading"] {
-      text-align: initial;
-      margin-bottom: 2rem; }
-
-  .football-tennis {
-    width: 100%; }
-    .football-tennis h2[class*="section-title"] {
-      text-align: center; }
-
-  .signup h2[class*="section-title"] {
+  .football-tennis,
+  .basketball-essentials,
+  .classics {
     text-align: center; }
-  .signup-container {
-    padding: 3rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10rem;
-    justify-items: center; }
-    .signup-container__text {
-      height: 25rem; }
-    .signup-container__carousel {
-      width: 90%; }
-    .signup-container .button-grouping {
-      justify-content: center; }
-    .signup-container h3[class*="heading"] {
-      width: 100% !important;
-      text-align: center;
-      font-weight: 400;
-      font-size: 6rem !important;
-      margin-bottom: 1.5rem;
-      line-height: 1.1 !important; }
-    .signup-container p[class*="subheading"] {
-      margin-bottom: 3rem;
-      font-size: 1.6rem !important; }
-    .signup-container div[class*="textbox"] {
-      margin-top: 0 !important;
-      align-items: center !important; } }
-@media (max-width: 28em) {
-  .signup-container {
-    padding: 2.5rem 2rem 2rem;
-    gap: 8rem; }
-    .signup-container__text {
-      height: auto; }
-    .signup-container h3[class*="heading"] {
-      font-size: 5rem !important; }
-    .signup-container p[class*="subheading"] {
-      font-size: 1.4rem !important; }
-    .signup-container a[class*="plain-button"]:link, .signup-container a[class*="plain-button"]:visited {
-      font-size: 1.5rem !important; } }
-@media (max-width: 23em) {
-  .slogan-small-screen h1[class*="heading"] {
-    font-size: 3.3rem; }
-  .slogan-small-screen p[class*="subheading"] {
-    font-size: 1.3rem; }
+
+  .football-tennis div[class*="textbox"] {
+    align-items: center; } }
+@media (max-width: 30em) {
+  .refresh-closet p[class*="subheading"] {
+    width: 90%; }
 
   .signup-container {
-    padding: 2rem;
-    gap: 5rem; }
+    padding: 1.5rem;
+    gap: 2rem;
+    justify-content: space-between; }
+    .signup-container__text {
+      flex-basis: 18rem; }
     .signup-container__carousel {
-      height: 20rem; }
+      width: 50%; }
     .signup-container h3[class*="heading"] {
-      font-size: 4.5rem !important; }
-    .signup-container p[class*="subheading"] {
-      font-size: 1.25rem !important; }
-    .signup-container a[class*="plain-button"]:link, .signup-container a[class*="plain-button"]:visited {
-      font-size: 1.3rem !important; } }
+      font-size: 3.5rem !important; } }
+@media (max-width: 25em) {
+  .signup-container {
+    padding: 1rem;
+    gap: 4rem; }
+    .signup-container__text {
+      flex-basis: 14rem; }
+    .signup-container__carousel {
+      width: 60%;
+      flex-basis: 15rem; }
+    .signup-container h3[class*="heading"] {
+      font-size: 3rem !important; } }
 
 /*# sourceMappingURL=Home.css.map */

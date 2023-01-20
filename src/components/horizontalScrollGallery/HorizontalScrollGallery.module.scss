@@ -58,7 +58,6 @@
 
     &--name {
       font-size: 1.8rem;
-      font-weight: 300;
       color: $black;
     }
   }
@@ -74,22 +73,36 @@
 
     ::-webkit-scrollbar-track {
       background-color: darken($white, 10%);
-      margin-inline: 3.5rem !important;
+      margin-inline: 3.5rem;
     }
 
     &__scroller {
       grid-auto-columns: 40%;
-      scroll-padding-inline: 3.5rem !important;
+      scroll-padding-inline: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 34em) {
+  //534px
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 85%;
+      scroll-padding-inline: 3.5rem;
     }
   }
 }
 
 @media (max-width: 30em) {
-  //480px
+  //448px
+
   .horizontal-scroll-gallery {
+    ::-webkit-scrollbar-track {
+      margin-inline: 2rem;
+    }
+
     &__scroller {
-      grid-auto-columns: 85%;
-      scroll-padding-inline: 3.5rem !important;
+      scroll-padding-inline: 2rem;
     }
   }
 }

@@ -1,10 +1,18 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
 
-.plain-button {
+.button-on-image {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  // learned something new down there about z index
+  position: relative;
+  z-index: 1;
+
   &__button:link,
   &__button:visited {
     color: $brandPrimary;
+    background-color: $white;
     font-size: 1.4rem;
     font-weight: 500;
     padding: 1.5rem;
@@ -14,16 +22,33 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: all 0.2s;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border: 1px solid white;
+      top: 0.3rem;
+      left: 0.3rem;
+      transition: $animate;
+    }
   }
 
-  &__button:hover,
-  &__button:active {
+  &:hover &__button::before {
+    background-color: $white;
+  }
+
+  &__button:hover {
     background-color: $lightRed;
+    color: $white;
   }
 }
 
 @media (max-width: 64em) {
-  .plain-button {
+  .button-on-image {
     &__button:link,
     &__button:visited {
       @include buttonAt64em();
@@ -32,7 +57,7 @@
 }
 
 @media (max-width: 54em) {
-  .plain-button {
+  .button-on-image {
     &__button:link,
     &__button:visited {
       @include buttonAt54em();
@@ -41,7 +66,7 @@
 }
 
 @media (max-width: 45em) {
-  .plain-button {
+  .button-on-image {
     &__button:link,
     &__button:visited {
       @include buttonAt45em();
@@ -50,7 +75,16 @@
 }
 
 @media (max-width: 38em) {
-  .plain-button {
+  .button-on-image {
+    &__button:link,
+    &__button:visited {
+      // @include buttonAt38em();
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  .button-on-image {
     &__button:link,
     &__button:visited {
       // @include buttonAt38em();
