@@ -44,7 +44,8 @@ import hero from "../../assets/hero.webp";
 //////////////////////////////////
 //////////////////////////////////
 //////////////////////////////////
-import useImportLargeCarouselHomepageImages from "../../hooks/useImportLargeCarouselHomepageImages";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import useImportLargeCarouselImagesData from "../../hooks/useImportLargeCarouselImagesData";
 import useImportFadeCarouselImages from "../../hooks/useImportFadeCarouselImages";
 import useImportHorizontalScrollHomepage from "../../hooks/useImportHorizontalScrollHomepage";
 import useImportGridShowcaseHome from "../../hooks/useImportGridShowcaseHome";
@@ -52,9 +53,11 @@ import usePerks from "../../hooks/usePerks";
 import useImportHeroBtnsData from "../../hooks/useImportHeroBtnsData";
 
 export default function Home() {
+  useDocumentTitle("The Shop Official Website | The Shop International");
+
   const { mediaQueryState } = useContext(MediaQueryContext);
   const { largeCarouselHomepageImages, largeCarouselHomepageImagesMobile } =
-    useImportLargeCarouselHomepageImages();
+    useImportLargeCarouselImagesData();
   const { fadeCarouselBrandLogos } = useImportFadeCarouselImages();
   const { popularCategoriesHomepage } = useImportHorizontalScrollHomepage();
   const { gridShowcaseHome } = useImportGridShowcaseHome();
