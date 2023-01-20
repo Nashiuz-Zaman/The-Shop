@@ -14,7 +14,7 @@ export default function LinkGroup({ singleListObject }) {
           ) : (
             <Link
               className={styles["link-group__heading-link"]}
-              to={singleListObject.heading.link}
+              to={`/${singleListObject.heading.link}`}
             >
               {singleListObject.heading.text}
             </Link>
@@ -28,10 +28,10 @@ export default function LinkGroup({ singleListObject }) {
               <li key={option.text} className={styles["link-group__list-item"]}>
                 <Link
                   className={styles["link-group__list-item-link"]}
-                  to={option.link}
+                  to={`/${option.link}`}
                 >
                   {option.text}
-                </Link>{" "}
+                </Link>
               </li>
             );
           })}

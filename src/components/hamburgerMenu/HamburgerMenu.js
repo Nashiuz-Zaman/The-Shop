@@ -8,6 +8,7 @@ export default function HamburgerMenu({ clickHandler = undefined }) {
   return (
     <div onClick={clickHandler} className={styles["hamburger-menu"]}>
       <button
+        aria-label="Mobile Navigation Button to toggle navigation menu on and off"
         className={styles["hamburger-menu__button"]}
         style={{
           background: `url(${hamburgerIcon})`,

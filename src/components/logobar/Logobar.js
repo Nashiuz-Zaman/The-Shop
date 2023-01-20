@@ -1,6 +1,3 @@
-//react stuff
-import { Link } from "react-router-dom";
-
 //components
 import BrandName from "../brandName/BrandName";
 

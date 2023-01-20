@@ -89,15 +89,19 @@ export default function Home() {
       </section>
 
       <section className="all-products-brands">
-        <LargeCarousel
-          imagesInfoArray={
-            mediaQueryState.mobileMatches
-              ? largeCarouselHomepageImagesMobile
-              : largeCarouselHomepageImages
-          }
-          // Check screen size and pass extraclass prop into the ButtonOnImage component based on the screen size
-          button={<ButtonOnImage rightArrow={false} />}
-        />
+        {mediaQueryState.mobileMatches && (
+          <LargeCarousel
+            imagesInfoArray={largeCarouselHomepageImagesMobile}
+            button={<ButtonOnImage rightArrow={false} />}
+          />
+        )}
+
+        {!mediaQueryState.mobileMatches && (
+          <LargeCarousel
+            imagesInfoArray={largeCarouselHomepageImages}
+            button={<ButtonOnImage rightArrow={false} />}
+          />
+        )}
       </section>
 
       <section className="popular-categories">

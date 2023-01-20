@@ -19,8 +19,9 @@ export default function ImageButton({
         extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}
     >
-      {externalLink === true && (
+      {externalLink && (
         <a
+          aria-label={imageSource.title}
           href={imageSource.link ?? "No url provided"}
           className={`${styles["image-button__link"]}`}
           style={{
@@ -33,8 +34,9 @@ export default function ImageButton({
         </a>
       )}
 
-      {externalLink === false && (
+      {!externalLink && (
         <Link
+          aria-label={imageSource.title}
           to={imageSource.link ?? "No url provided"}
           className={`${styles["image-button__link"]}`}
           style={{
