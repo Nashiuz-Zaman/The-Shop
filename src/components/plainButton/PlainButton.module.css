@@ -3,11 +3,16 @@
   font-size: 1.4rem;
   font-weight: 500;
   padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-transform: capitalize;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 .plain-button__button:hover, .plain-button__button:active {
   background-color: #fa5252; }

@@ -9,9 +9,16 @@
     font-size: 1.15rem;
     letter-spacing: 0.05rem; }
   .footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-end; }
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
     .footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:link,
     .footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:visited {
       color: gray;
@@ -20,8 +27,13 @@
     .footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:active {
       color: #fff; }
   .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 12rem; }
     .footer__links div:nth-child(1) {
       font-weight: 500;
@@ -47,9 +59,15 @@
     .footer__links div:nth-child(3) li a:active {
       color: #fff !important; }
   .footer__image-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1.5rem;
-    justify-content: flex-end;
-    align-items: flex-start; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
 
 /*# sourceMappingURL=Footer.module.css.map */

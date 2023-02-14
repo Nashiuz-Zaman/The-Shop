@@ -5,7 +5,8 @@
   .hero-container div[class*="textbox"] {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 5rem;
     color: #fff; }
     .hero-container div[class*="textbox"] h3[class*="heading"] {
@@ -15,8 +16,13 @@
       text-transform: capitalize;
       font-weight: 500; }
     .hero-container div[class*="textbox"] div[class*="button-group"] {
-      flex-direction: column;
-      align-items: flex-start; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
       .hero-container div[class*="textbox"] div[class*="button-group"] a:link,
       .hero-container div[class*="textbox"] div[class*="button-group"] a:visited {
         font-weight: 700;
@@ -40,12 +46,14 @@
     aspect-ratio: 16/11; } }
 @media (max-width: 38em) {
   .hero-container div[class*="textbox"] {
-    transform: translateY(-35%); } }
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%); } }
 @media (max-width: 30em) {
   .hero-container {
     aspect-ratio: 16/18; }
     .hero-container div[class*="textbox"] {
-      transform: translateY(-20%); }
+      -webkit-transform: translateY(-20%);
+              transform: translateY(-20%); }
       .hero-container div[class*="textbox"] h3[class*="heading"] {
         font-size: 4rem !important; }
       .hero-container div[class*="textbox"] p[class*="subheading"] {
@@ -57,7 +65,8 @@
   .hero-container {
     aspect-ratio: 16/18; }
     .hero-container div[class*="textbox"] {
-      transform: translateY(-40%); }
+      -webkit-transform: translateY(-40%);
+              transform: translateY(-40%); }
       .hero-container div[class*="textbox"] h3[class*="heading"] {
         font-size: 4rem !important; }
       .hero-container div[class*="textbox"] p[class*="subheading"] {

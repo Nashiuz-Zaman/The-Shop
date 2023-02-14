@@ -47,52 +47,49 @@ export default function MobileNavigation({
   };
 
   return (
-    <>
+    <nav className={styles["mobile-nav"]}>
+      <div className={styles["mobile-nav__brand-and-options"]}>
+        <BrandName title={brandName} />
+        <MobileSearchbar
+          brandName="The Shop."
+          searchTerm={searchTerm}
+          expand={searchbarOpen}
+          setSearchTerm={setSearchTerm}
+          handleOpenClick={handleOpenSearchbar}
+          handleCloseClick={handleCloseSearchbar}
+        />
+        {userInfoButtonData.map((single) => {
+          return <ImageButton key={single.id} imageSource={single} />;
+        })}
+        <HamburgerMenu clickHandler={handleOpenMobileNavigation} />
+      </div>
+
       <BackdropBlur
         open={backdropOpen}
         handleCloseClick={closeBackdropAndEverything}
       />
-
-      <nav className={styles["mobile-nav"]}>
-        <div className={styles["mobile-nav__brand-and-options"]}>
-          <BrandName title={brandName} />
-          <MobileSearchbar
-            brandName="The Shop."
-            searchTerm={searchTerm}
-            expand={searchbarOpen}
-            setSearchTerm={setSearchTerm}
-            handleOpenClick={handleOpenSearchbar}
-            handleCloseClick={handleCloseSearchbar}
-          />
-          {userInfoButtonData.map((single) => {
-            return <ImageButton key={single.id} imageSource={single} />;
-          })}
-          <HamburgerMenu clickHandler={handleOpenMobileNavigation} />
-        </div>
-
-        <div
-          className={`${styles["mobile-nav__container"]} ${
-            state.containerOpen ? styles["mobile-nav__container--open"] : ""
-          }`}
-        >
-          {mainNavOptions.map((option) => {
-            return (
-              <MobileNavigationList
-                key={option.id}
-                navigationOptions={option}
-                handleCloseClick={handleCloseMobileNavigation}
-                currentMenu={state.currentMenu}
-                previousMenuArray={state.previousMenu}
-                handleMenuChangeForward={goToNext}
-                handleMenuChangeBackward={goToPrevious}
-                brandName={"The Shop"}
-                learnMoreLink={""}
-                textButtonsWithImagesInfo={mobileNavigationButtons}
-              />
-            );
-          })}
-        </div>
-      </nav>
-    </>
+      <div
+        className={`${styles["mobile-nav__container"]} ${
+          state.containerOpen ? styles["mobile-nav__container--open"] : ""
+        }`}
+      >
+        {mainNavOptions.map((option) => {
+          return (
+            <MobileNavigationList
+              key={option.id}
+              navigationOptions={option}
+              handleCloseClick={handleCloseMobileNavigation}
+              currentMenu={state.currentMenu}
+              previousMenuArray={state.previousMenu}
+              handleMenuChangeForward={goToNext}
+              handleMenuChangeBackward={goToPrevious}
+              brandName={"The Shop"}
+              learnMoreLink={""}
+              textButtonsWithImagesInfo={mobileNavigationButtons}
+            />
+          );
+        })}
+      </div>
+    </nav>
   );
 }

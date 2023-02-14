@@ -4,7 +4,8 @@
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html {
   font-size: 62.5%;
@@ -26,9 +27,16 @@ body {
   height: 100%; }
   #root .App {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* margin-top: auto FOR footer */ }
+  #root ::-moz-selection {
+    background-color: transparent; }
   #root ::selection {
     background-color: transparent; }
 
@@ -47,7 +55,8 @@ body {
 
 .position-center-right {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 7rem; }
 
 .textbox-light-font h3[class*="heading"] {
@@ -78,6 +87,8 @@ body {
   position: relative !important; }
 
 .button-grouping {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem; }
 

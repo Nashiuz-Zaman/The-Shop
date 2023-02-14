@@ -28,10 +28,11 @@
   height: 100vh;
   overflow-y: auto;
   background-color: $white;
-  padding-top: 0.75rem;
+  padding-top: 3rem;
   padding-inline: 2rem;
   transition: min-width 0.15s ease-out;
   gap: 1rem;
+  z-index: 1000;
 
   .form-searchbar {
     margin-right: 0;
@@ -117,7 +118,7 @@
 
 @media (min-width: 31em) {
   .expand {
-    padding-top: 2rem;
+    padding-top: 3rem;
     justify-content: space-between;
 
     .form-searchbar {

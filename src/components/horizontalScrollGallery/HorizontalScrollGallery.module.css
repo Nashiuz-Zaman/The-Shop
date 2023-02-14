@@ -18,7 +18,9 @@
     gap: 1.2rem;
     overflow-x: auto;
     padding: 0 5rem;
-    scroll-snap-type: x mandatory;
+    -webkit-scroll-snap-type: x mandatory;
+        -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
     scroll-padding-inline: 5rem;
     overscroll-behavior-inline: contain; }
     .horizontal-scroll-gallery__scroller a:link,

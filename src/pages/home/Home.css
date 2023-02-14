@@ -15,7 +15,9 @@
   margin-bottom: 9.6rem; }
   .refresh-closet div[class*="textbox"] {
     margin-top: 2rem;
-    align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .refresh-closet div[class*="textbox"] a:link,
     .refresh-closet div[class*="textbox"] a:visited {
       border: 1px solid #111;
@@ -56,16 +58,24 @@
   .signup-container {
     background-color: #111;
     padding: 3rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .signup-container div[class*="textbox"] a:link,
     .signup-container div[class*="textbox"] a:visited {
       text-transform: uppercase; }
     .signup-container__text {
-      flex-basis: 65%; }
+      -ms-flex-preferred-size: 65%;
+          flex-basis: 65%; }
     .signup-container__carousel {
-      flex-basis: 35%;
+      -ms-flex-preferred-size: 35%;
+          flex-basis: 35%;
       height: 22rem; }
     .signup-container h3[class*="heading"] {
       width: 50% !important; }
@@ -123,7 +133,9 @@
   .signup-container {
     padding: 2.5rem;
     gap: 2rem;
-    align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .signup-container__carousel {
       padding: 1rem;
       height: 18rem; } }
@@ -137,7 +149,9 @@
   .classics div[class*="textbox"],
   .basketball-essentials div[class*="textbox"] {
     margin-top: 2rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%; }
   .classics a:link,
   .classics a:visited,
@@ -160,9 +174,11 @@
   .signup-container {
     gap: 0; }
     .signup-container__text {
-      flex-basis: 55%; }
+      -ms-flex-preferred-size: 55%;
+          flex-basis: 55%; }
     .signup-container__carousel {
-      flex-basis: 45%;
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%;
       height: 15rem; } }
 @media (max-width: 38em) {
   .perks [class*="perk"] {
@@ -174,12 +190,18 @@
 
   .signup-container {
     padding-bottom: 5rem;
-    flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
     gap: 4rem;
-    align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .signup-container__carousel {
       width: 50%;
-      flex-basis: 20rem; }
+      -ms-flex-preferred-size: 20rem;
+          flex-basis: 20rem; }
     .signup-container h3[class*="heading"] {
       width: 100% !important;
       text-align: center;
@@ -187,7 +209,9 @@
     .signup-container p[class*="subheading"] {
       text-transform: capitalize; }
     .signup-container div[class*="textbox"] {
-      align-items: center !important; } }
+      -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
+              align-items: center !important; } }
 @media (max-width: 34em) {
   .all-products-brands div[class*="button-on-image"] {
     position: relative;
@@ -195,10 +219,16 @@
     left: initial;
     padding: 3rem 3rem 0;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:link,
     .all-products-brands div[class*="button-on-image"] a[class*="button"]:visited {
+      width: -webkit-max-content;
+      width: -moz-max-content;
       width: max-content;
       color: #fff;
       background-color: #111;
@@ -217,7 +247,9 @@
     text-align: center; }
 
   .football-tennis div[class*="textbox"] {
-    align-items: center; } }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 @media (max-width: 30em) {
   .refresh-closet p[class*="subheading"] {
     width: 90%; }
@@ -225,9 +257,12 @@
   .signup-container {
     padding: 1.5rem;
     gap: 2rem;
-    justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     .signup-container__text {
-      flex-basis: 18rem; }
+      -ms-flex-preferred-size: 18rem;
+          flex-basis: 18rem; }
     .signup-container__carousel {
       width: 50%; }
     .signup-container h3[class*="heading"] {
@@ -237,10 +272,12 @@
     padding: 1rem;
     gap: 4rem; }
     .signup-container__text {
-      flex-basis: 14rem; }
+      -ms-flex-preferred-size: 14rem;
+          flex-basis: 14rem; }
     .signup-container__carousel {
       width: 60%;
-      flex-basis: 15rem; }
+      -ms-flex-preferred-size: 15rem;
+          flex-basis: 15rem; }
     .signup-container h3[class*="heading"] {
       font-size: 3rem !important; } }
 

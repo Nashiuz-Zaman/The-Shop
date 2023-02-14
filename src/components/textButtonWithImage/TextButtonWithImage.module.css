@@ -1,12 +1,21 @@
 .text-button-with-image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2rem;
   padding: 3.5rem; }
 .text-button-with-image__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .text-button-with-image__button:link, .text-button-with-image__button:visited {
     text-decoration: none;
     color: #111;

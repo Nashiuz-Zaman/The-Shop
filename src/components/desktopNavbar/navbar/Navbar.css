@@ -5,7 +5,8 @@
   top: 0;
   left: 0;
   background-color: #fff;
-  box-shadow: 0rem 1rem 2rem rgba(17, 17, 17, 0.1);
+  -webkit-box-shadow: 0rem 1rem 2rem rgba(17, 17, 17, 0.1);
+          box-shadow: 0rem 1rem 2rem rgba(17, 17, 17, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
   .navbar__brandName {
@@ -15,13 +16,21 @@
     letter-spacing: -1.5px;
     text-transform: uppercase;
     font-family: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 5rem; }
   .navbar .navigation-menu {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1rem;
     width: 100%;
     height: 100%; }
@@ -30,9 +39,15 @@
       cursor: pointer;
       height: 100%; }
       .navbar .navigation-menu__item--link:link, .navbar .navigation-menu__item--link:visited {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         color: #111;
         text-decoration: none;
         position: relative;
@@ -48,8 +63,11 @@
         background-color: #111;
         bottom: 0;
         left: 0;
-        transform-origin: center;
-        transform: scale(0, 1);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: scale(0, 1);
+                transform: scale(0, 1);
+        -webkit-transition: all 0.3s;
         transition: all 0.3s; }
       .navbar .navigation-menu__item .dropdown-container {
         visibility: collapse;
@@ -57,35 +75,51 @@
         position: absolute;
         padding: 4rem 2rem;
         bottom: 0;
-        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
         left: 0;
         width: 100%;
         pointer-events: none;
+        -webkit-transition: all 0.3s;
         transition: all 0.3s;
         background-color: #fff;
         z-index: 1;
         cursor: default; }
       .navbar .navigation-menu__item:hover .navigation-menu__item--link:link::before,
       .navbar .navigation-menu__item:hover .navigation-menu__item--link:visited::before {
-        transform: scale(1, 1); }
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1); }
       .navbar .navigation-menu__item:hover .dropdown-container {
         visibility: visible;
         opacity: 1;
         pointer-events: auto; }
         .navbar .navigation-menu__item:hover .dropdown-container .dropdown {
           opacity: 1;
-          transform: translateY(0%); }
+          -webkit-transform: translateY(0%);
+                  transform: translateY(0%); }
   .navbar__searchbar-and-user-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding-right: 3rem;
     gap: 1rem; }
     .navbar__searchbar-and-user-info__user-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       gap: 0.5rem;
-      justify-content: center;
-      align-items: center !important; }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
+              align-items: center !important; }
       .navbar__searchbar-and-user-info__user-info div[class*="image-button"] {
         background-color: #fff !important;
         width: 4rem; }

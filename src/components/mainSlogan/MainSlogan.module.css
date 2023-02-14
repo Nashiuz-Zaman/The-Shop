@@ -4,12 +4,20 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1.3fr;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fa5252), to(#fb8484));
   background-image: linear-gradient(to bottom right, #fa5252, #fb8484);
   color: #fff; }
   .main-slogan__text-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem 4rem 2rem 10rem;
     padding-right: 0;
     gap: 2.5rem; }
@@ -54,14 +62,17 @@
     grid-template-rows: 1fr 1fr;
     height: 70rem;
     background-image: none;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#4b0202), to(#fa5252));
     background-image: linear-gradient(to bottom right, #4b0202, #fa5252); }
     .main-slogan__text-part {
       padding: 2rem 6rem !important; }
     .main-slogan__carousel {
       width: 55%;
       justify-self: center;
-      box-shadow: 0rem 1rem 3rem rgba(17, 17, 17, 0.3);
-      transform: translateY(-15%);
+      -webkit-box-shadow: 0rem 1rem 3rem rgba(17, 17, 17, 0.3);
+              box-shadow: 0rem 1rem 3rem rgba(17, 17, 17, 0.3);
+      -webkit-transform: translateY(-15%);
+              transform: translateY(-15%);
       overflow: hidden; }
     .main-slogan__heading {
       font-size: 4rem;

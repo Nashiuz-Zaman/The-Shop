@@ -1,10 +1,18 @@
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: 1rem;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: transparent;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0s;
   transition: all 0s; }
 
 .brand-name {
@@ -23,22 +31,33 @@
   height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  padding-top: 0.75rem;
+  padding-top: 3rem;
   padding-inline: 2rem;
+  -webkit-transition: min-width 0.15s ease-out;
   transition: min-width 0.15s ease-out;
-  gap: 1rem; }
+  gap: 1rem;
+  z-index: 1000; }
   .expand .form-searchbar {
     margin-right: 0;
+    -webkit-transition: margin 0.25s;
     transition: margin 0.25s; }
     .expand .form-searchbar__label {
       background-color: #ddd;
       gap: 1rem; }
       .expand .form-searchbar__label__input {
+        min-width: -webkit-fit-content;
+        min-width: -moz-fit-content;
         min-width: fit-content;
-        flex-grow: 1 !important; }
+        -webkit-box-flex: 1 !important;
+            -ms-flex-positive: 1 !important;
+                flex-grow: 1 !important; }
   .expand .close-button {
-    transform: scale(1, 1);
-    transition: transform 0.2s 0.2s; }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: -webkit-transform 0.2s 0.2s;
+    transition: -webkit-transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s, -webkit-transform 0.2s 0.2s; }
 
 .close-button {
   background: none;
@@ -49,20 +68,34 @@
   font-size: 1.6rem;
   font-weight: 400;
   font-family: inherit;
-  transform-origin: center;
-  transform: scale(0, 0);
-  transition: transform 0s; }
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0s;
+  transition: -webkit-transform 0s;
+  transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s; }
 
 .form-searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-radius: 1000rem;
   overflow: hidden;
   margin-right: -7rem;
+  -webkit-transition: margin 0s;
   transition: margin 0s; }
   .form-searchbar__label {
     margin: auto;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0.75rem; }
     .form-searchbar__label:hover, .form-searchbar__label:active {
@@ -75,6 +108,21 @@
       color: #111;
       max-width: 0;
       overflow: hidden; }
+      .form-searchbar__label__input::-webkit-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
+      .form-searchbar__label__input:-ms-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
+      .form-searchbar__label__input::-ms-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
       .form-searchbar__label__input::placeholder {
         font-size: 1.5rem;
         font-family: inherit;
@@ -88,10 +136,14 @@
 
 @media (min-width: 31em) {
   .expand {
-    padding-top: 2rem;
-    justify-content: space-between; }
+    padding-top: 3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     .expand .form-searchbar {
-      flex-grow: 0 !important;
+      -webkit-box-flex: 0 !important;
+          -ms-flex-positive: 0 !important;
+              flex-grow: 0 !important;
       min-width: 40% !important; } }
 
 /*# sourceMappingURL=MobileSearchbar.module.css.map */

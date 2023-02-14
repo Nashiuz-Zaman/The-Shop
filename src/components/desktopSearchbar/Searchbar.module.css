@@ -1,10 +1,18 @@
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: 20rem;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: transparent;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: min-width 0.2s ease;
   transition: min-width 0.2s ease;
   z-index: 1000;
   position: relative; }
@@ -19,16 +27,25 @@
   background-color: #fff;
   padding-top: 2rem;
   padding-inline: 3.5rem;
+  -webkit-transition: min-width 0.15s ease-out;
   transition: min-width 0.15s ease-out;
-  justify-content: space-between !important; }
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important; }
   .expand .form-searchbar {
     min-width: 50%;
     margin-right: 0; }
     .expand .form-searchbar__label {
-      justify-content: flex-start !important; }
+      -webkit-box-pack: start !important;
+          -ms-flex-pack: start !important;
+              justify-content: flex-start !important; }
   .expand .close-button {
-    transform: scale(1, 1);
-    transition: transform 0.2s 0.2s; }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: -webkit-transform 0.2s 0.2s;
+    transition: -webkit-transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s, -webkit-transform 0.2s 0.2s; }
 
 .brand-name {
   padding: 1.15rem;
@@ -44,42 +61,86 @@
   cursor: pointer;
   display: block;
   padding: 1.15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.5rem;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: inherit;
-  transform-origin: center;
-  transform: scale(0, 0);
-  transition: transform 0s; }
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0s;
+  transition: -webkit-transform 0s;
+  transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s; }
 
 .form-searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   min-width: 100%;
   margin-right: -6rem; }
   .form-searchbar__label {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1rem;
     background-color: #ddd;
     padding: 1.15rem;
     border-radius: 1000rem; }
     .form-searchbar__label__input {
       border: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       font-size: 1.5rem;
       font-family: inherit;
       background-color: inherit;
       color: #111;
-      flex-grow: 1; }
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+      .form-searchbar__label__input::-webkit-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
+      .form-searchbar__label__input:-ms-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
+      .form-searchbar__label__input::-ms-input-placeholder {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: gray;
+        font-weight: 300; }
       .form-searchbar__label__input::placeholder {
         font-size: 1.5rem;
         font-family: inherit;

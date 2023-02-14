@@ -4,9 +4,16 @@
     width: 100%;
     aspect-ratio: 16/5.5; }
   .low-height-showcase__textbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: #fff;
-    flex-direction: column;
-    align-items: center; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 /*# sourceMappingURL=LowHeightShowcase.module.css.map */
